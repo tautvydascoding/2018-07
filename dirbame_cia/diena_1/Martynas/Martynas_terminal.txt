@@ -1,0 +1,8 @@
+keliam per terminala su git komandom:
+
+git status- patikrinam statusa
+git add - pridedam norimus failus
+git commit -m "parasom texta, ka padareme"
+git push - ikeliam failus
+
+( git pull - parsiuncia, jei yra pakeitimu)
