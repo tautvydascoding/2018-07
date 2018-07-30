@@ -9,6 +9,7 @@ linter-jshint
 linter-sass-lint
 
 autoclose-html
+
  Atom: papildomi iskiepiai
 beautify       // ivykdo ctrl + ALT + B
 color-picker   // ijungimas Alt + C
@@ -16,7 +17,7 @@ jQuery-snippets
 jquery
 atom-bootstrap4
 v-bootstrap4
-Packages -> autosave -> settings -> varnele uzdeti
+Files->Packages -> autosave -> settings -> varnele uzdeti
 
 =========short-cuts=============:
 p, a, button, header, footer, section … - HTML 5 auto elementu kurimas
@@ -45,3 +46,10 @@ linter-php
 jQuery-snippets
 jquery
 emmet
+
+--------TERMINAL-------:
+SourceTree: terminala pakeisti i "vim" redaktoriu
+
+git config --global core.editor "vim"
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
