@@ -1,0 +1,3 @@
+1) Pasitreniruoti CSS selectorius zaidime: CSS dinner game (google it)
+
+2) pabandyti savo jegomis sukurti - ta pati “kavines” puslapi

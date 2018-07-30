@@ -1,0 +1,13 @@
+﻿pasikartoti CSS @media:
+
+
+1) sukurti 3 blokus vienoje eiluteje
+2) ant plancetes (nuo 768px): atvaizduoti pirma per visa ekrano ploti, o 2 i 3  vienoje eilute
+3) ant telefono (nuo 320px): atvaizduoti pirma per visa ekrano ploti, o 2-tro neatvaizduoti, o 3-cia atvaizdoti per visa ekrano ploti
+display: none;
+
+//============================
+Uzbaigti “Header” full page kuri dareme klaseje
+
+//===========================
+Pabandyti sukurti “Header” full page kuri dareme klaseje, per nauja savo jegomis

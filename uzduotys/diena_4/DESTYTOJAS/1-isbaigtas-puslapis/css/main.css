@@ -1,0 +1,129 @@
+html {
+    background-color: #a2a2a2;
+}
+body {
+    /* centravimas X-asyje
+    1) reik width=xxxpx;
+    2) margin-left: auto;
+    3) margin-right: auto;
+    */
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1,
+h2,
+h3 {
+    font-family: 'Rammetto One', cursive;
+}
+h1 {
+    text-align: center;
+    /* desine apacia isblukimas spalva */
+    text-shadow: 0px 0px 20px #000;
+    color: #fff;
+}
+p {
+    text-align: justify;
+}
+
+header {
+    background-color: #FF80FF;
+}
+nav {
+    height: 80px;
+    display: block;
+    width: 60%;
+    float: left;
+}
+nav ul {
+    padding: 0;
+}
+form button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0 10px 0 10px;
+    width: 25%;
+    /* min-width: 50px; */
+    height: 28px;
+    margin-top: 2px;
+}
+form input {
+    border-radius: 10px;
+}
+a[title]:hover:before   {
+    border: #c0c0c0 1px dotted;
+    padding: 5px 20px 5px 5px;
+    display: block;
+    z-index: 100;
+    background: url(../Hakeris.jpg) #f0f0f0 no-repeat 100% 5%;
+    left: 0;
+    margin: 10px;
+    width: 250px;
+    position: absolute;
+    top: 10px;
+    text-decoration: none
+}
+nav li {
+    padding-top: 12px;
+    float: left; /* nepamirsti clear float uzdeti */
+    width: 25%;
+    font-size: 29px;
+    list-style: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* --------search----- */
+#paieska {
+    display: block;
+    width: 40%;
+    height: 80px;
+
+    float: right;
+}
+input {
+    width: 60%;
+    height: 26px;
+    border: none;
+    background-color: #b2b2b2;
+    color: #fff;
+}
+form {
+    padding-top: 22px;
+}
+main {
+    width: 80%;
+    background-color: #fff;
+}
+section {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 2%;
+}
+aside {
+    width: 18%;
+    background-color: #ffa4ff;
+    margin-left: 2%;
+    /* automatiskai apsiskaiciuojantis aukstis */
+    /* ! ant tecio uzdeti: overflow: hidden; ir ploti (pvz: width: 100%;) */
+    /*  */
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
+}
+
+/* --- pernaudojamas---- */
+.float-left {
+    float: left;
+}
+.clearfloat {
+    clear: both;
+}
+
+/* --------nuo 0 iki 1199px---------  */
+@media (max-width: 1199px) {
+    body {
+        width: 100%;
+    }
+
+}

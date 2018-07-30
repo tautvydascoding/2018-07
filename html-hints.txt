@@ -1,0 +1,60 @@
+<!--
+    KAIP SURASTI, KODEL failas neveikia?
+    1. blogas kelias/pavadinimas iki failo:
+    Patikrinimas:  puslapyje->Inspect -> Console
+    2. ar i "<link" ideta      rel="stylesheet"
+    2.1 ar issaugojot faila?
+    2.2 ar  naudoji tinkama atributa "src" "href"
+    2.3 issivalyti "Cash" F5 arba F5 + Fn   ARBA ctrl + shift + Del
+    3. ar egzistuoja elementas, kuri bandai pakeisti  pvz: h1
+    3.1 ar CSS faile parasei gera selectoriu ?
+    pvz: section h1 { color: red; }
+    Patikrinimas:  puslapyje->Inspect -> Elements  ziurime i stulpeli
+    A) pazymeti html elmenta
+    b) pasiziureti (desineje Styles) ar elementas turi suprogramuotus spakeitimus
+ 
+    5. ar tikrai programuoti i failus, kurie paleisti narsykleje?
+    patikrinimas:  uzdaryti failus Atome, atsiradyti juos per nauja ir paleisti narsykleje per nauja
+-->
+
+
+<!—- ==================== responsive design ====================  -—>
+ideti i head dali:
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<!—- ============== patterns - regx ==================== -—>
+<!-- TIkriname ar ivestas el.pasts neturi .ru galunes -->
+
+        <form class="" action="index.html" method="post">
+            <input id="telNo"   autocomplete="on"   name="telNo" type="tel" required  pattern="370[0-9]{6}">
+ 	    <input type="email" autocomplete="on"    name="elpastas" placeholder="aaa@aaa.lt" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+[^(.ru)|^(.RU)$]"  title="El. pastas turi buti ne .ru galunes"><br />
+            <input type="submit" name="" value="">
+        </form>
+
+[a-zA-Z]
+[0-5] - koki galimi skaiciai
+{6}   - 6 skaiciai (kiekis)
+^[a-zA-Z].*(.ru$)    // baigesi “.ru” , o pradzi nesvarbi
+
+Details:
+
+    ^ - start of string
+    (0?[1-9]|1[0-2]) - Group 1: month, from 01 to 12
+    \/ - a /
+    ((?:19|20)\d\d) - Group 2: either 19 or 20 and then 2 digits
+    $ - end of string.
+
+Expression 	Description
+[abc] 	Find any character between the brackets
+The pattern [a-d], which performs the same match as [abcd], matches the 'b' in "brisket" and the 'c' in "city". The patterns /[a-z.]+/ and /[\w.]+/ match the entire string "test.i.ng".     
+[^abc] 	Find any character NOT between the brackets
+[0-9] 	Find any character between the brackets (any digit)
+[^0-9] 	Find any character NOT between the brackets (any non-digit)
+(x|y) 	Find any of the alternatives specified
+(foo)   capturing groups matches and remembers "foo" in "foo bar". 
+
+
+more: https://www.w3schools.com/tags/att_input_pattern.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions

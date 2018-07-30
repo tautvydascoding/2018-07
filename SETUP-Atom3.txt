@@ -1,0 +1,47 @@
+﻿Parsisiusti: GoogleChrome
+
+Parsisiusti: Atom
+Isirasyti iskiepius: Atom -> FIle ->settings ->install
+linter
+linter-htmlhint
+linter-csslint ?
+linter-jshint 
+linter-sass-lint
+
+autoclose-html
+ Atom: papildomi iskiepiai
+beautify       // ivykdo ctrl + ALT + B
+color-picker   // ijungimas Alt + C
+jQuery-snippets
+jquery
+atom-bootstrap4
+v-bootstrap4
+Packages -> autosave -> settings -> varnele uzdeti
+
+=========short-cuts=============:
+p, a, button, header, footer, section … - HTML 5 auto elementu kurimas
+idea  - komentaro isvedimui 
+lorem - isveda Lorem Ipsum lotyniska teksta
+ctrl + /   - uzkomentuoja/atkomentuoja visas apibraktas eilutes 
+ctrl + rodykles (virsu/ zemyn) - perkelia koda lyg “CUT” komanda
+ctrl + d - dublicate row's
+ctrl + shift + P 
+emmet
+log - java script logo isvedimui
+ctrl + shift + D   - copy - paste visa eilute
+
+========== Setting ==========
+Plugins -> autosave -> ON
+Settings -> Editor -> SoftWrap  // visas kodas kuris netips  atvaiduoti ekrane, bus nukeltas i kita eilute
+
+
+Images:
+GIMP, KRITA, online photoshop
+ 
+
+ Goto-definition   - PHP f-ju atidarymui
+atom-autocomplete-php
+linter-php
+jQuery-snippets
+jquery
+emmet

@@ -1,0 +1,15 @@
+1)  sukurti/ uzbaigti Pilna puslapi ,,Header” uzdaviniai-3.pdf paskutine uzduotis
+
+
+
+4 -psl.  “Header” svetaine
+Sukurti identiska puslapi
+
+Reikalavimai:
+Visoms antrastems panaudoti spec. font’ą parsisiųstą iš www.fonts.google.com (nesvarbu kokį)
+Meniu punktus kurti naudojant html “li” elementus
+Menu sunktus sudeti i HTML 5 “nav” elementa,
+Search ir mygtuka - sudeti į savo sugalvota html elementa ( pvz:  <div id=‘search’ > )
+Content ir sidebare dalis i viena eilute sudeti pasinaudojus: “float” vakarykste komanda
+Straipsnisu (3x) ideti i atskirus HTML5 elementus (article)
+Footer copy rights simbolį išvesti pasigooglinus “html symbols codes”

@@ -1,0 +1,2 @@
+ 
+2) sukurti Bootstrap layout puslapi pagal 2.gif

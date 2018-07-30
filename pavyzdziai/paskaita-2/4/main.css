@@ -1,0 +1,41 @@
+h1 {
+  color: red;
+  text-align: center;
+}
+
+section {
+  margin-left: 2%;
+  background-color: #999;
+  /* komentaras */
+  border: 1px solid #666;
+  width: 30.5%;
+
+  /* bega kaip vanduo i virsi */
+  float: left;
+  /*  */
+  position: relative;
+}
+.section-3 {
+  margin-right: 2%;
+}
+p {
+  padding: 20px;
+  padding-top: 28px;
+}
+.first-title {
+  background-color: red;
+}
+.second-title {
+  background-color: blue;
+}
+.section-3 h2 {
+    background-color: orange;
+}
+section h2 {
+  width: 100px;
+  margin: 0;
+  /* absolute naudojama kartu su relative */
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}

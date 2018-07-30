@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Testuojame Forma</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h1>Testuojame Forma</h1>
+    <header>
+        <div id="navigation">
+            <ul>
+                <li> <a href="index.html"> Home </a> </li>
+                <li> <a href="about.html"> About</a> </li>
+                <li> <a href="form.html"> Contacts </a> </li>
+            </ul>
+        </div>
+        <nav>
+
+        </nav>
+    </header>
+    <section>
+        <h2>Resgistration form</h2>
+        <form action="confirm.html" method="get">
+            <input type="text" name="username" value="" placeholder="User Name" /><br />
+            <label>User password</label>
+            <input type="password" name="password" value="" placeholder=" " maxlength="25" /><br />
+
+            <input type="radio" name="gender" value="male" /> Male <br />
+            <input type="radio" name="gender" value="famale" checked="1" /> Famale <br />
+            <input type="radio" name="gender" value="other" /> Other <br /> Ivesk savo skelbima<br />
+            <textarea rows="5" cols="90"></textarea><br />
+
+            <select name="cars">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="fiat">Fiat</option>
+              <option value="audi">Audi</option>
+            </select>
+            <input type="submit" value="Resgistration" />
+        </form>
+
+        <a href="http://google.com"><button>Pasisitikrinti Google</button></a><br />
+
+        <h2>Rask Google informacija</h2>
+        <form action="http://google.com/search" method="get">
+            <input type="text" name="q" />
+            <button type="submit">Ieskoti</button>
+        </form>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

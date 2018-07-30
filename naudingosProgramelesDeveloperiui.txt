@@ -1,0 +1,5 @@
+Front_end:
+
+Google chrome iskeipis: color picker eyedropper
+
+Back_end:

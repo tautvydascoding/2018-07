@@ -1,0 +1,116 @@
+﻿==========musu puslapis uzimtu visu monitoriaus auksti =========
+body, html {
+    height: 100%;
+}
+
+* {
+ box-sizing: border-box;
+}
+===============================
+elemento centravimas
+
+   width: 1024px;
+   margin-left: auto;
+   margin-right: auto;
+
+ ---------------------------------------
+	
+    position: absolute;
+    top: 50px;   50%
+    left: 0px;
+    /* norint slikti kito elmento atzvilgiu, reik uzdeti teviniam ar kitam elmentui - relative */
+    position: relative;
+
+	
+   /* ---objekto centravimas (tobulas vcentras)--- */
+	.reiklamos-btn {
+  		position: absolute;
+   		transform: translate(-50%, -50%);
+   		left: 50%;
+  		top: 50%;
+	}
+ ---------------------------------------
+
+     float: left;
+     width: 100px;
+	/* panaudojus float - reik po joi naujimo 
+  	<div class="clear-float"> </div>
+	.clear-float {
+  		clear: both;
+		content: ‘’;
+	}
+ ---------------------------------------
+
+ sidebare - tokio pat aukscio kaip content 
+ teviniam elementui uzdedam
+#wrapper { 
+  overflow: hidden;
+}
+aside { 
+  padding-bottom: 100%;
+  margin-bottom: -100%;
+
+
+
+// ============================================Bootstrap 4==============================================
+		REKLAMOS MYGTUKAS CENTRE REKLAMOS BAKC
+
+            <!-- Bootstrap4 turinio centravimas X asyje: -->
+            <!-- ant tevo uzdeti class: justify-content-center d-flex  -->
+            <!-- visi vaikai bus centruoti -->
+            <section class="col-md-12">
+                <div class="ads aukstis300 row fonas-green mb-3 justify-content-center d-flex ">
+                    <!-- Vertical alignment "align-self-center" centracimas Y asyje -->
+                    <h3 class=" align-self-center "> Reklama</h3>
+                </div>
+            </section>
+
+// ===============per visa auksti ir desineje  background-img===========================
+
+    background-image: url(../assets/background.jpg); 
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    /*background-position: right bottom;*/
+    min-height: 100%;
+    margin: 0;
+
+// =================gradient-background - istrizas===========
+.banner-bg {
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #48cfad 5%, #3bafda 90%) repeat scroll 0 0;
+    bottom: 0;
+    height: 100%;
+    margin-left: -110px;
+    transform: skewX(-30deg);  /* istrizumas - sia css class “banner-bg “ ideti kaip atskira div i teva */
+    width: 70%;
+    /* ekrano virusje */
+    position: absolute;
+    top: 0;
+}
+
+// ---- background juodas nuo virsau ir pilkeja i apacia-----
+background-image: -webkit-linear-gradient( top, #000, gray); 
+
+======================================================
+CSS Issue - Why 4 * 25% is NOT 100%
+=====================================
+/* pas teva panaikinsime tarpus ir teksta, o pas vaika vel uzdesime */
+
+ul {word-spacing: -1em;
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -1px;
+}
+
+li {display: inline-block;
+    font: normal 13px/1.3 "Trebuchet MS", Helvetica, sans-serif;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+}
+//===========end============
+

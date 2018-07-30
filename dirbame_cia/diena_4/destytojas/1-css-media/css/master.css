@@ -1,0 +1,49 @@
+* {
+    /*  remelius iskaiciujai ploti*/
+    box-sizing: border-box;
+}
+h1 {
+    color: red;
+}
+
+div {
+    border: solid 1px #333;
+    background-color: #a1a1a1;
+    height: 100px;
+}
+.blokas1,
+.blokas2,
+.blokas4,
+.blokas5 {
+    width: 50%;
+
+    float: left;
+}
+ /*  isjungiu float */
+.fix-float {
+    clear: both;
+}
+
+/* ----tablet----- */
+@media (max-width: 768px) {
+    .blokas1,
+    .blokas2 {
+        width: 100%;
+    }
+}
+/* ----mobile----- */
+@media (max-width: 425px) {
+    .blokas4,
+    .blokas5 {
+        width: 100%;
+    }
+    .blokas2,
+    .blokas3 {
+        display: none;
+    }
+}
+
+
+
+
+/*  */

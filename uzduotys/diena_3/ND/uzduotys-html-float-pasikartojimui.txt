@@ -1,0 +1,9 @@
+ 
+Psikartojimui:
+1) sukurti 4 blokus <article> 
+2) i juos ideti teksto 
+3) visus 4-riu bloku fona pakeisti, ir  visus isdelioti i viena eilute
+1) sukurti bloka <section> ir jo viduje 4 mytukus <button>
+2) section - fona pakeisti, ir auksti i 800px
+3) visus mygtukus isdelioti skirtingose “section” bloko vietose (viena virsuje, kita desineje, kaireje, apacioje)
+————————————————

@@ -1,0 +1,12 @@
+1)  sukurti Sushi kavinei prisitaikanti dizaina ant Tablet ir ant Mobile
+
+Ivykdyti uzduotis is .pdf failo
+
+ “10 MEDIA QUERIES” - uzduotis - pakoreguoti 6-tos uzduoties kavinę
+
+
+reikalavimai:
+sukurti prisitaikanti dizaina naudojant: CSS @media
+aprasyti atskirus dizainus:
+viena telefonui  nuo 0 iki 425 px
+viena plancetei  nuo 0 iki 768 px

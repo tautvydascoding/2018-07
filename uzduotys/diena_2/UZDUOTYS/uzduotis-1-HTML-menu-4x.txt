@@ -1,0 +1,44 @@
+
+=========================GIT============================
+
+
+UŽDAVINYS
+
+
+0.  nueiti i kataloga dribame-cia diena_2,
+1. Susikurti kataloga su savo vardu "Tadas"
+2. Susikurti failą - ‘Tadas.txt’
+3. Įrašyti  į šį failą “pvz” labas
+4. naudojantis SourceTree arba gitBash console ikelti susikurta faila i serveri:
+   git status
+   git add --all
+   git commit -m "zinute: klases darvas git"
+   git pull
+   git push
+
+=========================HTML===========================
+ UŽDAVINYS 1
+1. Sukurti ‘index.html’ bei ‘contacts.html’ failus, kuriuose būtų antraštė bei paragrafas teksto
+2. ‘index.html’ faile ant teksto uzdeti nuorodą "<a ..." , kuri nurodytų į šį puslapį ‘contacts.html’.
+3. ‘contacts.html’ faile ideti paveikliuka "<img ..."
+4. ant paveikliuko uzdeti nuorodą "<a ..." , kuri nurodytų į šį puslapį ‘index.html’.
+
+
+
+ UŽDAVINYS 2
+ 0. susikurti faila ‘index.html’
+1. Pridėti antraštę “Hello world”
+2. Pridėti paragrafą teksto, kurio viduje vienas žodis būtų ‘italic’
+3. Sukurti forma "<form .." Pridėti įvedimo laukelį email adreso įvedimui
+3.2 Sukurti ivedimo lauka type='text'
+4. Pridėti atributa name='q'   ant sio ivedimo lauko
+5. Pridėti mygtuką, kuris siųstų formą
+6. Nurodyti formos siuntimą per GET metodą į ‘http:// www.google.com/search'
+
+
+UŽDAVINYS 3
+1. Sukurti 4 skirtingus HTML puslapius    ‘index.html’, ‘gallery.html’,‘about.html’,‘contacts.html’
+2. Pridėti po paragrafą teksto kieviename
+3. Sukuriame menu punktus su nuorodomis į kitus puslapius (‘index.html’, ‘gallery.html’,‘about.html’,‘contacts.html’)
+4. i kontaktu puslapi ideti: google maps
+5. i galerijos puslapi ideti 8 nuotraukas (vienodas) su atributais: width='20%' heigth='auto'

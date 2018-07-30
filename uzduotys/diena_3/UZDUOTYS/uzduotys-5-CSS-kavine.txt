@@ -1,0 +1,9 @@
+Ivykdyti uzduotis is .pdf failo
+
+5 - pasitreniruoti CSS selectorius
+6 - sukurti kaviniai puslapi 
+
+reikalavimai:
+plocius nurodyti procentais %, 
+patiekalu antrastes pozicionouti naudojant “position: absolute”
+i viena eilute 3 blokus sudeti naudojant : “float: left” komanda
