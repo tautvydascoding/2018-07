@@ -1,4 +1,4 @@
-Pasipraktikuoti HTML 5 elementus:  
+﻿Pasipraktikuoti HTML 5 elementus:  
 
 ==============================
 0) pasikartoti GIT komandas:

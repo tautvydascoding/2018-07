@@ -1,0 +1,38 @@
+h2 {
+    color: green;
+}
+.melyna {
+    color: blue;
+}
+.orandzine {
+    color: orange;
+}
+
+p {
+    font-size: 20px;
+}
+section  p {
+    color: red;
+}
+
+div.item-6.spec {
+    background-color: #a1a1a1;
+}
+
+/*    du kart keiciam ta pati  */
+html body h5 {
+    color: red;
+}
+body h5 {
+    color: blue;
+}
+
+
+/* naujas selektorius, h5 i zale */
+/* h5.orandzine { */
+body .orandzine {
+    color: green;
+}
+
+
+/*  */
