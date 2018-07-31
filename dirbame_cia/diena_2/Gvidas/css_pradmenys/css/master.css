@@ -1,0 +1,30 @@
+h2{
+    color: green;
+}
+.melyna{
+    color: blue;
+}
+.oranzine{
+    color: orange;
+}
+p{
+    font-size: 20px;
+}
+main section p{
+    color: red;
+}
+div.item-6{
+    background-color: #a1a1a1;
+}
+
+/* du kartus keiciame ta pati */
+body h5{
+    color: blue;
+}
+h5{
+    color: red;
+}
+
+h5.oranzine{
+    color: green;
+}
