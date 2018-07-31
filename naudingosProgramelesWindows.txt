@@ -16,3 +16,5 @@ i google "online photoshop" - online nemokama nepilna Phososhop verisija
 SourceTree: terminala pakeisti i "vim" redaktoriu
 
 git config --global core.editor "vim"
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
