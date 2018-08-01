@@ -1,0 +1,40 @@
+div {
+  /* border: 1px solid black; */
+  margin: 5px;
+}
+
+.plotis_30 {
+  width: 30%;
+}
+
+.plotis_47 {
+  width: 47%;
+}
+
+.plotis_100 {
+  width: 100%;
+}
+
+.float {
+  float: left;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.pink {
+  background-color: pink
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.clearfix {
+  clear: both;
+}
