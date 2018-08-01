@@ -1,0 +1,32 @@
+.plotis-30{
+    width: 30%;
+}
+.plotis-47{
+    width: 47%
+}
+.plotis-100{
+    width: 100%;
+}
+div{
+    border: 1px solid black;
+    text-align: center;
+    margin: 2px;
+}
+.float{
+    float: left;
+}
+.float-fix{
+    clear: both;
+}
+.fonas-blue{
+    background-color: blue;
+}
+.fonas-pink{
+    background-color: pink;
+}
+.fonas-green{
+    background-color: green;
+}
+.fonas-yellow{
+    background-color: yellow;
+}
