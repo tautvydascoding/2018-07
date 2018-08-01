@@ -1,0 +1,51 @@
+* {
+  box-sizing: content-box;
+}
+h3
+ {
+    text-align: center;
+}
+.teksto-blokas {
+  background-color: grey;
+  width: 29.4%;
+  border: solid 1px;
+  padding-right: 8px;
+  padding-left: 8px;
+  margin-left: 2%;
+  position: relative;
+  padding-top: 28px;
+  padding-bottom: 8px;
+}
+
+.floaf {
+  float: left;
+}
+
+float-fix {
+  clear: both;
+}
+
+body {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+  text-align: center;
+  padding: 5px;
+  width: 100px;
+  /*elemnta perkeliam i konkrecia pozicija*/
+  position: absolute;
+  top: 0px;
+  /*veikia tik su absoloiuciu elementu*/
+  right: 0;
+}
+.fonas-ruda {
+  background-color: brown;
+}
+.fonas-gelt {
+  background-color: yellow;
+}
+.fonas-oram {
+  background-color: orange;
+}

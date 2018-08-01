@@ -1,3 +1,40 @@
 h1 {
     color: red;
 }
+
+div {
+    border: 1px solid #000;
+    /* vienoje eiluteje */
+    /* display: inline-block; */
+    /* !!! butinai nurodyt plocio */
+}
+
+.plotis-30 {
+    width: 30%;
+}
+.plotis-47 {
+    width: 47%;
+}
+.plotis-100 {
+    width: 100%;
+}
+.float {
+    float: left;
+}
+/* vienoje eilute
+1. float visiems elementams, kurie bus vienoje eilute
+2. visiems uzdeti ploti (pasitikrinti su Inspect)
+3. isjungti Float (baigus naudoti uzdeti clear:both)
+ */
+ .float-fix {
+     clear: both;
+ }
+ .fonas-zal {
+     background-color: green;
+ }
+ .fonas-mel {
+     background-color: blue;
+ }
+ .fonas-ora {
+     background-color: orange;
+ }
