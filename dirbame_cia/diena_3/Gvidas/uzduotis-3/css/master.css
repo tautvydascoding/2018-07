@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+}
+.float{
+    float: left;
+}
+.float-fix{
+    clear: both;
+}
+/* ---------MENU-------*/
+/* nav{
+    width: 80%;
+    background-color: yellow;
+} */
+div nav li{
+    display: inline-block;
+    width: 25%;
+    padding-left: 50px;
+    text-transform: uppercase;
+}
+ul{
+    padding: 0;
+}
+/* ---------MENU END---------*/
+.virsus{
+    background-color: pink;
+    height: 70px;
+    margin-bottom: 1.5%;
+    width: 80%;
+}
+body{
+    background-color: grey;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.paieska{
+    width: 20%;
+    background-color: pink;
+    height: 70px;
+}
+main{
+    background-color: white;
+    width: 78%;
+    height: 400px;
+    margin-right: 2%;
+}
+aside{
+    width: 20%;
+    height: 400px;
+    padding: 1%;
+    background-color: pink;
+
+}
+footer{
+    background-color: blue;
+    margin-top: 1.5%;
+}
