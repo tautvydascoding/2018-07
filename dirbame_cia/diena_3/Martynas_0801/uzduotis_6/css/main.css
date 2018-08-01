@@ -17,7 +17,8 @@ main {
   width: 78%;
   height: 400px;
   margin-right: 1%;
-  margin-bottom: 1%
+  margin-bottom: 1%;
+  padding-left: 1%;
 }
 
 aside {
@@ -34,7 +35,20 @@ footer {
 }
 
 h1 {
+  color: white;
+  font-weight: 700;
+  text-shadow: 6px 6px 15px #000000;
+}
+
+h1,
+h2 {
   text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Raleway', sans-serif;
 }
 
 p {
@@ -42,6 +56,10 @@ p {
 }
 
 /* ======== menu======= */
+
+nav ul a {
+  text-decoration: none;
+}
 
 nav {
   width: 60%;
@@ -65,7 +83,17 @@ ul {
 
 .paieska {
   width: 40%;
-  background-color: brown;
+  margin-top: 30px;
+}
+
+/* ===paieska==== */
+
+/* input */
+
+.menu_paieska {
+  width: 60%;
+  height: 30px;
+  margin-left: 26px;
 }
 
 /* mygtukas */
@@ -73,6 +101,9 @@ ul {
 .btn_go {
   background-color: #000;
   color: #fff;
+  width: 25%;
+  height: 30px;
+  border: none;
 }
 
 /* ======end menu====== */
