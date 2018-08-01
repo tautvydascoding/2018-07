@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+.floaf {
+     float: left;
+}
+.float-fix {
+    clear: both;
+}
+/* ------- */
+h1 {
+    color: red;
+    text-align: center;
+}
+article {
+    border: 1px solid #000;
+    background-color: #a9a9a9;
+    padding-top: 23px;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    width: 30.6%;
+    margin-left: 2%;
+
+    position: relative;
+}
+body {
+    margin: 0;
+}
+h2 {
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    margin: 0;
+    width: 100px;
+    text-align: center;
+    padding: 3px;
+    /* elemento perkelimas i konkrecia ekrano pozicija */
+    position: absolute;
+    top: 0px;
+    right: 0;
+    /* !!! top, left, ... veikia tik kai elementas Absolute */
+    /* !!! proteviui uzdeti position: relative */
+
+}
+.fonas-rud {
+    background-color: brown;
+}
+.fonas-gelt {
+    background-color: yellow;
+}
+.fonas-oran {
+    background-color: orange;
+}
+
+
+
+/*  */
