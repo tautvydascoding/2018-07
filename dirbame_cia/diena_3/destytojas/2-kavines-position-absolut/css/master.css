@@ -7,6 +7,30 @@
 .float-fix {
     clear: both;
 }
+.aukstis-100 {
+    height: 100px;
+}
+.aukstis-200 {
+    height: 200px;
+}
+.aukstis-300 {
+    height: 300px;
+}
+.aukstis-400 {
+    height: 400px;
+}
+.aukstis-500 {
+    height: 500px;
+}
+.fonas-rud {
+    background-color: brown;
+}
+.fonas-gelt {
+    background-color: yellow;
+}
+.fonas-oran {
+    background-color: orange;
+}
 /* ------- */
 h1 {
     color: red;
@@ -42,15 +66,7 @@ h2 {
     /* !!! proteviui uzdeti position: relative */
 
 }
-.fonas-rud {
-    background-color: brown;
-}
-.fonas-gelt {
-    background-color: yellow;
-}
-.fonas-oran {
-    background-color: orange;
-}
+
 
 
 
