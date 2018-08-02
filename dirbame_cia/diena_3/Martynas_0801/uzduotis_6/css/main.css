@@ -1,4 +1,4 @@
-/* -family: 'Raleway', sans-serif; */
+/* font-family: 'Raleway', sans-serif; */
 
 * {
   box-sizing: border-box;
@@ -6,7 +6,7 @@
 
 body {
   background-color: #999;
-  width: 960px;
+  max-width: 1100px;
   /* margin-left:auto;
   margin-right:auto; */
   margin: 0 auto;
@@ -15,7 +15,7 @@ body {
 main {
   background-color: #fff;
   width: 78%;
-  height: 400px;
+  min-height: 400px;
   margin-right: 1%;
   padding-left: 1%;
 }
@@ -41,6 +41,7 @@ header h1 {
   color: white;
   font-weight: 700;
   text-shadow: 0px 0px 13px #000000;
+  font-size: 45px;
 }
 
 h1,
@@ -68,7 +69,6 @@ p {
 
 .virsus nav {
   width: 60%;
-  /* background-color: yellow; */
 }
 
 .virsus li {
@@ -140,6 +140,66 @@ p {
 }
 
 .wraper {
-  overflow-y: hidden;
+  overflow: hidden;
   margin-bottom: 1%;
+}
+
+/* -===MEDIA===--- */
+
+/* small tablets to big ones: from 768px to 1023px */
+@media (max-width: 1020px) {
+  body {
+    max-width: 100%;
+  }
+
+  .virsus nav {
+    width: 60%;
+  }
+  .virsus li {
+    width: 20%;
+    margin-top: 15px;
+  }
+
+  .virsus {
+    height: 70px;
+  }
+
+  .menu_paieska {
+    width: 58%;
+    height: 27px;
+    margin-left: -13px;
+  }
+
+  .paieska {
+    margin-top: 22px;
+  }
+
+  .paieska button {
+    width: 22%;
+    height: 28px;
+    border: none;
+  }
+
+  .related_aside {
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+  header h1 {
+    font-size: 35px;
+  }
+
+  aside h1 {
+    font-size: 30px;
+  }
+} /* media */
+
+/* small phones: from 0px to 480px */
+@media (max-width: 750px) {
+  nav {
+    display: none;
+  }
 }

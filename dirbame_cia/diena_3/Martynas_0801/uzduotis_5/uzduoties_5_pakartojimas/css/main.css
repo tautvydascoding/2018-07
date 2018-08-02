@@ -69,3 +69,43 @@ hr {
 .blue {
   background-color: rgba(90, 120, 221, 0.801);
 }
+
+/* ==MEDIA=== */
+
+@media (max-width:860px) {
+  article {
+    width: 40%;
+  }
+  article h2 {
+    width: 87px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width:580px) {
+  article {
+    width: 40%;
+  }
+  article h2 {
+    width: 57px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:440px) {
+  article {
+    width: 90%;
+  }
+  article h2 {
+    width: 80px;
+  }
+  h2 {
+    font-size: 17px;
+  }
+}
+
+/* -== END OF MEDIA==- */
