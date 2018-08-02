@@ -115,5 +115,8 @@ input {
 .wrapper {
   overflow: hidden;
 }
+p {
+   font-family: 'Fjalla One', sans-serif;
+}
 
 /*-------------------------------*/
