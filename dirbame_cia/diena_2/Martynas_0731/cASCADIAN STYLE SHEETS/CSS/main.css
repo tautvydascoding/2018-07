@@ -1,0 +1,48 @@
+.melyna {
+  color: blue;
+}
+
+.oranzine {
+  color: orange;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+section p {
+  color: green;
+}
+
+div.item-6 {
+  background-color: #a1a1a1;
+}
+
+/* keiciam du kartus */
+
+body h5 {
+  color: red;
+}
+
+h5 {
+  color: blue;
+}
+
+/* 
+darom specifiskuma */
+
+h5.oranzine {
+  color: green;
+}
+
+body h5.oranzine {
+  color: black;
+}
+
+h5.oranzine {
+  color: red !important;
+}
+
+/* main section div p {
+  color: red;
+} */

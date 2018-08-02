@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+article {
+    background-color: #9a9a9a;
+    border: 1px solid #333;
+    padding: 2% 0 .5% 2%;
+    width: 30.06%;
+    position: relative;
+    margin-left: 2%;
+}
+
+/*  fonai */
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    /* px nes mazinant, kasd isliktu visada 90px */
+    width: 90px;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #333;
+}
+
+.float {
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+}
+
+/* spalvos */
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.pink {
+    background-color: pink;
+}

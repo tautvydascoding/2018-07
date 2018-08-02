@@ -1,0 +1,22 @@
+h1 {
+  color: red;
+}
+div {
+  border: 1px solid black;
+  /* display: inline-block; */
+}
+.plotis-30 {
+  width: 30%;
+}
+.plotis-47 {
+  width: 47%;
+}
+.plotis-100 {
+  width: 100%;
+}
+.float {
+  float: left;
+}
+.float-fix {
+  clear: both;
+}

@@ -1,0 +1,22 @@
+.lenta div {
+  width: 100px;
+  height: 100px;
+  border: .03rem solid #000;
+  display: inline-block;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.brown {
+  background-color: brown;
+}

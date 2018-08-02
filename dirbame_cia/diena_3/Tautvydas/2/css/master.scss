@@ -1,0 +1,52 @@
+body {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  margin: auto;
+  text-align: center;
+}
+.elementas {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+$plotis: 100%;
+$polygon: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+$plotis1: ($plotis - $plotis/2.4)*1.25;
+article {
+  margin: 0;
+  position: relative;
+  background-color: #a9a9a9;
+  padding: 10px;
+  width: $plotis1;
+  // float: left;
+  display: block;
+  -webkit-clip-path: $polygon;
+  clip-path: $polygon;
+  padding-left: $plotis1 / 2.4;
+  height: 300px;
+}
+p {
+  width: 600px;
+}
+.elementas:hover {
+  article {
+    margin-left: 300px;
+    margin-right: -300px;
+  }
+}
+$height: 100vh;
+img {
+  position: absolute;
+  height: $height;
+  width: $height/3*4;
+}
+.efektas {
+  position: absolute;
+  height: $height;
+  width: $height/3*4;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) -90%, rgba(255, 0, 0, 0) );
+}

@@ -1,0 +1,30 @@
+h2 {
+  color: green;
+}
+.melyna {
+  color: blue;
+}
+.oranzine {
+  color: orange;
+}
+p {
+  font-size: 20px;
+}
+.raudona {
+  color: red;
+}
+section p {
+  color: red;
+}
+div.item-6.spec {
+  background-color: grey;
+}
+body h5 {
+  color: green;
+}
+h5 {
+  color: blue;
+}
+body .oranzine {
+  color: blue;
+}

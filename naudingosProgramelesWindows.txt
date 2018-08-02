@@ -1,5 +1,7 @@
 GoogleChrome
 
+"wireframe prototype" - nusipiesti puslapi
+
 Irasytos:
 Snippings tools  - daro screenshot (MAC: Command + 4)
 git bash 

@@ -1,0 +1,34 @@
+h2{
+    color: grey;
+    text-shadow: 1px 1px black;
+    text-align: center;
+
+}
+section div{
+    border: solid 1px black;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    left: 25%;
+    position: relative;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.black{
+    background-color: black;
+}
+.autorius{
+    color: blue;
+    text-align: center;
+}
+.data{
+    color: #623;
+    text-align: center;
+}
