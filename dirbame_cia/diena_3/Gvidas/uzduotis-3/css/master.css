@@ -11,36 +11,61 @@ h1{
     clear: both;
 }
 /* ---------MENU-------*/
-/* nav{
-    width: 80%;
-    background-color: yellow;
-} */
-div nav li{
-    display: inline-block;
-    width: 25%;
-    padding-left: 50px;
-    text-transform: uppercase;
+nav ul a {
+  text-decoration: none;
 }
-ul{
-    padding: 0;
+
+nav {
+  width: 60%;
+  /* background-color: yellow; */
 }
+
+li {
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  margin-top: 19px;
+}
+
+ul {
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.paieska {
+  width: 40%;
+  margin-top: 30px;
+}
+
+/* ===paieska==== */
+
+/* input */
+
+.menu_paieska {
+  width: 60%;
+  height: 30px;
+  margin-left: 26px;
+}
+
+/* mygtukas */
+
+.btn_go {
+  background-color: #000;
+  color: #fff;
+  width: 25%;
+  height: 30px;
+  border: none;
+}
+
 /* ---------MENU END---------*/
-.virsus{
-    background-color: pink;
-    height: 70px;
-    margin-bottom: 1.5%;
-    width: 80%;
-}
 body{
     background-color: grey;
     width: 1100px;
     margin-left: auto;
     margin-right: auto;
-}
-.paieska{
-    width: 20%;
-    background-color: pink;
-    height: 70px;
 }
 main{
     background-color: white;
@@ -58,4 +83,9 @@ aside{
 footer{
     background-color: blue;
     margin-top: 1.5%;
+}
+.virsus {
+  background-color: #d14ebb;
+  height: 80px;
+  margin-bottom: 2%;
 }
