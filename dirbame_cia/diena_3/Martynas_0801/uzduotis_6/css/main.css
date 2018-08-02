@@ -1,0 +1,125 @@
+/* -family: 'Raleway', sans-serif; */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #999;
+  width: 960px;
+  /* margin-left:auto;
+  margin-right:auto; */
+  margin: 0 auto;
+}
+
+main {
+  background-color: #fff;
+  width: 78%;
+  height: 400px;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  padding-left: 1%;
+}
+
+aside {
+  background-color: #d14ebb;
+  width: 21%;
+  height: 400px;
+  border: 1px solid black;
+}
+
+footer {
+  background-color: #fff;
+  height: 50px;
+  padding-top: 15px;
+}
+
+h1 {
+  color: white;
+  font-weight: 700;
+  text-shadow: 6px 6px 15px #000000;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+/* ======== menu======= */
+
+nav ul a {
+  text-decoration: none;
+}
+
+nav {
+  width: 60%;
+  /* background-color: yellow; */
+}
+
+li {
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  margin-top: 19px;
+}
+
+ul {
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.paieska {
+  width: 40%;
+  margin-top: 30px;
+}
+
+/* ===paieska==== */
+
+/* input */
+
+.menu_paieska {
+  width: 60%;
+  height: 30px;
+  margin-left: 26px;
+}
+
+/* mygtukas */
+
+.btn_go {
+  background-color: #000;
+  color: #fff;
+  width: 25%;
+  height: 30px;
+  border: none;
+}
+
+/* ======end menu====== */
+
+/* Floatas */
+
+.float {
+  float: left;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.virsus {
+  background-color: #d14ebb;
+  height: 80px;
+  margin-bottom: 1%;
+}

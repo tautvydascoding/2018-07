@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+}
+.float{
+    float: left;
+}
+.float-fix{
+    clear: both;
+}
+/* ---------MENU-------*/
+nav ul a {
+  text-decoration: none;
+}
+
+nav {
+  width: 60%;
+  /* background-color: yellow; */
+}
+
+li {
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  margin-top: 19px;
+}
+
+ul {
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.paieska {
+  width: 40%;
+  margin-top: 30px;
+}
+
+/* ===paieska==== */
+
+/* input */
+
+.menu_paieska {
+  width: 60%;
+  height: 30px;
+  margin-left: 26px;
+}
+
+/* mygtukas */
+
+.btn_go {
+  background-color: #000;
+  color: #fff;
+  width: 25%;
+  height: 30px;
+  border: none;
+}
+
+/* ---------MENU END---------*/
+body{
+    background-color: grey;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+main{
+    background-color: white;
+    width: 78%;
+    height: 400px;
+    margin-right: 2%;
+}
+aside{
+    width: 20%;
+    height: 400px;
+    padding: 1%;
+    background-color: pink;
+
+}
+footer{
+    background-color: blue;
+    margin-top: 1.5%;
+}
+.virsus {
+  background-color: #d14ebb;
+  height: 80px;
+  margin-bottom: 2%;
+}
