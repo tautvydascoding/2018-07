@@ -17,7 +17,6 @@ main {
   width: 78%;
   height: 400px;
   margin-right: 1%;
-  margin-bottom: 1%;
   padding-left: 1%;
 }
 
@@ -27,6 +26,8 @@ aside {
   height: 400px;
   border: 1px solid black;
   border: none;
+  padding-bottom: 999px;
+  margin-bottom: -999px;
 }
 
 footer {
@@ -136,4 +137,9 @@ p {
 .related_aside li {
   padding-right: 2px;
   color: black;
+}
+
+.wraper {
+  overflow-y: hidden;
+  margin-bottom: 1%;
 }
