@@ -17,7 +17,6 @@ main {
   width: 78%;
   height: 400px;
   margin-right: 1%;
-  margin-bottom: 1%;
   padding-left: 1%;
 }
 
@@ -26,18 +25,22 @@ aside {
   width: 21%;
   height: 400px;
   border: 1px solid black;
+  border: none;
+  padding-bottom: 999px;
+  margin-bottom: -999px;
 }
 
 footer {
   background-color: #fff;
   height: 50px;
   padding-top: 15px;
+  padding-left: 10px;
 }
 
-h1 {
+header h1 {
   color: white;
   font-weight: 700;
-  text-shadow: 6px 6px 15px #000000;
+  text-shadow: 0px 0px 13px #000000;
 }
 
 h1,
@@ -48,7 +51,9 @@ h2 {
 h1,
 h2,
 h3 {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-style: italic;
 }
 
 p {
@@ -57,16 +62,16 @@ p {
 
 /* ======== menu======= */
 
-nav ul a {
+.virsus nav ul a {
   text-decoration: none;
 }
 
-nav {
+.virsus nav {
   width: 60%;
   /* background-color: yellow; */
 }
 
-li {
+.virsus li {
   display: inline-block;
   width: 24%;
   text-align: center;
@@ -75,19 +80,18 @@ li {
   margin-top: 19px;
 }
 
-ul {
+.virsus ul {
   padding: 0;
   text-decoration: none;
   list-style-type: none;
 }
 
+/* ===paieska==== */
+
 .paieska {
   width: 40%;
   margin-top: 30px;
 }
-
-/* ===paieska==== */
-
 /* input */
 
 .menu_paieska {
@@ -98,7 +102,7 @@ ul {
 
 /* mygtukas */
 
-.btn_go {
+.paieska button {
   background-color: #000;
   color: #fff;
   width: 25%;
@@ -118,8 +122,24 @@ ul {
   clear: both;
 }
 
+/*  virsus */
 .virsus {
   background-color: #d14ebb;
   height: 80px;
+  margin-bottom: 1%;
+}
+
+/* =====  aside ===== */
+.related_aside ul {
+  line-height: 30px;
+}
+
+.related_aside li {
+  padding-right: 2px;
+  color: black;
+}
+
+.wraper {
+  overflow-y: hidden;
   margin-bottom: 1%;
 }
