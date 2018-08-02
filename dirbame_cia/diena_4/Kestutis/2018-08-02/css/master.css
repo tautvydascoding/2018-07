@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-.float {
+.floaf {
      float: left;
 }
 .float-fix {
@@ -35,12 +35,6 @@
 h1 {
     color: red;
 }
-h1,
-h2,
-h3,
-h4 {
-    font-family: 'Lato', 'Kirang Haerang',  'Roboto', 'verdona', sans-serif;
-}
 body {
     width: 1100px;
     /*  centravimas */
@@ -52,23 +46,24 @@ body {
 .virsus {
     background-color: #d87ae0;
     height: 80px;
+    color: black;
     margin-bottom: 1.5%;
 }
 main {
     background-color: yellow;
-    width: 78%;
-    min-height: 400px;
+    width: 77%;
+    height: 400px;
     border: 1px solid red;
+    display: inline-block;
     margin-right: 1.5%;
+    min-height: 400px;
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
 }
 aside {
     width: 20%;
     background-color: #d87ae0;
-    min-height: 400px;
-    /* ---automatinis aukst */
-    padding-bottom: 9999px;
-    margin-bottom: -9999px;
-    /* !!! nepamirsti teciui uzdeti overflow:hidden */
+    height: 400px;
 }
 footer {
     background-color: orange;
@@ -79,7 +74,7 @@ footer {
 /* ----------MENU------- */
 nav {
     width: 60%;
-    background-color: yellow;
+    background-color: #d87ae0;
 }
 nav ul {
     padding: 0;
@@ -92,45 +87,36 @@ nav li {
     font-size: 26px;
     margin-top: 8px;
 }
-/* ---------PAIESKA----- */
+/* ---------END paieska-MENU----- */
 .paieska {
     width: 40%;
-    background-color: brown;
     margin-top: 26px;
 }
 input {
-    height: 30px;
-    background-color: #f1f1f1;
-    padding-left: 10px;
-    border: none;
-    width: 66%;
-    margin-right: 15px;
+  height: 30px;
+  padding-left: 10px;
+  border: none;
+  width: 45%;
+  color: rgb(43, 91, 27);
+  margin-right: 20px;
 }
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: white;
-    opacity: 1; /* Firefox */
-}
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: white;
-}
-::-ms-input-placeholder { /* Microsoft Edge */
-    color: white;
+::-ms-input-placeholder {
+  color: red;
 }
 .paieska button {
-    border: none;
-    background-color: #000;
-    color: white;
-    padding-left: 27px;
-    padding-right: 27px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+  background-color: black;
+  color: white;
+  padding-left: 15px;
+  padding-right: 27px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  display: inline;
 }
-/* -------------- */
 .wrapper {
-    overflow: hidden;
+  overflow: hidden;
+}
+p {
+   font-family: 'Fjalla One', sans-serif;
 }
 
-
-
-
-/*  */
+/*-------------------------------*/

@@ -1,0 +1,64 @@
+h1{
+    text-align: center;
+}
+article{
+    margin: 1%;
+    width: 28%;
+    border: solid 2px black;
+    background-color: grey;
+    padding-top: 25px;
+    position: relative;
+    padding-left: 3%;;
+}
+.float{
+    float: left;
+}
+.floatfix{
+    clear: both;
+}
+h3{
+    margin: 0;
+    text-align: center;
+    width: 80px;
+    border-left: solid 2px black;
+    border-bottom: solid 2px black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3px;
+}
+.red{
+    background-color: red;
+}
+.pink{
+    background-color: pink;
+}
+.brown{
+    background-color: brown;
+}
+.mobile_kontaktai{
+    display: none;
+}
+/* media responsive desing */
+/* for tablet (iki tablet) nuo 0 iki 768px */
+@media (max-width: 768px) {
+    article {
+        width: 40%;
+    }
+    article:last-of-type {
+        width: 95.9%;
+        margin-top: 2%;
+    }
+} /* end media for tablet */
+/* for phone nuo 0 iki 425px */
+@media (max-width: 425px) {
+    article{
+        width: 95.9%;
+    }
+    article:nth-of-type(2) {
+        margin-top: 2%;
+    }
+    .mobile_kontaktai{
+        display: block;
+    }
+} /* end media for phone */
