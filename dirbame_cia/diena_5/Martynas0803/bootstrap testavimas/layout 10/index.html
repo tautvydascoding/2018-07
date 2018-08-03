@@ -1,31 +1,75 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <!-- resposive design reikalingas -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Bootstrap CSS -->
-         <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
-        <link rel="stylesheet" href="libs/css/bootstrap.min.css">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- resposive design reikalingas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <!-- !!!! mano CSS failas visas patas zemiausias -->
-        <link rel="stylesheet" href="css/master.css?ver=1.0">
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="libs/css/bootstrap.min.css">
 
-        <!-- NOTE: jeigu neveikia:
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- !!!! mano CSS failas visas patas zemiausias -->
+    <link rel="stylesheet" href="css/master.css?ver=1.0">
+
+    <!-- NOTE: jeigu neveikia:
         1) ar failo pavadinimas geras
         2) ar kelias geras?   (ar "/" teisingi; direktorija ar gere )
         3) ar   rel="stylesheet"
         4) ar link gale uzdalete ">"
         5) ar tuo adresu nuejai internete (pvz: ar ne praeitos dienos projektas)
     -->
-    </head>
-    <body>
-        <div class="container   ">
+</head>
 
-            <h1> Isijunk Inspect->console </h1>
+<body>
+    <div class="container-fluid">
+
+        <!-- Pirma eilute: Header pradzia -->
+        <div class="row">
+            <header class="col-md-12 bg-warning aukstis-100 mb-2">
+                Headeris
+            </header>
+        </div>
+        <!--==========PIRMOS EILUTES PABAIGA -->
+
+        <!-- Antra eilute: NAV, MAIN, FOOTER -->
+        <div class="row">
+
+            <nav class="col-md-2 bg-success aukstis-510 mr-2">
+                Navigacija
+            </nav>
+            <!-- Navigacijos pabaiga -->
+            <div class="col">
+
+                <main class="row bg-primary aukstis-400 mb-2">
+                    <article class="col mr-2">
+                        Article 1 pagrindinis
+                    </article>
+
+                    <aside class="col-md-2 bg-info ml-2 border-white">
+                        ADS
+                    </aside>
+                </main>
+
+                <footer class="row bg-secondary aukstis-100">
+                    <div class="col ">
+                        Footeris
+                    </div>
+                </footer>
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+        <!-- antros eilutes divo pabaiga-->
 
 
 
@@ -33,7 +77,12 @@
 
 
 
-        </div> <!--  end Container-->
+
+
+
+
+    </div>
+    <!--  end Container-flui-->
 
 
 
@@ -43,12 +92,16 @@
 
 
 
-                <!--  =================================== -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        <!-- !!! mano js failas pats zemiausias; visada failo -->
-        <script type="text/javascript" src="js/main.js"></script>
+    <!--  =================================== -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <!-- !!! mano js failas pats zemiausias; visada failo -->
+    <script type="text/javascript" src="js/main.js"></script>
 
-    </body>
+</body>
+
 </html>
