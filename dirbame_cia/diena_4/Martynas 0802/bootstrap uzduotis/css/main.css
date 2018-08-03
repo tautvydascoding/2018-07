@@ -1,0 +1,34 @@
+nav {
+  background-color: aquamarine;
+  height: 600px;
+  margin-left: 1.5%;
+}
+
+header {
+  background-color: rgb(65, 207, 96);
+  /* width: ; */
+  height: 100px;
+  width: 80%;
+}
+
+article {
+  width: 82%;
+  background-color: #ff2aa2;
+  height: 400px;
+  position: absolute;
+  top: 100px;
+  right: 117px;
+}
+
+footer {
+  background-color: #55dd22;
+  height: 100px;
+  width: 82%;
+  position: absolute;
+  top: 500px;
+  right: 117px;
+}
+
+.wraper {
+  position: relative;
+}
