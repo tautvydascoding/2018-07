@@ -12,7 +12,7 @@ autoclose-html
 
  Atom: papildomi iskiepiai
 beautify       // ivykdo ctrl + ALT + B
-color-picker   // ijungimas Alt + C
+color-picker   // ijungimas ctrl + Alt + C
 jQuery-snippets
 jquery
 atom-bootstrap4
