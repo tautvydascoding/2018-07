@@ -3,9 +3,11 @@
 
 TARPAS IR BE TARPO
 /* pakeisime tik 3-cia */
+
 p  .fonas-blue {
     background-color: blue;
 }
+
 /* pakeisime tik 1-cia */
 p.fonas-blue {
     background-color: orange;

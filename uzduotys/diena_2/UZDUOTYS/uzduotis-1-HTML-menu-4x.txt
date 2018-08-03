@@ -12,7 +12,7 @@ UŽDAVINYS
 4. naudojantis SourceTree arba gitBash console ikelti susikurta faila i serveri:
    git status
    git add --all
-   git commit -m "zinute: klases darvas git"
+   git commit -m "zinute: klases darbas git"
    git pull
    git push
 
