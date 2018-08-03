@@ -17,6 +17,6 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 *.DS_Store
-
+.DS_Store
 
 dirbame_cia/diena_1/.DS_Store

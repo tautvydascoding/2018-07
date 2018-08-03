@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+.virsus {
+  background-color: rgb(199, 152, 90);
+  width: 100%;
+  height: 80px;
+}
+
+.wraper {
+  border: 1px solid black;
+  margin-top: 1%;
+  overflow: hidden;
+}
+
+.float {
+  float: right;
+}
+
+.clearfix {
+  clear: both;
+}
+
+main {
+  background-color: #38eb88;
+  width: 70%;
+  height: 600px;
+}
+
+aside {
+  background-color: #33d17a;
+  width: 30%;
+  padding-bottom: 100%;
+  margin-bottom: -100%;
+}
+
+footer {
+  background-color: #8b8421;
+  height: 30px;
+  margin-top: 1%;
+}

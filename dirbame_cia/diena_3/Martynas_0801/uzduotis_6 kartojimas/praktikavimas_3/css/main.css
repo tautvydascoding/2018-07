@@ -1,0 +1,31 @@
+.virsus_head {
+  background-color: rgb(243, 194, 134);
+  width: 100%;
+  height: 70px;
+}
+
+.virsus_nav {
+  background-color: bisque;
+  width: 100%;
+  height: 40px;
+}
+
+.sidebar {
+  background-color: rgb(148, 134, 116);
+  width: 20%;
+  height: 500px;
+  display: inline-block;
+}
+
+main {
+  background-color: #8f7979;
+  width: 79.555%;
+  height: 500px;
+  display: inline-block;
+}
+
+footer {
+  background-color: #6d6868;
+  width: 100%;
+  height: 50px;
+}

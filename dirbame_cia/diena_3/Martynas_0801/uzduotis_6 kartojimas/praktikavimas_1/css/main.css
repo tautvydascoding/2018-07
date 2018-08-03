@@ -1,0 +1,71 @@
+body {
+  background-color: beige;
+}
+
+main {
+  background-color: rgb(127, 255, 144);
+  width: 79%;
+  height: 500px;
+  margin-right: 1%;
+}
+
+article.pirmas_art {
+  background-color: rgb(70, 231, 177);
+  height: 80px;
+  margin: 15px;
+}
+
+article.antras_art {
+  background-color: rgb(61, 145, 117);
+  height: 80px;
+  margin: 15px;
+}
+
+article.trecias_art {
+  background-color: rgb(134, 214, 187);
+  height: 80px;
+  margin: 15px;
+}
+
+article.ketvirtas_art {
+  background-color: rgb(67, 94, 85);
+  height: 80px;
+  margin: 15px;
+}
+
+aside {
+  width: 20%;
+  background-color: rgb(17, 179, 125);
+  padding-bottom: 100%;
+  margin-bottom: -100%;
+  text-align: center;
+}
+
+aside ul {
+  text-align: left;
+}
+
+footer {
+  height: 40px;
+  background-color: rgb(50, 68, 62);
+  color: #fff;
+}
+
+.virsus {
+  background-color: aquamarine;
+  height: 80px;
+  margin-bottom: 1%;
+}
+
+.float {
+  float: left;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.wraper {
+  overflow: hidden;
+  margin: 0 0 1% 0;
+}
