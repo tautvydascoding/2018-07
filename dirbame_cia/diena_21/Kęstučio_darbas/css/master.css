@@ -11,3 +11,7 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	min-height: 1200px;
+
+.aukstis-700 {
+  min-height: 700px;
+}
