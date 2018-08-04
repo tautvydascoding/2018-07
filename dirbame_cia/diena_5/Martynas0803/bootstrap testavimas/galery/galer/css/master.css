@@ -64,4 +64,90 @@ h1 {
     color: red;
 }
 
-/*  */
+/* GALERY */
+
+/* PIRMAS STULPELIS */
+
+.creat_img {
+    background: url("../IMG/create.jpeg ");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.creat_text {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.creat_text:hover {
+    display: inline-block;
+    color: #fff;
+    z-index: 99;
+}
+
+.creat_img:hover {
+    background-image: linear-gradient(rgba(61, 60, 60, 0.6), rgba(56, 55, 55, 0.6)), url("../IMG/create.jpeg");
+    cursor: pointer;
+}
+
+/* antras stulpelis */
+
+.koman-pic {
+    background-color: #283196;
+    color: #fff;
+    text-align: center;
+    transition: all 0.5s ease-out;
+}
+
+.koman-pic h3 {
+    margin-top: 52px;
+}
+
+.koman-pic:hover {
+    background-image: url("../IMG/team.jpeg");
+    /* transition: 0.2s ease;  */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: transparent;
+}
+
+.pic-changer {
+    background-image: url("../IMG/think.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.pic-changer:hover {
+    background-image: url("../IMG/rainbow.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* trecias stulpelis */
+
+.change-girl {
+    background-image: url("../IMG/girtl1.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.change-girl:hover {
+    background-image: url("../IMG/girl2.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.teviskasis {
+    position: relative
+}
+
+.info {
+    background-color: #af8b1c;
+    height: 100px;
+    position: absolute;
+    top: 176px;
+    color: #fff;
+    font-weight: bold;
+    padding: 1rem;
+}
