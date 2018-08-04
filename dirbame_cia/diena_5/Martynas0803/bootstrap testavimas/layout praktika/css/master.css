@@ -69,7 +69,14 @@
 .vaikas_absolut {
     position: absolute;
     top: 26px;
-    right: -276px;
+    right: -333px;
+    z-index: 99;
+}
+
+.vaikas_absolut2 {
+    position: absolute;
+    top: 66px;
+    left: -53px;
     z-index: 99;
 }
 
@@ -80,3 +87,31 @@ h1 {
 }
 
 /*  */
+
+@media (max-width: 1199px) {
+    .vaikas_absolut {
+        top: 15px;
+        right: -288px;
+    }
+}
+
+@media (max-width: 992px) {
+    .vaikas_absolut {
+        top: 15px;
+        right: -230px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vaikas_absolut {
+        display: none;
+    }
+}
+
+/* antras pasaka */
+
+@media (max-width: 768px) {
+    .vaikas_absolut2 {
+        display: none;
+    }
+}
