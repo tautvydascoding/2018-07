@@ -143,11 +143,12 @@ h1 {
 }
 
 .info {
-    background-color: #af8b1c;
+    /* background-color: #af8b1c; */
     height: 100px;
     position: absolute;
     top: 176px;
     color: #fff;
     font-weight: bold;
     padding: 1rem;
+    box-shadow: -14px 12px 13px #333;
 }
