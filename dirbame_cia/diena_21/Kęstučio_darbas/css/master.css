@@ -1,17 +1,83 @@
-.jumbotron {
-  background-image: url('../img/kalnai.jpg');
-}
-.antraste {
-  text-align: center;
-  color: #f2f2f2;
-}
-.box-wraper  {
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	min-height: 1200px;
 
-.aukstis-700 {
-  min-height: 700px;
+/* {
+    box-sizing: border-box;
+}*/
+.floaf {
+     float: left;
 }
+.floar {
+     float: right;
+}
+.float-fix {
+    clear: both;
+}
+.aukstis-100 {
+    height: 100px;
+}
+.aukstis-200 {
+    height: 200px;
+}
+.aukstis-300 {
+    height: 300px;
+}
+.aukstis-400 {
+    height: 400px;
+}
+.aukstis-500 {
+    height: 500px;
+}
+.aukstis-700 {
+    min-height: 700px;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+/*===================== Namu puslapio ===========================*/
+.antraste {
+    text-align: center;
+    color: #f2f2f2;
+    font-size: 60px;
+    color: rgb(137, 130, 139);
+    text-shadow: 2px 3px white;
+    margin-top: 250px;
+}
+p {
+    text-align: center;
+    color: rgb(40, 217, 11);
+    font-size: 18px;
+    text-shadow: 1px 2px white;
+}
+
+.box-wraper {
+  	background-size: cover;
+  	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	min-height: 1000px;
+}
+.perVisaPuslapi {
+    overflow: hidden;
+    height: 100%;
+    background-image: url('../img/kalnai.jpg');
+}
+
+/*================= Meniu ===========================*/
+
+.meniu {
+    border-bottom: 2px solid #b5acaa;
+}
+nav {
+    width: 35%;
+}
+ul {
+    list-style: none;
+}
+li {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    margin-top: 8px;
+    font-size: 20px;
+    color: rgb(137, 130, 139);
+}
+/*============== Baigiam meniu =============================*/
