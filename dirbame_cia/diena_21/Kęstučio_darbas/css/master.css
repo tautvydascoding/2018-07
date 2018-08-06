@@ -84,6 +84,10 @@ p {
 }
 
 /*================= Meniu ===========================*/
+.no-gutters {
+    padding-left: 0;
+    padding-right: 0;
+}
 
 .meniu {
     border-bottom: 2px solid #b5acaa;
