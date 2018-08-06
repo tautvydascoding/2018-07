@@ -1,0 +1,67 @@
+h1 {
+    color: red;
+}
+.aukstis-100 {
+    height: 100px;
+}
+.aukstis-200 {
+    height: 200px;
+}
+.aukstis-300 {
+    height: 300px;
+}
+.aukstis-500 {
+    height: 500px;
+}
+
+h1::after {
+    background-color: red;
+    width: 100px;
+    height: 20px;
+    content: " ";
+    display: inline-block;
+}
+h1::before {
+    background-color: red;
+    width: 100px;
+    height: 20px;
+    color: #000;
+    font-size: 5px;
+    content: " Labas ";
+    display: inline-block;
+}
+
+/* ------paveiksliuko dejimas---- */
+h2::before {
+    background: url('../2.jpg') no-repeat;
+    background-size:   cover  ;
+    background-position: left center ;
+    width: 400px;
+    height: 400px;
+    content: ' asadfasdfadsf';
+    display: inline-block;
+    color: red;
+    text-align: right;
+}
+/* fono nuotraukos galimos klaidos: */
+/*
+    0) ar nuotraka randa kompiuteris? (inspect->console isijungti)
+    1) kelias nurodomas nuo main.css failo ( nepamirsti su "../" islipti is css katalogo)
+   2) blogai nurodytas kelias
+   3) failo pavadinimas
+   4) ! reik "width" ir "height"
+
+*/
+
+/* neveikia jeigu H1 turi "::before ir ::after" */
+h1::first-letter {
+    font-size: 70px;
+    font-weight: 900; 
+}
+
+
+/*  */
+
+
+
+/*  */
