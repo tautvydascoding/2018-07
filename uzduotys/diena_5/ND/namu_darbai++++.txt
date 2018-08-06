@@ -1,0 +1,13 @@
+1) pasiziureti video apie javascript (penktadieni tai     mokinsimes)
+
+2) suzaisti CSS Frog zaidima (googel it)
+
+3) Naudojantis Bootstrap (vėl) suprogramuoti layoutus 2.gif, 5.gif, ….
+
+4) pasikartoti CSS selektoriu svorius  .didelis; section h2; section.didelis; section nav li; #wrapper;
+
+5) pasikartoti CSS pseuodo selectorius:  h2:first-of-type; h2:hover; section:last-child
+
+!!!==========pasiruosimas kitai savaitei============
+1) pasiziureti kas yra "js function RETURN"
+2) pasiziureti kas yra "js array basics"
