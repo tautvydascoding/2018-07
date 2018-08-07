@@ -32,13 +32,27 @@
     background-color: orange;
 }
 /* ------- */
-h1 {
-    color: red;
+
+.flexo-klase {
+  margin-top: 215px;
+  border: 2px solid black;
 }
-
-
-
-
-
-
+.no-gutters {
+  padding-left: 0;
+  padding-right: 0;
+}
+ul {
+    list-style: none;
+  }
+footer {
+  background-color: #6c80c2;
+}
+.realitivus {
+  position: relative;
+}
+.absoliuti {
+  width: 20%;
+  height: auto;
+  float: right;
+}
 /*  */

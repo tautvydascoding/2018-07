@@ -16,7 +16,7 @@
 
 <body>
   <!-- IDEA: Puslapio Background -->
-  <div class="container-fluid perVisaPuslapi">
+  <div class="container-fluid">
     <div class="row">
       <div class="col box-wraper">
 
@@ -25,7 +25,8 @@
           <div class="row meniu">
             <div class="col">
 
-           <img class="logo" src="./img/slide-logo-2.png" alt="logo">
+      <!-- IDEA: Ikeliu logo -->
+         <img class="logo" src="./img/slide-logo-2.png" alt="logo">
 
               <nav class="floar">
                 <ul>
@@ -47,27 +48,60 @@
         <div class="container">
           <div class="row">
             <div class="col text-center">
-              <h1 class="antraste lead">
-              Kalnų turizmas
-              </h1>
-              <p><b>Mes padėsime jums išsirinkti jūsų svajonių nuotykį kalnuose </b></p>
-              <div class="container">
-                <div class="row">
-                  <div class="col">
-                    <a href="#" class="badge badge-success"><h2>Rinktis kelionę</h2></a>
+
+              <!-- IDEA: Ikeliu forma -->
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">E-paštas</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
                   </div>
-                  <!-- IDEA: Uzdarau mygtuko "col"> -->
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Slaptažodis</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                  </div>
                 </div>
-                <!-- IDEA: Uzdarau mygtuko row -->
-              </div>
-              <!-- IDEA: Uzdarom mygtuko kontaineri -->
+                <div class="form-group">
+                  <label for="inputAddress">Adresas</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress2">Adresas 2</label>
+                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCity">Miestas</label>
+                    <input type="text" class="form-control" id="inputCity">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputState">Šalis</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>Pasirinkite...</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="inputZip">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                      Check me out
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign in</button>
+              </form>
+            <!-- IDEA: Užbaigiu forma -->
+
+             </div>
             </div>
-            <!-- IDEA: Uzdarom Antrastes col -->
-          </div>
-          <!-- IDEA: Uzdarom Antrastes row -->
-        </div>
-        <!-- IDEA: Uzdarom Antrastes containeri -->
-      </div>
+         </div>
+       </div>
       <!-- IDEA: Uzdarom pagrindini puslapio Background col -->
     </div>
     <!-- IDEA: Uzdarom pagrindini Background row -->

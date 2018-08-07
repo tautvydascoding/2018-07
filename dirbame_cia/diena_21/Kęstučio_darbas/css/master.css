@@ -102,8 +102,13 @@ li {
     display: inline-block;
     width: 30%;
     text-align: center;
-    margin-top: 8px;
+    margin-top: 12px;
     font-size: 20px;
     color: rgb(137, 130, 139);
+}
+
+.logo {
+  width: 5%;
+  height: auto;
 }
 /*============== Baigiam meniu =============================*/
