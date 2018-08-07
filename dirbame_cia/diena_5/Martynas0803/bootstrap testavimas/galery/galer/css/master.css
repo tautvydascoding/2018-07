@@ -127,7 +127,7 @@ hr.style-eight:after {
 /* PIRMAS STULPELIS */
 
 .creat_img {
-    background: url("../IMG/create.jpeg ");
+    background: url("../IMG/desWeTrust.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -142,11 +142,6 @@ hr.style-eight:after {
     display: inline-block;
     color: #fff;
     z-index: 99;
-}
-
-.creat_img:hover {
-    background-image: linear-gradient(rgba(61, 60, 60, 0.6), rgba(56, 55, 55, 0.6)), url("../IMG/create.jpeg");
-    cursor: pointer;
 }
 
 /* antras stulpelis */
@@ -212,4 +207,18 @@ hr.style-eight:after {
     padding: 1rem;
     box-shadow: -14px 12px 40px #333;
     z-index: 99;
+}
+
+/* apatiniai stulpeliai */
+
+.pabaigosPirmas {
+    background-image: url("../IMG/des_2.jpeg");
+    background-size: 600px 300px;
+    background-repeat: no-repeat;
+}
+
+.pabaigosAntras {
+    background-image: url("../IMG/des_1.jpg");
+    background-size: 600px 400px;
+    background-repeat: no-repeat;
 }
