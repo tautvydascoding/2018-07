@@ -57,8 +57,30 @@ for (i=0; i < 12; i++) {
 // B) nupiesti tuscia lentele paleidiznat f-jas (  antrastine eilute "vardas |  pavarde | amzius" - teks isvesti be f-jos)
 
 function piestiEilute(x) {
-
+    var y = "-";
+    for (var i = 0; i < x; i++) {
+        document.querySelector('header').innerHTML += y;
+    }
 }
+piestiEilute(30);
+
+document.querySelector('header').innerHTML += "<p> vardas |  pavarde | amzius</p>"
+
+function piestiEilute(x) {
+    var y = "-";
+    for (var i = 0; i < x; i++) {
+        document.querySelector('header').innerHTML += y;
+    }
+}
+piestiEilute(30);
+
+function spausdintiStulpeli(x) {
+    // var stul = "/";
+    for (var i = 0; i < x; i++) {
+        document.querySelector('nav').innerHTML += "| <br>";
+    }
+}
+spausdintiStulpeli(5);
 
 // ----------------------------
 // vardas |  pavarde | amzius
