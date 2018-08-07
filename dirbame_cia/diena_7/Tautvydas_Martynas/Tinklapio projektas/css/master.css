@@ -74,6 +74,12 @@ body {
     letter-spacing: .5rem;
 }
 
+.laughImg {
+    width: 35%;
+    height: 100px;
+    margin-right: -16px;
+}
+
 hr.style-two {
     border: 0;
     height: 2.5px;
@@ -86,6 +92,8 @@ article p {
     padding: 1rem;
 }
 
+/* Main reklama */
+
 .mainReklama {
     background-image: linear-gradient(rgba(154, 193, 216, 0.459), rgba(147, 182, 214, 0.425)), url("../img/pexels-photo-1133505.jpeg");
     background-size: cover;
@@ -93,25 +101,17 @@ article p {
     position: relative;
 }
 
-.vaikasFoto {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.laughImg {
-    width: 35%;
-    height: 100px;
-    margin-right: -16px;
-}
-
-.mainTevas {}
-
 .mainRekBtn {
     width: 150px;
     height: 3rem;
     position: absolute;
     top: 50%;
     left: 45%;
+}
+
+.vaikasFoto {
+    display: flex;
+    justify-content: flex-end;
 }
 
 /*  media*/
