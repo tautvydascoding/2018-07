@@ -1,14 +1,28 @@
+/*  -=== GLOBAL==-- */
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
 * {
     box-sizing: border-box;
 }
+
+/* ------======== REUSABLE=======----- */
+
+/* flautas */
 
 .float {
     float: left;
 }
 
+/* flauto fixsas */
+
 .float-fix {
     clear: both;
 }
+
+/* === A U K S C I A I====----- */
 
 .aukstis-100 {
     height: 100px;
@@ -30,6 +44,14 @@
     height: 300px;
 }
 
+.aukstis-320 {
+    height: 320px;
+}
+
+.aukstis-350 {
+    height: 350px;
+}
+
 .aukstis-400 {
     height: 400px;
 }
@@ -46,6 +68,8 @@
     height: 500px;
 }
 
+/* === F O N A I===--- */
+
 .fonas-rud {
     background-color: brown;
 }
@@ -58,13 +82,47 @@
     background-color: orange;
 }
 
-/* ------- */
-
-h1 {
-    color: red;
+.rotateD {
+    transform: rotate(10deg);
 }
 
+.rotateK {
+    transform: rotate(-10deg);
+}
+
+/* ------- */
+
 /* GALERY */
+
+.firstRow h2 {
+    transform: rotate(-50deg);
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 0.11rem;
+    color: #333;
+}
+
+hr.style-eight {
+    overflow: visible;
+    /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double #b8d2fc;
+    color: #b8d2fc;
+    text-align: center;
+    transform: rotate(-50deg);
+}
+
+hr.style-eight:after {
+    content: "⎌";
+    color: #b8d2fc;
+    display: inline-block;
+    position: relative;
+    top: -.7rem;
+    font-size: 1em;
+    padding: 0px 0.25em;
+    background: white;
+}
 
 /* PIRMAS STULPELIS */
 
@@ -114,15 +172,15 @@ h1 {
 
 .pic-changer {
     background-image: url("../IMG/think.jpg");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
-.pic-changer:hover {
+/* .pic-changer:hover {
     background-image: url("../IMG/rainbow.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-}
+} */
 
 /* trecias stulpelis */
 
@@ -143,12 +201,15 @@ h1 {
 }
 
 .info {
-    /* background-color: #af8b1c; */
-    height: 100px;
+    background-color: #b8d2fc;
+    height: 180px;
     position: absolute;
     top: 176px;
-    color: #fff;
+    color: #333;
     font-weight: bold;
+    line-height: 1.4em;
+    font-size: 1.3rem;
     padding: 1rem;
-    box-shadow: -14px 12px 13px #333;
+    box-shadow: -14px 12px 40px #333;
+    z-index: 99;
 }
