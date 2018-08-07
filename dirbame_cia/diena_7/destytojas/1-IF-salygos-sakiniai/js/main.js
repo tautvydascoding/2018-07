@@ -1,34 +1,7 @@
-// =================if  teorija====================
-// if ( true ) {
-//     console.log("labas");
-// }
-
-// if (salyga) {
-//     // jei true
-//     //
-//     //
-// } else {
-//     // jei false
-// }
+console.log("Labas");
 
 
-// if ( salyga ) {
-//     // jei salyga tenkinama
-// }
-//
-// if ( salyga ) {
-//     // jei salyga tenkinama
-// } else {
-//     // jei salyga netenkinama  / priesingu atveju
-// }
-//
-// if (salyga) {
-//
-// } else if (salyga) {
-//
-// } else {
-//     // ?
-// }
+
 
 //=============IF====================
 // 0 UZDUOTIS
@@ -38,20 +11,34 @@
 // jeigu vardai sutampa, i konsole pranesti apie tai
 // jeigu vardai nesutampa - parasysi "vardai yra skirtingi"
 
-// B) 
+var vardas1 = "Tomas";
+var vardas2 = "Antanas";
+
+if (vardas1 == vardas2) {
+    console.log("vardai yra vienodi");
+    document.querySelector('h1').innerHTML += "  vardai yra vienodi";
+} else {
+    console.log("vardai yra skirtingi :( ");
+    document.querySelector('h1').innerHTML += "  vardai yra skirtingi :(";
+}
+// B)
 // Jeigu vardas1 yra "Tomas" - pasisveikinti su juo
 
 // C)
 // Patikrinti ar varda1 yra "Tomas", IR butinai vardas2  yra "Karolis"
-
+if (vardas1 == "Tomas" && vardas2 == "Karolis") {
+    document.querySelector('h1').innerHTML = "  Tomas ir Karolis";
+}
 // D)
 // Patikrinti ar bent vienas is vardu "Tomas"
 // || - arba
-
+if (vardas1 == "Tomas" || vardas2 == "Tomas") {
+    document.querySelector('h1').innerHTML = "  vienas is vardu: Tomas  ";
+}
 
 // 1 UZDUOTIS
 // turesime vartotojo amziu
-// var age = 24;
+var age = 24;
 // gapal ji, turesiem isvesti tam tikra reklamos teksta
 
 
