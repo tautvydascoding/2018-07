@@ -38,8 +38,7 @@
 // jeigu vardai sutampa, i konsole pranesti apie tai
 // jeigu vardai nesutampa - parasysi "vardai yra skirtingi"
 
-// B)
-// Papildomai patikrinti uzdavini A.
+// B) 
 // Jeigu vardas1 yra "Tomas" - pasisveikinti su juo
 
 // C)

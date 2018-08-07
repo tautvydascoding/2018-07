@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Gallery</title>
+        <!-- resposive design reikalingas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+         <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="libs/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <!-- !!!! mano CSS failas visas patas zemiausias -->
+        <link rel="stylesheet" href="css/master.css?ver=1.0">
+
+        <!-- NOTE: jeigu neveikia:
+        1) ar failo pavadinimas geras
+        2) ar kelias geras?   (ar "/" teisingi; direktorija ar gere )
+        3) ar   rel="stylesheet"
+        4) ar link gale uzdalete ">"
+        5) ar tuo adresu nuejai internete (pvz: ar ne praeitos dienos projektas)
+    -->
+    </head>
+    <body>
+
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <h1> Galerija </h1>
+              <div class="row">
+                <div class="col">
+                </div> <!-- IDEA: Pirma nuotrauku col uzdarom -->
+                  <div class="col">
+                  <img src="./img/foto.jpg" class="img-fluid" alt="Responsive image">
+                  </div> <!-- IDEA: Antra nuotrauku eilute uzdarau -->
+                  <div class="col">
+                  </div> <!-- IDEA: trecia nuotrauku eilute uzdarau -->
+              </div> <!-- IDEA: Pirma nuotrauku eilute row uzdarau -->
+
+<!-- IDEA: Prasideda antra galerijos row eilute -->
+             <div class="row">
+               <div class="col">
+                 <img src="./img/foto.jpg" class="img-fluid" alt="Responsive image">
+               </div> <!-- IDEA: Uzdara Antros eiltes pirma col -->
+               <div class="col">
+               </div> <!-- IDEA: Antros nuotrauku eilutes antra col uzdarau -->
+               <div class="col">
+                 <img src="./img/foto.jpg" class="img-fluid" alt="Responsive image">
+               </div> <!-- IDEA: Antros nuotrauku eilutes trecia col uzdarau -->
+             </div><!-- IDEA: Antra nuotrauku eilute uzdarau -->
+
+<!-- IDEA: Prasideda trecia galerijos row eilute -->
+            <div class="row">
+              <div class="col">
+                <img src="./img/foto.jpg" class="img-fluid" alt="Responsive image">
+              </div> <!-- IDEA: Uzdara Trecios eiltes pirma col -->
+              <div class="col">
+                <img src="./img/foto.jpg" class="img-fluid" alt="Responsive image">
+              </div> <!-- IDEA: Trecios nuotrauku eilutes antra col uzdarau -->
+              <div class="col">
+                <img src="./img/foto.jpg" class="img-fluid" alt="Responsive image">
+              </div> <!-- IDEA: Trecios nuotrauku eilutes trecia col uzdarau -->
+            </div><!-- IDEA: Trecia nuotrauku eilute uzdarau -->
+            </div> <!-- IDEA: Uzdarom main col -->
+          </div> <!-- IDEA: Uzdarom main row -->
+        </div> <!--  end Container-->
+
+  <!-- IDEA: Pradedu nauja conteinery fluid -->
+    <div class="container-fluid no-gutters">
+      <div class="row no-gutters">
+        <div class="col">
+          <img src="./img/foto.jpg" class="img-fluid" alt="Responsive image">
+        </div> <!-- IDEA: Uzdara Trecios eiltes pirma col -->
+        <div class="col">
+          <h2 class="text-center flexo-klase"> Klausti </h2>
+        </div> <!-- IDEA: Trecios nuotrauku eilutes antra col uzdarau -->
+      </div> <!-- IDEA: uzdarau row -->
+    </div> <!-- IDEA: Uzdarau konteineri fluid -->
+
+<!-- IDEA: Pradedu apatini Conteineri -->
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h3 class="text-center"> Antraste </h3>
+    </div><!-- IDEA: Uzdarau row pirma -->
+    <div class="row">
+      <div class="col-4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+         </p>
+      </div> <!-- IDEA: uzdarau pirma col -->
+      <div class="col-4">
+
+      </div> <!-- IDEA: uzdarau antra col -->
+      <div class="col-4">
+
+      </div> <!-- IDEA: uzdarau trecia col -->
+
+    </div> <!-- IDEA: uzdarau row -->
+
+    <div class="row">
+      <div class="col-4">
+
+      </div> <!-- IDEA: uzdarau pirma col -->
+      <div class="col-4">
+
+      </div> <!-- IDEA: uzdarau antra col -->
+      <div class="col-4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+         </p>
+      </div> <!-- IDEA: uzdarau trecia col -->
+    </div> <!-- IDEA: uzdarau row -->
+      </div> <!-- IDEA: Uzdarau col Pirma -->
+  </div> <!-- IDEA: uzdarau conteineri -->
+
+
+  <footer class="container">
+    <div class="row">
+      <div class="col">
+
+
+
+
+<ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Brand</li>
+</ul>
+
+
+</div> <!-- IDEA:  -->
+    </div>
+  </footer>
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <!-- !!! mano js failas pats zemiausias; visada failo -->
+        <script type="text/javascript" src="js/main.js"></script>
+
+    </body>
+</html>

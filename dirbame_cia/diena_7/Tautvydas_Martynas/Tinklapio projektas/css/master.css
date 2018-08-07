@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+.float {
+     float: left;
+}
+.float-fix {
+    clear: both;
+}
+.aukstis-100 {
+    height: 100px;
+}
+.aukstis-200 {
+    height: 200px;
+}
+.aukstis-300 {
+    height: 300px;
+}
+.aukstis-400 {
+    height: 400px;
+}
+.aukstis-500 {
+    height: 500px;
+}
+.fonas-rud {
+    background-color: brown;
+}
+.fonas-gelt {
+    background-color: yellow;
+}
+.fonas-oran {
+    background-color: orange;
+}
+/* ------- */
+h1 {
+    color: red;
+}
+
+.galerija-centravimas-h {
+  display: flex;
+  justify-content: center;
+}
+.galerija-krastai {
+  display: flex;
+  justify-content: space-between;
+}
+.galerija-apskritimas {
+  height: 50vh;
+  border-radius: 50%;
+}
+.galerija-ad {
+  height: 400px;
+}
+.galerija-ad-img {
+  background-image: url('../images/galerija-1.jpg');
+  background-size: cover;
+  background-position: center
+}
+.galerija-ad-klausti {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.galerija-straipsnis {
+  width: 30%;
+}
+.straipsnis-kaire {
+  display: flex;
+  justify-content: flex-start;
+}
+.straipsnis-desine {
+  display: flex;
+  justify-content: flex-end;
+}
+footer {
+  font-size: 1.5rem;
+}
+footer > ul {
+  list-style: none;
+}
+.footer-logo-sm {
+  height: 1.5rem;
+}
+.footer-logo-lg {
+  height: 4.5rem;
+}
+.footer-logo-lg-position {
+  display: flex;
+  justify-content: flex-end;
+}
+/*  */
