@@ -7,7 +7,7 @@
 
 
 
-//==============TEKSTO ISVEDIMAS (tik susipazinti)=========
+//======================TEKSTO ISVEDIMAS (tik susipazinti)===============
 // UZDUOTIS
 // Issimeginti komandas:
 
@@ -16,8 +16,10 @@
 // alert("Viso");
 // var ivestasTekstas = prompt("Ivestkite savo varda");
 // console.log(ivestasTekstas);
-// document.querySelector('h1').innerHTML = " <b>Antraste</b>";
+document.querySelector('h1').innerHTML = " <b>Antraste</b>";
 
+var elementai = document.querySelectorAll('h1');
+console.log(elementai);
 //----Elemento duomenys--------
 // auksto paemimas:
 // var aukstis = document.getElementById('manoDiv').clientHeight;   // clientHeight includes the height and vertical padding.
