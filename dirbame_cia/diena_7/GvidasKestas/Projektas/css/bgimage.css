@@ -1,0 +1,39 @@
+.bg {
+
+    background-image: url("https://cdn.cjr.org/wp-content/uploads/2017/08/perlman_02-1300x500.jpg");
+
+
+    height: 100%;
+
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body{
+    background-color: #DED1C8;
+}
+h2{
+    font-size: 30px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 45%;
+}
+h3{
+    text-align: center;
+    position: relative;
+    top: 45%;
+}
+h6{
+    text-align: left;
+    position: relative;
+    top: 75%;
+    color: red;
+}
+p{
+    color: white;
+}
