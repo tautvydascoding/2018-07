@@ -1,45 +1,28 @@
 // ========js best practice & common mistakes (~2h)
 
-// -------- --Array / Masyvai  TEORIJA (~2h)--------------------
-	// UZDUOTIS
-	var prekiautojai = []; // empty array
 
-	prekiautojai[0] = "IKI";
-	console.log(  "prekybos centrai:", prekiautojai  );
-	
-	prekiautojai[1] = "Maxima";
-	prekiautojai[2] = "Lidl";
-	prekiautojai[3] = "Rimi";
-	prekiautojai[50] = "Cia Market";
-
-	// A) pervadinti pirma stalciu
-	prekiautojai[1] = "Barbora";
-
-	// B) sukeisti antro ir trecio stalciu reiksmes vietomis.
-	// !negalima rasyti rankomis String (nes duomenys kinta, ir jus nezinote koki duomenys bus po savaites)
-
-	// C) padaryti B) uzdaviniui f-ja sukeistiMasyvo2elementus(x, y)
-
-// -------- --Array / Masyvai  TEORIJA (~2h)--------------------
+// -------- --Array / Masyvai  Methods (~2h)--------------------
 names = ["Tomas", "Pietkus", 25, "VDU - inzinerija"];
 
 console.log(names);
-
-.length
-.join()
-.shift()
-.pop()
-
-
+// UZDUOTIS; panaudoti masyvu Methods:
+// .length
+// .join()
+// .shift()
+// .pop()
+// ...
+// pvz    names.shift();
 
 // =========================================================
-// uzduotis  Array
+// SAVARANKISKA UZDUOTIS  Array
 keiautojas = ["Tomas", "Pietkus", 25, "VDU - inzinerija"];
 
 // 1. i masyvo gala ideti elmenta "butelis vandens"
 // 2. i masyvo pradzia ideti elmenta "ziebtuvelis"
 // 3. istrinti 3-cia elmenta
 
+
+// --------GERESNI UZDAVINIAI: 
 // 4. sukurti masyva (50 ilgumo) naudojant FOR ir uzpildyti visa skaiciais "0" (kiekvienas stalcius turi but lygus "0");
 
 
