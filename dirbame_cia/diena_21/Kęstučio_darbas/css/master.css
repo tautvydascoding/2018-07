@@ -31,7 +31,10 @@
 }
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: transparent;
 }
+/*.bg-light {
+     background-color: transparent;*/
 /*===================== Namu puslapio ===========================*/
 
 h2 {
@@ -100,7 +103,7 @@ ul {
 }
 li {
     display: inline-block;
-    width: 30%;
+    width: 100%;
     text-align: center;
     margin-top: 12px;
     font-size: 20px;
@@ -110,5 +113,9 @@ li {
 .logo {
   width: 5%;
   height: auto;
+}
+
+.navbar-nav {
+  width: 100%;
 }
 /*============== Baigiam meniu =============================*/
