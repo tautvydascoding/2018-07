@@ -1,4 +1,4 @@
-<!--
+﻿<!--
     KAIP SURASTI, KODEL failas neveikia?
     1. blogas kelias/pavadinimas iki failo:
     Patikrinimas:  puslapyje->Inspect -> Console
@@ -58,3 +58,4 @@ The pattern [a-d], which performs the same match as [abcd], matches the 'b' in "
 
 more: https://www.w3schools.com/tags/att_input_pattern.asp
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+
