@@ -34,7 +34,7 @@ console.log(lietuva); // patikriname
 lietuva.unshift("Taurage"); // pridedame taurage i masyvo prieki
 console.log(lietuva); // tikriname
 
-// shift - istrina is masyvo pirma elementa
+// shift() - istrina is masyvo pirma elementa
 
 lietuva.shift(); // atimame is masyvo pradzios elementa
 console.log(lietuva); // patikriname
@@ -51,7 +51,7 @@ delete lietuva[0];
 
 console.log(lietuva);
 
-// ikeliame daugiau miestu i pradzia
+// ikeliame daugiau miestu i masyvo  pradzia
 lietuva.unshift("panevezys");
 lietuva.unshift("Kaisiadorys");
 
@@ -65,13 +65,16 @@ console.log(lietuva);
 
 var kopija = lietuva.slice(1, 3); // nusikopojuoja dali/visa masyva (nuo, iki).
 
-console.log("kopija 1,3", kopija); // padare masyvo kopija nuo 1 indexso iki 3. 3 neieina.
+console.log("kopija 1,3", kopija); // padare masyvo kopija nuo 1 indexso iki 3.  1 elementas ieina,  3 neieina.
 console.log("originalas", lietuva);
 
 var kopija2 = lietuva.slice(1, -1); // su minusu tai nukopina nuo galo, viena neitraukdama ( - 1 reiksia vieno nuo galo neitrauksime.)
 
 console.log("kopija2", kopija2);
 
+
+lietuva.splice(1, 1, "kaukazas");
+console.log("pakeiciu po kaisiadoriu, kad butu kaukazas vietoj pnvezio:", lietuva);
 
 // iterpimas i viduri 
 
@@ -83,13 +86,13 @@ console.log("iterpeme vidury:", lietuva); // tikrinimas
 
 lietuva.splice(5, 1); // nuo 5 elemento, istriname 1 slaciu
 
-console.log(lietuva); // tikriname
+console.log("splice trynimas:", lietuva); // tikriname
 
 // PAKEITIMAS
 
 lietuva.splice(1, 2, "KAUNAS", "TAURAGES RAJ. LAUKSARGIAI"); // NUO PIRMO: istrinti 2 elementus ir iterpti du elementus;
 
-console.log(lietuva);
+console.log("nuo 1 istrinam ir iterpiam 2 elementus", lietuva);
 
 
 // =======================================
@@ -133,23 +136,19 @@ while (i < 50) {
   masyvas2[i] = 1;
   i++;
 }
-console.log(masyvas2);
+console.log("masyvas vien 1,1,1,1,1,1...",
+  masyvas2);
 
 // 5.2: kas antra ^ masyvo elementa pakeisti i "3"
 // [1, 3, 1, 3, 1, 3, 1, 3, 1, 3, ....
 
 // VIENAS BUDAS
-// for (var i = 1; i < 50; i += 2) {
-//   masyvas[i] = 3;
+for (var i = 1; i < 50; i += 2) {
+  masyvas2[i] = 3;
 
-//   // if (masyvas[i] == 1) {
-//   //   i++;
-//   // } else if (i == 2) {
-//   //   i++;
-//   // }
+}
+console.log("masyvas turi buti: 1,3,1,3,1,3,1,3,...", masyvas2);
 
-// }
-// console.log(masyvas);
 
 // ANTRAS BUDAS
 // for (var i = 0; i < 50; i++) {
@@ -175,12 +174,9 @@ console.log(masyvas2);
 // 5.3: kas 5-ta ^ masyvo elementa pakeisti i "9"
 // [1, 3, 1, 3, 9, 3, 1, 3, 1, 9, ....
 
-var hardMasyvas = [];
+for (var i = 4; i < masyvas2.length; i += 5) { // pradine i reiksme yra index reiksme masyve. pvz, jei i=4 vadinas masyve [0,1,2,3,nuo cia 4]
 
-for (var i = 0; i < 50; i++) {
-  hardMasyvas[i] = 1;
-  hardMasyvas[i + 1] = 3;
-  hardMasyvas[i + 2] = 1;
-  hardMasyvas[i + 3] = 3;
-  hardMasyvas[i + 4] = 9;
+  masyvas2[i] = 9;
+
 }
+console.log("1,3,1,3,9.. kas 5 - 9", masyvas2);
