@@ -35,3 +35,67 @@ function sukeistiMasEl(x, y) {
 console.log(prekiautojai);
 sukeistiMasEl(2, 3);
 console.log(prekiautojai);
+
+
+
+// UZDUOTIS:
+// sukurti masinos duomenu masyva: pavadinimas, pravaziuota rida, kaina
+// 1. isvesti masyvo duomenis
+// 2. padidinti kaina: 100
+// 3. padidinti rida: -50000
+// 4. i masyva ideti papildomus duomenis: savininko vardas "Tomas"
+// 4.1 atspausdinti pakeistus masyvo duomenis
+// 5. i masyva ideti papildomus duomenis: masinos metai "2004"
+// sunkesne:
+// 6. atspausdinti masyvo duomenis i ekrana:
+// <article>
+//      <h2> pavadinimas </h2>
+//      <div> savininko vardas: ...</div>
+//      <span> masinos metai: ...  Rida: ...</span>
+//      i mygtuka ideti: masinos kaina ....
+// </article>
+
+// 
+var autoDuom = ["audi", 223334444, 10000, ]; // sukuriamas auto masyvas
+
+// 1. isvedame duomenis:
+document.querySelector('h1').innerHTML += "<h3> automobilio masyvas:" + autoDuom + "</h3";
+
+// 2. padidinti kaina: 100
+
+autoDuom[2] += 100;
+console.log(autoDuom[2]);
+
+// 3. padidinti rida: -50000
+
+autoDuom[1] -= 50000;
+console.log(autoDuom[1]);
+
+// 4. i masyva ideti papildomus duomenis: savininko vardas "Tomas"
+
+autoDuom[3] = "Tomas";
+console.log(autoDuom);
+document.querySelector('h1').innerHTML += "<h3> automobilio masyvas:" + autoDuom + "</h3";
+
+// 5. i masyva ideti papildomus duomenis: masinos metai "2004"
+
+autoDuom[5] = 2004;
+document.querySelector('h1').innerHTML += "<h3> automobilio masyvas:" + autoDuom + "</h3";
+
+// 6. atspausdinti masyvo duomenis i ekrana:
+// <article>
+//      <h2> pavadinimas </h2>
+//      <div> savininko vardas: ...</div>
+//      <span> masinos metai: ...  Rida: ...</span>
+//      i mygtuka ideti: masinos kaina ....
+// </article>
+
+document.querySelector('body').innerHTML += "<article> </article>"; // sukuriam article
+
+document.querySelector('article').innerHTML += "<h2> <strong>Automobilio Masyvo duomenys:</strong></h2> "; //sukuriam h2 su pavadinimu
+
+document.querySelector('article').innerHTML += "<div> Automobilio savininko vardas: " + autoDuom[3] + "</div>"; //sukuriam div su automob. sav. vardu
+
+document.querySelector('article').innerHTML += "<span> Rida: " + autoDuom[1] + " Automobilio marke: " + " " + autoDuom[0] + "." + " " + "</span>"; //sukuriam span elementa su duomenimis
+
+document.querySelector('article').innerHTML += "<button type='Submit' class='btn-lg'>" + "KAINA" + " " + autoDuom[2] + " $ " + "</button>";
