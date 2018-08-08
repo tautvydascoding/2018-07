@@ -1,5 +1,5 @@
 // ========js best practice & common mistakes (~2h)
-
+        
 // UZDUOTIS:
 // sukurti masinos duomenu masyva: pavadinimas, pravaziuota rida, kaina
 // 1. isvesti masyvo duomenis

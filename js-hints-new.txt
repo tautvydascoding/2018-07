@@ -1,0 +1,33 @@
+
+==========================neleisti isjugnti lango================
+<script>
+window.onbeforeunload = function(event) {
+    event.returnValue = "si teksta matys tik  IE vartotojai";
+};
+</script>
+===========================desinys peles klavisas===============
+document.addEventListener('contextmenu', event => event.preventDefault());
+OR
+<body oncontextmenu="return false;">
+OR
+<div oncontextmenu="myFunction()" contextmenu="mymenu">
+<p>Right-click inside this box to see the context menu!</p>
+<script>
+	function myFunction() {
+    		alert("Tu paspaudei desini peles mygtuka. Nesiskolink turinio!");
+	}
+</script>
+=======================local storage======================
+<div id="result"></div>
+
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("vardas", "Tomas");
+    // Retrieve
+    document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+} else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
