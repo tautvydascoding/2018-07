@@ -55,6 +55,8 @@ var lastNames = ["Mcdowell", "Gates", "Mccall", "Cisneros", "Hancock", "Gaines",
 // A) atspausdinti visus numerius
 // B) isvesti ju pavardes ir vardus
 
+
+
 // var a = Math.random(); // 0 - 1
 // if ( a <= 0.1) {
 //     console.log("laimejai");

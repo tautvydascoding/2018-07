@@ -81,7 +81,7 @@ console.log( tekstas );
 
 function getStalciausNumeris(ieskomasTekstas ) {
     for (var i = 0; i < names.length; i++) {
-        if(  names[i] === ieskomasTekstas) { 
+        if(  names[i] === ieskomasTekstas) {
             return i;
         }
     }
@@ -99,11 +99,26 @@ var freidosNR = getStalciausNumeris("Freida");
 console.warn(  "Freido pavarde:", lastNames[freidosNR]  );
 
 // 4) rasti visu zmoniu vardu "Rico" pavardes
+var xx = "Rico";
+for (var i = 0; i < names.length; i++) {
+    if( names[i] === xx) {
+        console.log( "Rico ",  lastNames[i]  );
+    }
+}
+
 // 5) Turime masyva su zmoniu nr.  ieskomiZmones = [2, 16, 17, 18, 19, 25];
 // A) atspausdinti visus numerius
 // B) isvesti ju pavardes ir vardus
 
+console.log("----------ieskomu sarasas:----");
+ieskomiZmones = [2, 16, 17, 18, 19, 25];
+var numeris = -99999;
+for (var i = 0; i < ieskomiZmones.length; i++) {
+    numeris = ieskomiZmones[i]; // 2 , 16 , 17 , ....
+    console.log(    names[numeris] + " " + lastNames[numeris]  );
+}
+
 // var a = Math.random(); // 0 - 1
 // if ( a <= 0.1) {
-//     console.log("laimejai");
+//     console.log( "laimejai" );
 // }
