@@ -73,11 +73,25 @@ if (arRadau == false) {
 }
 // ====ARBA  IF trumpiau====
 var tekstas = (arRadau) ? "radau" : "neradau" ;
-console.log( tekstas ); 
+console.log( tekstas );
 
 // 2 UZDUOTIS (f-ja iekom stalciaus)
 // parasyti funkcija, kuriai davus iekoma zodi , ji suranda jo vieta masyve (stalciaus numeri) ir si   numeri grazina
 // eg: getStalciausNumeris( ieskomasTekstas)
+
+funkction getStalciausNumeris(ieskomasTekstas ) {
+    for (var i = 0; i < names.length; i++) {
+        if(  names[i] === ieskomasTekstas) { }
+            return i;
+        }
+    }
+    return null;   // kai nera ka grazinti ,daznai programuotojai grazina null
+}
+var x = getStalciausNumeris("Rico");
+console.log(  "numeris:", x);
+
+// arba trumpiau
+console.log(   getStalciausNumeris("Rico")    );
 
 // uzduots:----------------------------
 // 3) rasti pavarde masyve esancio  zmogaus vardu "Freida" (pirmojo)
