@@ -1,3 +1,5 @@
+console.log("Labas");
+
 
 
 // ====================Scope====================
@@ -13,7 +15,6 @@
 //  dabar, pabandykite po f-ja (uz jos ribu) i konsole atspausdinti kintamaji "vardas"
 //  console.log( vardas) ;
 // NOTE: gausite klaida ""is not defined""
-
 
 
 //================local && global=========
@@ -77,8 +78,8 @@
 //  iskviesti f-ja 3 kartus, kad atspausdintu 3 skirtingas antrastes:  "BMW pinga, nes daugeja", "Greik pageres orai", "Vasaros vis salteja"
 
 //  1.2 UZDUOTIS
-//  sukurti funkcija "printStraipsnis(x)"
-//  kuri atspausdina i DOM-a (ekrana) "<p>" + x + "</p>" (paduota teksta tarp "p")
+//  sukurti funkcija "printStraipsnis(x)" ,
+//  kuri atspausdina i DOM-a (ekrana) "x" reiksme
 
 //  1.3 UZDUOTIS
 //  iskviesti f-jaS 3 kartus, kad atspausdintu 3 skirtingas antrastes IR 3 straipnsnius:  "Lorem1 ....",   "Lorem2 ....",   "Lorem3 ....",

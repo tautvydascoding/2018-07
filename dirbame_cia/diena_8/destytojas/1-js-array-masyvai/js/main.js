@@ -13,7 +13,16 @@ prekiautojai[2] = "Moki vezi";
 prekiautojai[3] = "Vamsdziai ir KO";
 prekiautojai[50] = "Tomas ir Tomauskai";
 
-
-
-
+// ISVEDIMAS
+// console.log(    prekiautojai[0]     );
+// console.log(    prekiautojai[1]     );
+// console.log(    prekiautojai[2]     );
+// console.log(    prekiautojai[3]     );
+// ARBA
+for (var i = 0;    i < prekiautojai.length;    i++) {
+    console.log(     prekiautojai[i]   );
+}
+//
+console.warn("ispejimas");
+console.error("raudonas tekstas");
 //

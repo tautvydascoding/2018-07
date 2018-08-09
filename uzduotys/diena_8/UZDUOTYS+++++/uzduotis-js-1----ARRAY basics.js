@@ -12,6 +12,6 @@
  	// 3 sukeisti antro ir trecio stalciu reiksmes vietomis.
 		// !negalima rasyti rankomis String (nes duomenys kinta, ir jus nezinote koki duomenys bus po savaites)
 
-	//3.1  padaryti 3) uzdaviniui f-ja sukeistiMasyvo2elementus(x, y)
+	// 3.1  padaryti 3) uzdaviniui f-ja sukeistiMasyvo2elementus(x, y)
 
 	var prekiautojai = []; // empty array
