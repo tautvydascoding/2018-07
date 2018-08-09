@@ -79,9 +79,9 @@ console.log( tekstas );
 // parasyti funkcija, kuriai davus iekoma zodi , ji suranda jo vieta masyve (stalciaus numeri) ir si   numeri grazina
 // eg: getStalciausNumeris( ieskomasTekstas)
 
-funkction getStalciausNumeris(ieskomasTekstas ) {
+function getStalciausNumeris(ieskomasTekstas ) {
     for (var i = 0; i < names.length; i++) {
-        if(  names[i] === ieskomasTekstas) { }
+        if(  names[i] === ieskomasTekstas) { 
             return i;
         }
     }
@@ -95,6 +95,9 @@ console.log(   getStalciausNumeris("Rico")    );
 
 // uzduots:----------------------------
 // 3) rasti pavarde masyve esancio  zmogaus vardu "Freida" (pirmojo)
+var freidosNR = getStalciausNumeris("Freida");
+console.warn(  "Freido pavarde:", lastNames[freidosNR]  );
+
 // 4) rasti visu zmoniu vardu "Rico" pavardes
 // 5) Turime masyva su zmoniu nr.  ieskomiZmones = [2, 16, 17, 18, 19, 25];
 // A) atspausdinti visus numerius
