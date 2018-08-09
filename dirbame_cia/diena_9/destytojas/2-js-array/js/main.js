@@ -1,10 +1,5 @@
-console.log("labas");
+console.log("Labas");
 
-// =================taisyklingas Array copy  =================
-var array = ['a', 'b', 'c'];  // Becomes arr1 = ['a', 'b', 'c']
-var kopijaNEGERAI =  array; // !!! Blogi  - sukurs susietaja kopija ir redaguojant keisis abu masyvai
-var kopija1 = array.slice(0);   // Becomes arr2a = ['a', 'b', 'c'] - deep copy
-var kopija2 = array.concat(  );   // Becomes arr2b = ['a', 'b', 'c'] - deep copy
 
 // ================= ========= ======== ========
  ieskomiZmones = [2, 16, 17, 18, 19, 25];
@@ -40,9 +35,45 @@ var lastNames = ["Mcdowell", "Gates", "Mccall", "Cisneros", "Hancock", "Gaines",
 
 
 // 1A) surasti vardu masyve, kelintas zmogus yra "Rico" (surasti pirmaji; sunkes- surasti visus riko)
+// var nr = -9999;
+// for (var i = 0; i < names.length; i++) {
+//     if(  names[i] === "Rico") {
+//         nr = i;
+//         break; // nutraukia loop   (tam kad toliau nebeieskoti, nes jau radome)
+//     }
+// }
+// document.querySelector("body").innerHTML +=
+//     "<div class='bg-info'>   Rico numeris: " + nr + "</div>";
+
+// -----------ieskome visu Rico------------
+// var ieskomasis = "Rico";
+// for (var i = 0; i < names.length; i++) {
+//
+//     if(  names[i] === ieskomasis) {
+//         document.querySelector("body").innerHTML +=
+//             "<div class='bg-info'>   Rico numeris: " + i + "</div>";
+//      }
+// }
 
 // 1B) papildyti ^: jeigu tokio vardo neranda, isvesti VIENĄ pranesima "Nepavyko rasti...Bandykite kita zodi"
+var ieskomasis = "Rico";
+var arRadau = false; // neradau dar
 
+for (var i = 0; i < names.length; i++) {
+        if(  names[i] === ieskomasis) {
+            arRadau = true; // radau
+            document.querySelector("body").innerHTML +=
+                "<div class='bg-info'>   Rico numeris: " + i + "</div>";
+         }
+}
+if (arRadau == false) {
+    document.querySelector("body").innerHTML +=
+        "<div class='bg-danger'> NERADAU </div>";
+    console.log("Nepavyko rasti...Bandykite kita zodi");
+}
+// ====ARBA  IF trumpiau====
+var tekstas = (arRadau) ? "radau" : "neradau" ;
+console.log( tekstas ); 
 
 // 2 UZDUOTIS (f-ja iekom stalciaus)
 // parasyti funkcija, kuriai davus iekoma zodi , ji suranda jo vieta masyve (stalciaus numeri) ir si   numeri grazina
