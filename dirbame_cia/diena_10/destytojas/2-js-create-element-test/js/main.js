@@ -1,3 +1,5 @@
+console.log("Labas");
+
 
 
 // <aside>  elemento objekto (Node) kurimas
@@ -14,31 +16,32 @@
 //
 var elmAside = document.createElement("aside");  // !!! neatsiras ekrane (nes neidetas i puslapi, tai tik kintamasis)
 console.log(  elmAside  );  // <aside></aside>
-
-// paprasto teksto rasymas
+//
+// // paprasto teksto rasymas
 var elmText = document.createTextNode("lorem lorem lorem");
-// or
-//elmAside.innerHTML += "lorem lorem lorem2";
+// // or
+// elmAside.innerHTML += "lorem lorem lorem2"; // <aside>lorem lorem</aside>
+// !!! nera ekrane
 
 console.log(elmText);
+console.log(elmAside);
+//
+// // elemento idejimas i kita elementa
+// i ka                 ka idedame
+elmAside.appendChild(   elmText );
 
-// elemento idejimas i kita elementa
-elmAside.appendChild(elmText);
-//console.log(elmAside);
-
-// ! sukurti elementai - buna dar neideti i window  document html puslapi
-
-//=============
-//  objekto (Node) idejimas i HTML
+console.log(elmAside);
+//
+// // ! sukurti elementai - buna dar neideti i window  document html puslapi
+//
+// //=============
+// //  objekto (Node) idejimas i HTML
 var elmH1 =  document.querySelector("h1");
 //       kur                kaIdeti  PriesKa
 document.body.insertBefore(elmAside, elmH1);
 //ARBA
 document.body.appendChild(elmAside);
 document.body.appendChild("<h2>aaa</h2>"); /// !! NEVEIKS (nes veikia tik su DOM objektais / Node)
-
-
-//==============
 //==============SHORT VERSION==========
 var manoDiv = document.createElement("div");  //  ! ne ekrane!!!
 manoDiv.innerHTML += "BMW greita"; //idedam teksta "BMW greita"
