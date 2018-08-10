@@ -21,7 +21,7 @@ manoHeader.appendChild( manoTekstas );
 var manoAside = document.querySelector('aside');
 document.body.insertBefore(  manoHeader, manoAside ); // nevaikia!! nes nurodytas tetis, yra ne aside'o (reik rasti aside teti)
 
-
+//           tetis(pries ka dedame)                ka idedam   pries ka
 document.querySelector('.container').insertBefore(  manoHeader, manoAside );
 
 // 1.2. naudojant javascript sukurti (var manotekstas = "Antraste") kintamaji ir sukurti teksto Node : panaudojant js document.createTextNode(manotekstas)

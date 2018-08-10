@@ -63,6 +63,7 @@ $( "input[type='email']").val("Username");    // will return the current real va
 
 
 $("body h2").siblings().css({"color": "red", "border": "2px solid red"});
+
 h2 brolius kurie yra "p", bet nera h2 ar kiti
 $("h2").siblings("p").css({"color": "orange", "border": "2px solid red"});
 sekanti brolini elementa
