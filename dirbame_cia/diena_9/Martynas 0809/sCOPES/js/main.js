@@ -145,34 +145,24 @@ if (arPasikeite) {
 
 var nr = -9999;
 var ieskomas = "Rico"
-var radom = "Rico rastas";
-var neradom = "Deja Rico nerastas";
-var ricky = [];
-var neRicky = " ";
+console.log("----------- IESKOJIMO FUNKCIJA MASYVE----------- ")
 
-// IESKOME VISU RICKU MASYVE
-console.log("IESKOME RICKO, IR NURODOME, AR JIS RASTAS AR NE:");
 
-function ieskom(x) {
+function ieskom(ieskomasis) {
+  var tempMasyvas = [];
   for (var i = 0; i < names.length; i++) {
-    if (names[i] === x) {
+    if (names[i] === ieskomasis) {
       // console.log("Cia tikrinimo tekstas", radom);
-      ricky.push(names[i]); // itraukem rastus duomenis i nauja masyva
-      // console.log("Masyve toks ", ricky[i]);
-    } else {
-      // console.log("Masyve tokio nera");
+      tempMasyvas.push(names[i]); // itraukem rastus duomenis i nauja masyva
     }
   }
   // Tikrinam ar ivesta reiksme sutampa su reiksme esancia sukurtame masyve.
-  if (x === ricky[0]) {
-    console.log("Masyve toks " + ricky[0] + " Yra"); // jei randa tai paraso taip
+  if (ieskomasis === tempMasyvas[0]) {
+    console.log("Masyve toks " + tempMasyvas[0] + " Yra"); // jei randa tai paraso taip
   } else {
     console.log("Masyve tokio Nera"); // jei neranda
   }
-
 }
-
-
 var ats = ieskom("Ala");
 console.log(ats);
 
