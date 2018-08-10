@@ -7,7 +7,6 @@
 //     // Your code using failsafe $ alias here...
 // });
 
-
 // //=============css===============
 // $( "article > p" ).css( "border", "1px solid gray" );
 
@@ -59,12 +58,11 @@
 
 // // brolius ir seses Isskyrus h2 pati
 
-
-
 // $("body h2").siblings().css({"color": "red", "border": "2px solid red"});
+
 // h2 brolius kurie yra "p", bet nera h2 ar kiti
 // $("h2").siblings("p").css({"color": "orange", "border": "2px solid red"});
 // sekanti brolini elementa
 // $("h2").next().css({"color": "red", "border": "2px solid red"});
 // $("h2").nextAll();
-// $("h2").nextUntil("h6"); // !!! tik su elementais, su class neveiks
+// $("h2").nextUntil("h6"); // !!! tik su elementais, su class
