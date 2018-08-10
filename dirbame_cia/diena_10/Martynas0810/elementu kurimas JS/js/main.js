@@ -1,6 +1,13 @@
+console.log("Labas");
+
 // 0. HTML faile  po H1 elementu  -  sukurti <aside> elementa
 
+var manoAside = document.createElement("aside");
+console.log(manoAside);
 // 1. naudojant javascript sukurti "header"  elementa  (document.createElment)
+var manoHeader = document.createElement("header");
+console.log(manoHeader);
+
 // nepamirskite patestuot ar pavyko
 // console.log(  manoHeader );  // test
 
