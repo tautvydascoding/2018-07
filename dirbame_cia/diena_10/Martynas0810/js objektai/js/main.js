@@ -74,12 +74,22 @@ console.log(tevas.vaikas);
 
 // 3 UZDUOTIS
 // sukurti  objekto "darbuotojas" construktoriu. Objektas darbuotojas: nr, vardas, pavarde, alga
+console.log("====== KONSTRUKTORIAUS SUKURIMAS=======")
 
-function darbuotojas(nr, vardas, pavarde, alga) {
+function darbuotojas(nr, vardas, pavarde, alga) { // SUKURIAM konstruktoriu, su parametrais
+  this.nr = nr; // this numeris nurodo numeri, kuri ives asmuo
+  this.vardas = vardas; // this vardas nurodo varda, kuri ives asmuo, ir kuris priklausys tam vartotojui.
+  this.pavarde = pavarde; // this pavarde nurodo varda, kuri ives asmuo
+  this.alga = alga; // this alga nurodo varda, kuri ives asmuo
+}
 
-};
+// IS DIDZIOSIOS RAIDES, ATSPINDI OBJEKTA. GALIMA KURTI SU DIDZIAJA RAIDE
+var TomasTomauskas = new darbuotojas(1001, "Tomas", "Tomauskas", 600);
+var DarbuotojasNr2 = new darbuotojas(1002, "Martynas", "Martynauskas", 500);
 
+var DarbuotojasNr3 = new darbuotojas();
 
+console.log(TomasTomauskas, DarbuotojasNr2, DarbuotojasNr3);
 
 
 //============3=pvz: construktorius =====
