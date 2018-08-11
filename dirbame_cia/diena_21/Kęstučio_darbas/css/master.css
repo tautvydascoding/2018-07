@@ -2,6 +2,9 @@
 * {
     box-sizing: border-box;
 }
+* .space {
+  margin-left: 2.5em;
+}
 .floaf {
      float: left;
 }
@@ -11,8 +14,17 @@
 .float-fix {
     clear: both;
 }
+.aukstis-50 {
+    height: 50px;
+}
+.aukstis-85 {
+    height: 85px;
+}
 .aukstis-100 {
     height: 100px;
+}
+.aukstis-150 {
+    height: 150px;
 }
 .aukstis-200 {
     height: 200px;
@@ -36,9 +48,12 @@ body {
 /*.bg-light {
      background-color: transparent;*/
 /*===================== Namu puslapio ===========================*/
-
+/* -------------------- Tekstai ---------------------------------*/
 h2 {
-   width: 25%;
+  text-align: center;
+  color: #07522c;
+  text-shadow: 1px 2px #b5adae;
+  margin-bottom: 30px;
 }
 
 .antraste {
@@ -49,11 +64,22 @@ h2 {
     text-shadow: 2px 3px white;
     margin-top: 250px;
 }
+
+h4 {
+  text-align: center;
+  color: #07522c;
+  text-shadow: 1px 2px #b5adae;
+}
+
 p {
     text-align: center;
     color: rgb(40, 217, 11);
     font-size: 18px;
     text-shadow: 1px 2px white;
+}
+
+.batasTekstas {
+  color: white;
 }
 
 .NamuMygtukas {
@@ -67,7 +93,7 @@ p {
     height: 70px;
     /*width: 25%;*/
 }
-
+/* -------------------- Tekstai ---------------------------------*/
  .centruojam {
    /*width: 25%; */
    margin-left: auto;
@@ -111,7 +137,7 @@ li {
 }
 
 .logo {
-  width: 5%;
+  width: 7%;
   height: auto;
 }
 
@@ -119,3 +145,24 @@ li {
   width: 100%;
 }
 /*============== Baigiam meniu =============================*/
+/*-----------------Karuselė --------------------------------*/
+.carousel-inner {
+  border-left: 4px solid #b5acaa;
+  border-right: 4px solid #b5acaa;
+  border-bottom: 4px solid #b5acaa;
+}
+/*-------------------footer----------------------------------*/
+footer {
+  border-top: 2px solid #b5acaa;
+}
+
+footer p {
+color: rgba(0,0,0,.5);
+margin-top: 20px;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 15px;
+}
