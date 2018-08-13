@@ -1,13 +1,12 @@
 console.log("Labas");
-
+ 
 //Execute the function when the DOM is ready to be used.
 $(function() {
     var x = 10;
-
-    // alert("viduryje");
+    alert("viduryje");
 });
 
-// alert("paskutinis");
+alert("paskutinis");
 
 // --------------CSS keitimas--------
 document.querySelector('p').style.backgroundColor = "red";
