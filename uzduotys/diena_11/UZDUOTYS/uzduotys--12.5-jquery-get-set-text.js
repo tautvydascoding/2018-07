@@ -36,7 +36,7 @@
 // pakeisti i "Pakeista antraste "
 
 // UZDUOTIS 3
-// i console atspausdinti "li" elemento, kurio klase "reklama" - teksta
+// paimti ir i console atspausdinti "li" elemento teksta, bet tik to "li" kuris turi klase "reklama"
 
 // UZDUOTIS 4
 // i console atspausdinti  visus "li" tekstus
@@ -53,7 +53,7 @@
 
 // UZDUOTIS 7
 // A. visiems "li" elementams pridete atributa: class='nav-item '   (naujant jQuery)
-// B. pirmam "li" elementui uzddeti dar viena klase: "active"
+// B. pirmam "li" elementui uzdeti dar viena klase: "active"
 
 // UZDUOTIS 8
 //   su jquery uzpildyti form'a uz vartotoja:
