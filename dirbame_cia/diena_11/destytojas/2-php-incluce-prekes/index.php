@@ -27,7 +27,12 @@
         <div class="container   ">
             <div class="row">
                 <?php
-                    include('preke.php');
+                    $antraste = "Kompiuteris Lenovo x55";
+                    $aprasymas = "100GB 2GB RAM, i5,  .... ir t.t.";
+                    $kaina = 440;   
+                    for ($i=0; $i < 6; $i++) {
+                        include('preke.php');
+                    }
                  ?>
             </div>
 

@@ -12,13 +12,15 @@ Faile index.php naudojant include('kelias'); f-ja "iterpti" preke.php
 
 // UZDUOTIS:
 // 1: sukurti "preke.php" faila
-// h2 (antraste)
-// p (aprasymas)
-// button (Kaina)
+// <div class="row">
+//        h2 (antraste)
+//        p (aprasymas)
+//        button (Kaina)
+// </div>
 
 // 2: index.php faile
 // A) ideti container klase
-// B)  paleisti FOR cikla 6 kartus
+// B)  paleisti FOR cikla 6 kartus, kuris include'ina  preke.php faila
 
 // 3) index.php
 // sukurti kintamuosius:
