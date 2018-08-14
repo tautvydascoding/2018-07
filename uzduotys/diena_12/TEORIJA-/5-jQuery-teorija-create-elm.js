@@ -2,13 +2,13 @@ function objektas (name, age) {
     this.name = name,
     this.age = age;
 };
+var zmogus = objektas ("tomas", 21);
+
+
 var objektas = new objektas (name, age) {
     this.name = name,
     this.age = age;
 };
-
-
-var zmogus = objektas ("tomas", 21);
 
 //===============Create element==================
 var elementas0 = "<p> <button>Register</button> </p>";
@@ -39,8 +39,8 @@ var elementas2 = $("<p> </p>").html("<button>Register</button>");
 // <footer class='bg-info mt-2' onclick='function() {  $( this ).hide( ); }' > tekstas viduje tago </footer>
 
 //=============delete===========
-// $("div").remove();  //  removes the selected element(s) and its child elements.
-// $("div").empty();  //   removes the child elements of the selected element(s).
-//
-// $("p").remove(".test");         //removes all <p> elements with class="test":
-// $("p").remove(".test, .demo"); // removes elements with class="test" and class="demo":
+$("div").remove();  //  removes the selected element(s) and its child elements.
+$("div").empty();  //   removes the child elements of the selected element(s).
+
+$("p").remove(".test");         //removes all <p> elements with class="test":
+$("p").remove(".test, .demo"); // removes elements with class="test" and class="demo":
