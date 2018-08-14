@@ -16,11 +16,11 @@ var elementasH1 =   $("h1"),
     afterText   = "<b>after text</b>",
     beforeText  = "<b>before text</b>";
 
-//elementasH1.append( appendText);
-//elementasH1.prepend( prependText);
-//elementasH1.after( afterText);
-//elementasH1.before( beforeText);
-//elementasH1.appendTo( "html");  // h1 perkels i html pabaiga
+elementasH1.append( appendText);
+elementasH1.prepend( prependText);
+elementasH1.after( afterText);
+elementasH1.before( beforeText);
+elementasH1.appendTo( "html");  // h1 perkels i html pabaiga
 
 // ========tricks=====================
 // perkels (nekopijuos)  elementa i kita  vieta
