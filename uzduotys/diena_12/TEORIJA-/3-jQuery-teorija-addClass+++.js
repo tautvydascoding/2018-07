@@ -21,7 +21,7 @@ $("h1").addClass(" bg-info ");
 $( "p" ).removeClass( "myClass noClass" ).addClass( "yourClass" );
 $("h1").toggleClass('change_me newClass');
 $('h2').hasClass(" mt-2 "); // tikrinu ar 'h2' elementas turi klase 'mt-2'
-$('h2').is(' .mt-2');   // tikrinu ar 'h2' elementas turi klase 'mt-2'
+$('h2').is(' .mt-2');       // tikrinu ar 'h2' elementas turi klase 'mt-2'
 
 $("button").click(function(){
    $("h1, h2, p").addClass(" bg-info ");  // you can select multiple elements, when adding classes
@@ -58,7 +58,7 @@ if ( $('#MyElement').hasClass('MyClass') ) {}
 // arba
 $( 'p' ).is( ".blue, .red" );
 
-//$( "div"  ).on( "click", function() {
+// $( "div"  ).on( "click", function() {
 //   if ( $( this ).is( ":first-child" ) ) {
 //     $( "p" ).text( "It's the first div." );
 //   } else if ( $( this ).is( ".blue,.red" ) ) {
@@ -78,7 +78,7 @@ $( 'p' ).is( ".blue, .red" );
 
 
 //=============set  attribute===============
-//$("h2", 'article').attr('id','a1234');
+$("h2", 'article').attr('id','a1234');
 
 //=====================================
 

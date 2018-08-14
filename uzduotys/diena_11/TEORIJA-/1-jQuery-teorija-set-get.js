@@ -46,7 +46,7 @@ $("h1").html("<button> Registruotis </button>");
 
 // document.getElementsByTagName("input")[0].value = "Tomas";
 // document.getElementsByTagName("input")[0].setAttribute('value','Tomas');
-// document.myform.vardas.value = 'Tomas';
+// // document.myform.vardas.value = 'Tomas';
 //                 <form name="myform">
 //                         <input class="aa" name="vardas" type="text" value="" >
 //                     </form>
