@@ -93,18 +93,21 @@
               //     }
               // }
 
+              echo "<div class='row'>";
               for ($i=0; $i < count($visosPrekes) ; $i++) {
-                  echo $visosPrekes[0][$i]." ";
-
-                  // if ($i % 2 === 1) {
-                  //     echo "<br>";
-                  // }
+                  echo "<div class='col-md-6'>";
+                  for ($k=0; $k < count($preke1) ; $k++) {
+                      echo $visosPrekes[$i][$k];
+                  }
+                  echo "</div>";
               }
+              echo "</div>";
 
               // 3 budai nuotraukoms
                // printf("<img src='./img/" . $visosPrekes[$i][1] . "' width='200px;' alt=''  />");
                // printf("<img src='./img/%s' width='200px;' alt=''  />", $visosPrekes[$i][1]);
 
+               printf($format [, $args...])
 
               ?>
           </div>
