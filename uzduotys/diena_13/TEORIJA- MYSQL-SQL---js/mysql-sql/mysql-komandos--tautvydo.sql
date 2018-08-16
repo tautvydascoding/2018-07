@@ -9,7 +9,8 @@ show tables;  -- parodo visas DB lenteles
 SELECT * FROM user;    -- issirenki duomenis, kuriuos nori surasti DB-je
 SELECT USER, PASSWORD, password_expired FROM user;
 
- CREATE USER 'tautvydas10'@'localhost' IDENTIFIED BY 'tratata'  PASSWORD EXPIRE NEVER;  
+ CREATE USER 'tautvydas10'@'localhost' IDENTIFIED BY 'tratata'  PASSWORD EXPIRE NEVER;
+ALTER USER 'tautvydas7'@'localhost' PASSWORD EXPIRE NEVER;
  // tratata - spaltazodis
 
 " "
@@ -23,7 +24,7 @@ SELECT USER, PASSWORD, password_expired FROM user;
 
 
  // username - pas kai kuriuos negali tureti skaiciu!!!
- CREATE USER 'tautvydasDelete'@'localhost' IDENTIFIED BY 'tratata'    PASSWORD EXPIRE NEVER;  
+ CREATE USER 'tautvydasDelete'@'localhost' IDENTIFIED BY 'tratata'    PASSWORD EXPIRE NEVER;
 GRANT ALL PRIVILEGES ON * . * TO 'tautvydasDelete'@'localhost' WITH GRANT OPTION;
 
  CREATE DATABASE  `hospital4`;
@@ -49,7 +50,7 @@ DBCC CHECKIDENT (mytable, RESEED, 0);       // B) budas
 use duomenuBazesPavadinimas;   // pasikeisti DB  pries kuriant lenteles
 
  CREATE TABLE IF NOT EXISTS doctors (
-      id INT(6) UNSIGNED     AUTO_INCREMENT PRIMARY KEY,
+      id INT UNSIGNED     AUTO_INCREMENT PRIMARY KEY,
       name VARCHAR(30) not NULL,
       lname VARCHAR(30) NOT NULL
 	  );
