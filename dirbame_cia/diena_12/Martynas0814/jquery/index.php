@@ -27,6 +27,49 @@
 
             <h1> Isijunk Inspect->console </h1>
 
+<?php 
+
+
+// 1 uzduotis
+// su js sukurti <img elementa 200x200 dydzio
+// pasitikrinti su console
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
