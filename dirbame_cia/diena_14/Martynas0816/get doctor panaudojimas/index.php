@@ -8,7 +8,7 @@
 
         <!-- Bootstrap CSS -->
          <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
-        <link rel="stylesheet" href="libs/css/bootstrap.min.css">
+        <link rel="stylesheet" href="libs/Bootstrap_css/bootstrap.min.css">
 
         <link rel="stylesheet" href="css/normalize.css">
         <!-- !!!! mano CSS failas visas patas zemiausias -->
@@ -29,17 +29,64 @@
 
 
 
+<?php
+
+include_once("db_functions.php");
+
+$gydytojas1 = getDoctor(2);
+print_r($gydytojas1);
+
+// foreach ($gydytojas1 as $duomenys) {
+//     echo "<h3> $duomenys </h3>";
+// }
+
+
+// uzduotis, be foreach atspausdinti gydytojo informacija
+// <h2> <em> nr</em> vardas pavarde </h2>
+
+echo "<h2> Gydytojo nr: <em> $gydytojas1[id], </em> Gydytojo vardas, pavarde: <strong> $gydytojas1[name] $gydytojas1[lname]. </strong> </h2>";
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
         </div> <!--  end Container-->
-
-
-
-
-
-
 
 
 
