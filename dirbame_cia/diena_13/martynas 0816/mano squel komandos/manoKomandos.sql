@@ -70,3 +70,75 @@ INSERT INTO img VALUES (null, "3.jpg", 1);
 INSERT INTO img VALUES (null, "1.jpg", 1);
 INSERT INTO img VALUES ( null, "3.gif", 2);
 INSERT INTO img VALUES (null, "0.png", 4);
+
+
+-- PAKEITIMAS
+-- nurodoma kad update,ka keisime ir i ka, ir   kur keisim(cia id)
+           UPDATE doctors SET lname = "Makalas" WHERE id = 5;
+
+-- pakeitimas su  conditionu be id. kad ieskotu tokio vardo ir pavardes.
+UPDATE doctors SET lname = "Makalauskas" WHERE name = "Koris" and lname  = "Makalas";
+
+-- pajamti visus daktarus, kuriu pavarde prasideda is l raides
+
+select * from doctors where lname like "L%";
+
+-- pajamti visus duomenis is name daugiau nei vienos lenteles ;
+-- UNION paima ir sujungia duomenis i viena lentele.
+select doctors.name from doctors
+union
+select img.name from img;
+
+
+-- UZDUOTIS  1.1  (SELECT) : ISVESTI 4 IR 5 gydytoja
+
+select * from doctors where id = 5 or id = 4;
+
+
+-- UZDUOTIS  1.2  (SELECT) : ISVESTI visus gydytojus, kuriu vardas: 'Tim' ARBA pavarde 'Leo'
+
+select * from doctors where name = "Timas" or lname = "Leo";
+
+-- UZDUOTIS  1.3  (SELECT): isvesti visus gydytojus, kuriu 'id' mazesnis uz 4
+
+select * from doctors where id <4;
+
+-- UZDUOTIS  1.4  (SELECT): isvesti visus gydytojus, bet ne 'Ona'
+
+select * from doctors where not name = "Ona";
+
+-- UZDUOTIS  1.5  (SELECT): isvesti visus paciantus, surikiuotus pagal varda
+
+select * from doctors order by name ASC;
+
+-- // UZDUOTIS 2: pervadinti gydytoja 'Lita' i 'Litas'
+
+update doctors set name = "Litas" where name = "Lita";
+
+--// uzduotis 1: istrinti gydytoja "Koris"
+delete from doctors where id = 5;
+
+--// uzduotis 2:  Pakeisti Paciento "Co" varda i "Karolis"
+
+update patients set name = "Karolis" where name = "Co";
+--// uzduotis 3.1: visu pacientu, kuriu vardas yra "Tom" -  varda pakeisti i "Tomas"
+
+update patients set name = "Tomas" where name = "tom";
+
+--// uzduotis 3.2: visu pacientu, kuriu vardas prasideda "T" -  docotor_id pakeisti i "4"
+
+update patients set doctor_id = 4 where name like "T%";
+
+--// uzduotis 4: gauti paciento "Mark" daktaro pavarde
+
+select patients.name, doctors.lname
+from patients
+inner join doctors 
+on doctors.id = patients.doctor_id 
+where patients.name = 'Mark';
+
+
+
+
+
+
