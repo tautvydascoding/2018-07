@@ -1,3 +1,5 @@
+
+
 // uzduotis 1: istrinti gydytoja "Koris"
 // uzduotis 2:  Pakeisti Paciento "Co" varda i "Karolis"
 // uzduotis 3.1: visu pacientu, kuriu vardas yra "Tom" -  varda pakeisti i "Tomas"

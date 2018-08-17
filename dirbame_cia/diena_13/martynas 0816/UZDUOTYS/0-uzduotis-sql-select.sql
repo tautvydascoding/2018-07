@@ -4,9 +4,3 @@
 -- UZDUOTIS  1.4  (SELECT): isvesti visus gydytojus, bet ne 'Ona'
 -- UZDUOTIS  1.5  (SELECT): isvesti visus paciantus, surikiuotus pagal varda
 -- // UZDUOTIS 2: pervadinti gydytoja 'Lita' i 'Litas'
-
-
-
--- UZDUOTIS UPDATE- pakeisti Koris pavarde i Makalas (suradus pagal id)
--- UZDUOTIS UPDATE- pakeisti Koris pavarde i Paulaitis (suradus pagal ir pavarde)
--- UZDUOTIS (select LIKE)- paimti visus gydytojus, kuriu pavarde parsideda is "L" raides

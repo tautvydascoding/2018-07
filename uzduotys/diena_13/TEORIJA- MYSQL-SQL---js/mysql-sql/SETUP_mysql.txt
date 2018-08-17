@@ -31,16 +31,23 @@ C:\MAMP\bin\mysql\bin\mysql.exe -u root -p
 // -p password
 
 //================= MAC================
+Start MAMP or MAMP PRO
+Start the server
+Open Terminal (Applications -> Utilities)
+Type in: (one line)
 sudo ln -s /Applications/MAMP/Library/bin/mysql /usr/bin/mysql
 
 mysql -uroot -proot
 
 
 // OR
-Start MAMP or MAMP PRO
-Start the server
-Open Terminal (Applications -> Utilities)
+1) Start MAMP or MAMP PRO
+2) Start Mysql the server ( ar dega zalia lempute)
+3) Open Terminal (Applications -> Utilities)
 Type in: (one line)
+4) /Applications/MAMP/Library/bin/mysql --host=localhost -uroot -proot
+ARBA
 ?/Applications/MAMP/Library/bin/mysql --host=localhost -uroot -proot
-
-mysql -uroot -proot
+ 
+pasitikrinti:
+5) ivesti komanda: show databases;
