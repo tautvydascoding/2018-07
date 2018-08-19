@@ -111,6 +111,11 @@ p {
     height: 100vh;
     background-image: url('../img/kalnai.jpg');
 }
+/*----------------Header Jumbotron --------------------*/
+.jumbotron {
+    background-image: url('../img/kalnai.jpg');
+    background-position: center;
+}
 
 /*================= Meniu ===========================*/
 .no-gutters {
