@@ -8,7 +8,7 @@
 
         <!-- Bootstrap CSS -->
          <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
-        <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="libs/css/bootstrap.min.css">
 
         <link rel="stylesheet" href="css/normalize.css">
         <!-- !!!! mano CSS failas visas patas zemiausias -->
@@ -26,6 +26,63 @@
         <div class="container   ">
 
             <h1> Isijunk Inspect->console </h1>
+
+
+<!--sukuriam php--> 
+<?php
+// includinam db_functions php
+include_once("db_functions.php");
+// $gydytojas1 = getDoctor($i);
+// print_r($gydytojas1);
+
+// darom for cikla kad atspausdinti visus gydytojus. nurodome $i 1 nes, id prasideda nuo1, ne nuo 0.
+// for ($i = 1; $i < 5; $i++) {
+//     $gydytojas1 = getDoctor($i);
+//     echo "<h2> Gydytojo Id: <em> $gydytojas1[id] </em>" . " Gydytojo vardas: <strong> $gydytojas1[name], " . " Gydytojo pavarde: $gydytojas1[lname]. </strong> </h2> ";
+
+// }
+
+
+// for ($i = 1; $i < 5; $i++) {
+//     $gydytojas1 = getDoctor($i);
+
+
+// }
+
+
+// ?>
+
+<!-- UZDUOTIS 1.3:
+// su kokiu nors ciklu atspausdinti VISUS gydytojus
+-->
+
+<div class="row">
+
+ <?php 
+include("template-item.php")
+?>
+
+
+
+</div>
+
+
+<!--
+// UZDUOTIS 1.3.2
+// A) sukurti nauja faila, pvz:  template-item.php
+// B)  perkelti dizaina is index failo ciklo (1.3) (visa h2 eilute):
+//     <h2 class='bg-info   m-1'> vardas pavarde</h2>
+//       i   faila  template-item.php
+// C)    index failo cikle (1.3) ideti:
+//       include  (' template-item.php');
+//  papildomai)  template-item.php   faile uzdeti klases 'col-md-4  m-1'
+//           virs ciklo uzdeti klase 'row' ir po ciklu uzdaryti
+
+
+
+
+-->
+
 
 
 

@@ -8,7 +8,7 @@
 
         <!-- Bootstrap CSS -->
          <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
-        <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="libs/css/bootstrap.min.css">
 
         <link rel="stylesheet" href="css/normalize.css">
         <!-- !!!! mano CSS failas visas patas zemiausias -->
@@ -27,7 +27,22 @@
 
             <h1> Isijunk Inspect->console </h1>
 
+            <?php
+                include_once 'db-functions.php';
+                for ($i=1; $i < ; $i++) {
+                    // code...
+                }
 
+
+
+
+                // include_once('db_functions.php');
+                // for ($i=1; $i < 5; $i++) {
+                //     $gydytojas1 = getDoctor($i);
+                //     echo "<h2><em>nr: $gydytojas1[id]</em> | Vardas: $gydytojas1[name] | Pavarde: $gydytojas1[lname]</h2>";
+                // }
+                // print_r($gydytojas1);
+             ?>
 
 
 

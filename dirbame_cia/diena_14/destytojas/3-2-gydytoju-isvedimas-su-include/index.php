@@ -27,21 +27,31 @@
 
             <h1> Isijunk Inspect->console </h1>
 
+<?php
+// UZDUOTIS 1.3.2
+// A) sukurti nauja nauja faila, pvz:  template-item.php
+// B)  perkelti dizaina is index failo ciklo (1.3) (visa h2 eilute):
+//     <h2 class='bg-info   m-1'> vardas pavarde</h2>
+//       i   faila  template-item.php
+// C)    index failo cikle (1.3) ideti:
+//       include  (' template-item.php');
+//  papildomai)  template-item.php   faile uzdeti klases 'col-md-4  m-1'
+//           virs ciklo uzdeti klase 'row' ir po ciklu uzdaryti
 
+        include_once('db_functions.php');
 
+        echo "<div class='row'>";
+            for ($i=1; $i < 6; $i++) {
+                $gydytojas = getDoctor($i);
+                include('template-item.php');
+            }
+        echo "</div>";
+?>
 
 
 
 
         </div> <!--  end Container-->
-
-
-
-
-
-
-
-
 
                 <!--  =================================== -->
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
