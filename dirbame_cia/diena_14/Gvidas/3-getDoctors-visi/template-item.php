@@ -1,3 +1,3 @@
-<?php
-echo "<h2><em>nr: $gydytojas1[id]</em> | Vardas: $gydytojas1[name] | Pavarde: $gydytojas1[lname]</h2>";
- ?>
+<div class="col-md-4 m-1 bg-info">
+    <h2><em>nr: <?php echo $gydytojas1['id']; ?></em> | Vardas: <?php echo $gydytojas1['name']; ?> | Pavarde: <?php echo $gydytojas1['lname']; ?></h2>
+</div>
