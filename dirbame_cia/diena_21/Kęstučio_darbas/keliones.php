@@ -33,7 +33,7 @@
         </div>
       </div>
       <!-- IDEA: uzbaigiu nuotrauku shou -->
-      <div class="col-2 align-self-center">
+      <div class="col-md-2 col-sm col-xs align-self-center">
         <h4> Antraste </h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
           irure dolor.</p>
@@ -54,7 +54,7 @@
           <div class="card-body">
             <h5 class="card-title"> Karpatai </h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary"> Užsisakyti kelionę </a>
+            <a href="http://localhost/d/detales.php" id="karpatai" class="btn btn-primary"> Užsisakyti kelionę </a>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@
           <div class="card-body">
             <h5 class="card-title"> Kalifornijos kalnai</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary"> Užsisakyti kelionę </a>
+            <a href="http://localhost/d/detales.php" id="kalifornija" class="btn btn-primary"> Užsisakyti kelionę </a>
           </div>
         </div>
       </div>
@@ -76,7 +76,7 @@
           <div class="card-body">
             <h5 class="card-title"> Islandijos kalnai</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary"> Užsisakyti kelionę </a>
+            <a href="http://localhost/d/detales.php" id="islandija" class="btn btn-primary"> Užsisakyti kelionę </a>
           </div>
         </div>
       </div>
@@ -87,7 +87,7 @@
           <div class="card-body">
             <h5 class="card-title"> Alpės </h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Užsisakyti kelionę</a>
+            <a href="http://localhost/d/detales.php" id="alpes" class="btn btn-primary">Užsisakyti kelionę</a>
           </div>
         </div>
       </div>

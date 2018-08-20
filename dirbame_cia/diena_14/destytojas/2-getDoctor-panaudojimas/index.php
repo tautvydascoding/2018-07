@@ -29,6 +29,28 @@
 
 
 
+        <?php
+            include_once( 'db_functions.php');
+
+            $gydytojas1 = getDoctor(2);
+            // print_r( $gydytojas1 );
+
+            foreach ($gydytojas1 as  $stalcius) {
+                echo "<h3>$stalcius</h3>";
+            }
+
+            // UZDUOTIS:
+            // be foreach atspausdinti visa gydytoja info
+             // <h2> <em>nr</em> vardas pavarde</h2>
+             echo " <h2> <em>" .$gydytojas1['id']. "</em> ".$gydytojas1['name'] . $gydytojas1['lname'].   "</h2>";
+         ?>
+            <!--  -----------ARBA----------  -->
+            <h2 class="bg-success    aukstis-100   m-5">
+                <em>
+                    <?php echo $gydytojas1['id'] ?>
+                </em>
+                <?php echo  $gydytojas1['name'] . $gydytojas1['lname']    ?>
+            </h2>
 
 
 

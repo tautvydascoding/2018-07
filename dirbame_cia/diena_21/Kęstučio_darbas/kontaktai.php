@@ -22,6 +22,13 @@
         <!-- ISJUNGIU meniu FLOAT -->
         <div class="float-fix"> </div>
 
+        <div class="jumbotron">
+          <h2 class="display-4">Susisiekite su mumis</h2>
+          <p class="lead">Jai turite klausymų mielai į juos atsakysime.</p>
+          <hr class="my-4">
+          <p>Galime suteikti visą papildomą jus dominančią informaciją apie poilsį kalnuose.</p>
+        </div>
+
         <!-- IDEA: Pradedu Antraste su Mygtuku -->
         <div class="container">
           <div class="row">
@@ -32,20 +39,20 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputEmail4">E-paštas</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="El. paštas">
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="inputPassword4">Slaptažodis</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    <label for="idėti vardą">Vardas</label>
+                    <input type="text" class="form-control" id="inputVardas" placeholder="Vardas">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputAddress">Adresas</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Jūsų gyvenamoji vieta">
                 </div>
                 <div class="form-group">
-                  <label for="inputAddress2">Adresas 2</label>
-                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                  <label for="inputAddress2">Kalnų kurorto adresas</label>
+                  <input type="text" class="form-control" id="inputAddress2" placeholder="Vietovė kur planuojate vykti">
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
@@ -56,11 +63,16 @@
                     <label for="inputState">Šalis</label>
                     <select id="inputState" class="form-control">
                       <option selected>Pasirinkite...</option>
-                      <option>...</option>
+                      <option>Vokietija</option>
+                      <option>Italija</option>
+                      <option>Prancuzija</option>
+                      <option>Tibetas</option>
+                      <option>Norvegija</option>
+                      <option>Švedija</option>
                     </select>
                   </div>
                   <div class="form-group col-md-2">
-                    <label for="inputZip">Zip</label>
+                    <label for="inputZip">Pašto kodas</label>
                     <input type="text" class="form-control" id="inputZip">
                   </div>
                 </div>
@@ -68,11 +80,11 @@
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="gridCheck">
                     <label class="form-check-label" for="gridCheck">
-                      Check me out
+                      Sutinku pateikti savo asmeninius duomenis
                     </label>
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="btn btn-primary">Siūsti</button>
               </form>
             <!-- IDEA: Užbaigiu forma -->
 

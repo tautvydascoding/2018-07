@@ -17,7 +17,7 @@
     $prisijungimas = mysqli_connect( DB_HOST, DB_USER, DB_PASSWORD, DB_NAME );
 
     if ( $prisijungimas && $rodytiZinutes ) {
-        echo "Prisijungem prie DB: " . DB_NAME . " sekmingai :)";
+        // echo "Prisijungem prie DB: " . DB_NAME . " sekmingai :)";
     } elseif( $rodytiZinutes )  {
         echo "ERROR: nepavyko prisijungti prie DB: " . mysqli_connect_error();
     }
@@ -54,7 +54,7 @@ function getDoctorPaprasta($nr) {
 
     }
 
-    //  testing  
+    //  testing
     // $gydytojas1 = getDoctor(10000);
     // print_r(   $gydytojas1  );
     //

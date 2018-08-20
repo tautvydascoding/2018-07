@@ -1,0 +1,1 @@
+ isvesti visus gydytojus
