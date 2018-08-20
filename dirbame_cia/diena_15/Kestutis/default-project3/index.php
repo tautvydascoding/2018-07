@@ -39,18 +39,74 @@
 </form>
  -->
 
-<form class="" action="#" method="get">
+<!-- <form class="" action="#" method="get">
   <input type="text" name="adresas" value="">
   <button type="submit" name="button">Siusti</button>
 </form>
-
+-->
 <?php
-$x = $_GET['adresas'];
-echo $x;
- ?>
+$rodytiZinutes = false;
+   // $debugMode = 1;
+
+   // konstantos
+   define('DB_NAME', "hospital7");
+   define('DB_USER', "root");
+   define('DB_PASSWORD', "root");
+   define('DB_HOST', "localhost");
+
+   $prisijungimas = mysqli_connect( DB_HOST, DB_USER, DB_PASSWORD, DB_NAME );
+
+   if ( $prisijungimas && $rodytiZinutes ) {
+       echo "Prisijungem prie DB: " . DB_NAME . " sekmingai :)";
+   } elseif( $rodytiZinutes )  {
+       echo "ERROR: nepavyko prisijungti prie DB: " . mysqli_connect_error();
+   }
+   function getPrisijungimas() {
+       global $prisijungimas;
+       return $prisijungimas;
+   }
 
 
-        </div> <!--  end Container-->
+
+//--------------end paprasta-----------
+    function getDoctorDaug($nr) {
+        $manoSQL = "SELECT * FROM doctors WHERE id=$nr ";
+
+        // grista obj !!! ne masyvas
+        $rezultatai = mysqli_query( getPrisijungimas() , $manoSQL);
+
+        // jei DB-je radome
+        if (mysqli_num_rows($rezultatai) > 0) {
+            // is "$rezultatai" objekto  paimam duomenis i Array
+            $resultataiMasyvas = mysqli_fetch_assoc($rezultatai);
+            return $resultataiMasyvas;
+        } else {
+        echo "<div class='bg-danger'> ERRRO: gytytojo nr:" . $nr . " neradome</div> ";
+        }
+
+    }
+
+
+
+
+    echo "<div class='row'>";
+    echo "<ul>";
+               for ($i=2; $i < 6; $i++) {
+                   $gydytojas = getDoctorDaug($i);
+                    echo "<li>";
+                      <a href='templ-doctor.php?nr=$gydyt[id]'> $gydytojas[ 'name' ] $gydytojas[ 'name' ]; </a>
+                    echo . "</li>";
+
+               }
+echo "</ul>";
+   ?>
+
+
+
+
+
+
+ </div>
 
 
 

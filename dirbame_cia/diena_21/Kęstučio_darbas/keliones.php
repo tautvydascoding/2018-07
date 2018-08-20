@@ -54,7 +54,7 @@
           <div class="card-body">
             <h5 class="card-title"> Karpatai </h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="http://localhost/d/detales.php" id="karpatai" class="btn btn-primary"> Užsisakyti kelionę </a>
+            <a href="detales.php" id="karpatai" class="btn btn-primary"> Užsisakyti kelionę </a>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@
           <div class="card-body">
             <h5 class="card-title"> Kalifornijos kalnai</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="http://localhost/d/detales.php" id="kalifornija" class="btn btn-primary"> Užsisakyti kelionę </a>
+            <a href="detales.php" id="kalifornija" class="btn btn-primary"> Užsisakyti kelionę </a>
           </div>
         </div>
       </div>
@@ -76,7 +76,7 @@
           <div class="card-body">
             <h5 class="card-title"> Islandijos kalnai</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="http://localhost/d/detales.php" id="islandija" class="btn btn-primary"> Užsisakyti kelionę </a>
+            <a href="detales.php" id="islandija" class="btn btn-primary"> Užsisakyti kelionę </a>
           </div>
         </div>
       </div>
@@ -87,7 +87,7 @@
           <div class="card-body">
             <h5 class="card-title"> Alpės </h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="http://localhost/d/detales.php" id="alpes" class="btn btn-primary">Užsisakyti kelionę</a>
+            <a href="detales.php" id="alpes" class="btn btn-primary">Užsisakyti kelionę</a>
           </div>
         </div>
       </div>
