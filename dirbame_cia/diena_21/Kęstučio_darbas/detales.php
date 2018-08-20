@@ -1,71 +1,118 @@
-<!doctype html>
-<html lang="en">
+<?php include('header.php') ?>
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="./css/bootstrap.min.css" />
-  <link rel="stylesheet" href="./css/normalize.css" />
-  <link rel="stylesheet" href="./css/master.css" />
-  <title> Baigiamasis Kestucio darbas</title>
-</head>
-
-<body>
+  <!-- IDEA: Puslapio Background -->
   <div class="container-fluid">
-    <header class="row meniu">
-      <div class="col">
+    <div class="row">
+      <div class="col box-wraper">
 
-        <img class="logo" src="./img/slide-logo-2.png" alt="logo">
+        <!-- IDEA: Pradedu meniu -->
+        <header class="container-fluid no-gutters">
+          <div class="row meniu">
+            <div class="col">
 
-        <!-- IDEA: Meniu -->
-        <nav class="navbar navbar-expand-lg navbar-light floar">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
-     </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html"> Namai </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="keliones.html"> Kelionės </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="kontaktai.html"> Kontaktai </a>
-              </li>
-            </ul>
+              <?php include('nav.php') ?>
+         <!-- IDEA: Pabaigem meniu -->
+
+            </div>
+            <!-- IDEA: Pabaigiu Header col -->
           </div>
-        </nav>
-        <!-- IDEA: Pabaigem meniu -->
-        <div class="float-fix"></div>
-        <!-- IDEA: isisvalom float left -->
-      </div>
-      <!-- IDEA: uzbaigiu headerio col -->
-    </header>
-  </div>
-  <!-- IDEA: uzdarau header kontaineri -->
+          <!-- IDEA: Pabaigiu Header row -->
+        </header>
+        <!-- IDEA: Pabaigiau Header konteinerį -->
+        <!-- ISJUNGIU meniu FLOAT -->
+        <div class="float-fix"> </div>
 
-  <div class="container">
-    <main class="row aukstis-700 bg-primary">
-      <div class="col-md">
-        <div class="col-md-3">
-          <div class="col-md-3">
-            <p>hhhhhhhhhhhhhk</p>
-          </div>
-          <!-- IDEA: udarau cpl 3 -->
+        <div class="jumbotron">
+          <h2 class="display-4">Susisiekite su mumis</h2>
+          <p class="lead">Jai turite klausymų mielai į juos atsakysime.</p>
+          <hr class="my-4">
+          <p>Galime suteikti visą papildomą jus dominančią informaciją apie poilsį kalnuose.</p>
         </div>
-        <!-- IDEA: udarau col 3 -->
-      </div>
-      <!-- IDEA: uzdarau 6 col -->
-    </main>
-  </div>
-  <!-- IDEA: uzdarau main container -->
 
+        <!-- IDEA: Pradedu Antraste su Mygtuku -->
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+
+              <!-- IDEA: Ikeliu forma -->
+              <form>
+                <div class="form-row">
+
+                  <div class="form-group col-md-6">
+                    <label for="inputAddress">Telefono numeris</label>
+                    <input type="text" class="form-control" id="telefonas" placeholder="+370">
+                  </div>
+
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">E-paštas</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="El. paštas">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="idėti vardą">Vardas</label>
+                    <input type="text" class="form-control" id="klientoVardas" placeholder="Vardas">
+                  </div>
+
+                <div class="form-group col-md-6">
+                  <label for="idėti vardą">Pavardė</label>
+                  <input type="text" class="form-control" id="klientoPavardė" placeholder="Pavardė">
+                </div>
+              </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCity">Viežbučio pavadinimas</label>
+                    <h4 id="Viezbucio pavadinimas"> Viezbucio pavadinimas </h4>
+                    <!-- <input type="text" class="form-control" id="Viezbucio pavadinimas"> -->
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputState">Dienų skaičius</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>Pasirinkite...</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                      <option>11</option>
+                      <option>12</option>
+                      <option>13</option>
+                      <option>14</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="inputAddress2">Atostogų kaina</label>
+                  <input type="text" class="form-control" id="atostoguKaina" placeholder="">
+                </div>
+
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                      Sutinku pateikti savo asmeninius duomenis
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Patvirtinti užsakymą</button>
+              </form>
+            <!-- IDEA: Užbaigiu forma -->
+
+             </div>
+            </div>
+         </div>
+       </div>
+      <!-- IDEA: Uzdarom pagrindini puslapio Background col -->
+    </div>
+    <!-- IDEA: Uzdarom pagrindini Background row -->
+  </div>
+  <!-- IDEA: Uzdarom pagrindini Background container -->
+  <!-- IDEA: Antrste su mygtuku pabaigta -->
 
   <!-- IDEA: Isidedu specery -->
   <div class="row aukstis-100">
@@ -73,32 +120,6 @@
     </div>
   </div>
   <!-- IDEA: Pabaigiau specery pradedu footer -->
-  <!-- IDEA: uzdarau main container -->
-  <footer class="container-fluid no-gutters">
-    <div class="row align-items-center aukstis-85">
-      <div class="col align-self-center">
-        <p>&copy; 2018 Kęstutis Morkevičius</p>
-      </div>
-      <div class="col align-self-center">
-        <p> Lietuva Kaunas Pakalnės 42 <span class="space"> </span> <i class="material-icons"> call </i> +370654212 </p>
-      </div>
-      <div class="col align-self-center">
-        <p> <i class="material-icons"> email </i> djkestutis@yahoo.com </p>
-      </div>
-      <!-- IDEA: usidarau footer col -->
-    </div>
-    <!-- IDEA: Uzsidarau footer row -->
-  </footer>
+<!-- IDEA: uzdarau main container -->
 
-
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/min.js"></script>
-
-</body>
-
-</html>
+<?php include('footer.php') ?>
