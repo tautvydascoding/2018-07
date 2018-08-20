@@ -258,24 +258,21 @@ for (i = 0; i < 100; i++) {
 // A) sukurti f-jas piestiEilute(x); spausdintiStulpeli(x);
 // B) nupiesti tuscia lentele paleidiznat f-jas (  antrastine eilute "vardas |  pavarde | amzius" - teks isvesti be f-jos)
 
-function piestiEilute(ilgis) {
-  var x = "";
-  for (i = 0; i < ilgis; i++) {
-    x = x + "-";
+function piestiEilute(x) {
+  var y = "-";
+  for (var i = 0; i < x; i++) {
+    document.querySelector('header').innerHTML += y;
   }
-  // console.log(x);
-
-
 }
 piestiEilute(10);
 piestiEilute(10);
 
 function spausdintasStulpelis(stulpelis) {
-  var y = " ";
-  for (a = 0; a < stulpelis; a++) {
-    y = y + "|"
+  var y = "|";
+  for (var a = 0; a < stulpelis; a++) {
+    document.querySelector('nav').innerHTML += y;
   }
-  console.log(y);
+
 }
 spausdintasStulpelis(5)
 
