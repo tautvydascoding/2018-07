@@ -25,10 +25,16 @@
     <body>
         <div class="container   ">
 
-            <h1> Isijunk Inspect->console </h1>
+            <h1> Isijunk </h1>
+<?php include 'db_functions.php'; ?>
 
+<h3>
 
-<img src="public/img/aaa.jpg" alt="tomas tomaiskis veidas">
+  <?php foreach ($gydytojuVardaiPoFunkcijos as $value) {
+    echo "$value <br>";
+}
+?>
+</h3>
 
 
 
