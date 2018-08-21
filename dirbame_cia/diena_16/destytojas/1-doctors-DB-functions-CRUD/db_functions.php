@@ -88,13 +88,21 @@ function getDoctorPaprasta($nr) {
     //     $manoSQL = "INSERT INTO  doctors VALUES (NULL, '$vardas', '$pavarde');  ";
     //     mysqli_query(getPrisijungimas(), $manoSQL);
     // }
+    function createDoctorTRUMPA($vardas, $pavarde) {
+
+            // SAUGUMAS:  uzkoduoja spec. simbolius "  ' \n \t < >
+            $vardas = mysqli_real_escape_string(getPrisijungimas(), $vardas);
+            $pavarde = mysqli_real_escape_string(getPrisijungimas(), $pavarde);
+
+            $manoSQL = "INSERT INTO  doctors VALUES (NULL, '$vardas', '$pavarde');  ";
+            $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+
+    }
+
     function createDoctor($vardas, $pavarde) {
-        // SAUGUMAS:  uzkoduoja spec. simbolius "  ' \n \t < >
-        $vardas = mysqli_real_escape_string(getPrisijungimas(), $vardas);
-        $pavarde = mysqli_real_escape_string(getPrisijungimas(), $pavarde);
+     // $istorija = sprintf("%s keliavo per %s ir sutiko %s raudona",  $vardas, "laukus", $pavarde );
 
         // !!! pasitikrinti ar SQL veikai terminale
-        // $manoSQL = "INSERT INTO  doctors VALUES (NULL, '$vardas', '$pavarde');  ";
         $manoSQL = sprintf("INSERT INTO  doctors VALUES (
                                     NULL,
                                    '%s',
@@ -130,6 +138,29 @@ function getDoctorPaprasta($nr) {
             echo "ERRRO: nemavyko istrinti gydytojo nr: $nr <BR />";
         }
     }
-    deleteDoctor(1);
+    // deleteDoctor(1); // test
+    /*
+        update/ change doctor information in DB
+    */
+    function updateDoctor($nr, $vardas, $pavarde) {
+        //
+        // $istorija = sprintf("%s keliavo per %s ir sutiko %s raudona",  $vardas, "laukus", $pavarde );
+        // UPDATE doctors SET name='onute', lname='aaa' WHERE id=4 LIMIT 1
+        $manoSQL = sprintf("UPDATE doctors SET
+                                                name='%s',
+                                                lname='%s'
+                                            WHERE id = %s
+                                            LIMIT 1
+                            ",
+                            mysqli_real_escape_string(getPrisijungimas(), $vardas),
+                            mysqli_real_escape_string(getPrisijungimas(), $pavarde),
+                            mysqli_real_escape_string(getPrisijungimas(), $nr)
+                        );
+        $arVeikia = mysqli_query(getPrisijungimas(), $manoSQL);
+        if (!$arVeikia) {
+            echo "ERROR: nepavyko koreguoti nr: $nr" . mysqli_error(getPrisijungimas());
+        }
+    }
+    updateDoctor(4, 'Onute', 'Griebliauskiene');
     // 7. updateDoctor($nr, $vardas, $pavarde)
     // 8. getDoctors($kiekGydytoju=99999)
