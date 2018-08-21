@@ -25,10 +25,22 @@
     <body>
         <div class="container   ">
 
-            <h1> Isijunk Inspect->console </h1>
+            <!-- 1. sukurti form'a naudojant metoda (GET) ir  su ivedimo laukais:
+             vardas, pavarde, telefonas, mygtukas 'registruotis'
+
+            2. kai paspaudzia 'registruotis', vartotoja perkelti i registracija.php faila (formoje action='registracija.php') -->
+
+            <form action="registracija.php" method="get">
+                <input type="text" name="vardas" value="" placeholder="Jusu vardas"> <br>
+                <input type="text" name="pavarde" value="" maxlength="30"> <br>
+                <label for="telefonas">Jusu tel. numeris</label><br>
+                <input type="number" name="telefonas" value="" autocomplete="true" pattern="370[0-9]{8}" title="Reikia ivesti +370 ..."> <br>
+
+                <button type="submit" name="button">registracija</button>
+
+            </form>
 
 
-<img src="public/img/aaa.jpg" alt="tomas tomaiskis veidas">
 
 
 

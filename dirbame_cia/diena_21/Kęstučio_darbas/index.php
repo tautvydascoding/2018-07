@@ -32,7 +32,7 @@
               <div class="container">
                 <div class="row">
                   <div class="col">
-                    <a href="keliones.html" class="btn btn-success"><h4 class="batasTekstas">Rinktis kelionę</h4></a>
+                    <a href="keliones.php" class="btn btn-success"><h4 class="batasTekstas">Rinktis kelionę</h4></a>
                   </div>
                   <!-- IDEA: Uzdarau mygtuko "col"> -->
                 </div>
