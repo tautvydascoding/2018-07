@@ -215,6 +215,8 @@ function updateDoctor($nr, $vardas, $pavarde)
 // updateDoctor(3, 'Teresyti', 'Teresauskiene');
 
 
+
+// VISU GYDYTOJU PAEMIMAS
 // 8. getDoctors($kiekGydytoju)
 
 /*
@@ -229,7 +231,7 @@ function getAllDoctors()
     // salyga, kad paimami visi gydytojai
     $manoSQL = "SELECT * FROM doctors";
 
-    // paimtas gydytojas issaugomas i kintamaji
+    // query grazina OBJEKTA NE MASYVA!!!!!!! sio objekto viduje yra daug eiluciu is DB. Siuo metu, visi duomenys is doctors lenteles yra musu php faile ir $visiGydytojai kintamajame
     $visiGydytojai = mysqli_query(getPrisijungimas(), $manoSQL);
 
     // grazinam paimta gydytoja
@@ -240,8 +242,21 @@ function getAllDoctors()
 
 $visiGydytojai = getAllDoctors();
 
-$pirmasGydytojas = mysqli_fetch_assoc($visiGydytojai); // FETCH paima tik viena eilute.
+$gydytojas = mysqli_fetch_assoc($visiGydytojai); // FETCH paima tik viena eilute.
 
-echo "vardas: $pirmasGydytojas[name] ";
+// visu gydytoju isvedimas
+// AR TURIME GYDYTOJA? ar true?
+// while ($gydytojas) {
+//     echo " <h2> $gydytojas[name] $gydytojas[lname] </h2>";
+//     $gydytojas = mysqli_fetch_assoc($visiGydytojai);
+// }
 
-print_r($visiGydytojai);
+
+
+// echo "vardas: $pirmasGydytojas[name] ";
+
+// print_r($visiGydytojai);
+
+// var_dump($pirmasGydytojas); // vieno gyd masyvas
+
+// var_dump($visiGydytojai); //objektas
