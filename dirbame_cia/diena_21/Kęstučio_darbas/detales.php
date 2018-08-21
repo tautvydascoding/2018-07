@@ -33,7 +33,7 @@
         <div class="container">
           <div class="row">
             <div class="col text-center">
-
+              <h4>Užpildykite trūkstamus laukus.</h4>
               <!-- IDEA: Ikeliu forma -->
               <form>
                 <div class="form-row">
@@ -61,7 +61,7 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputCity">Viežbučio pavadinimas</label>
-                    <h4 id="Viezbucio pavadinimas"> Viezbucio pavadinimas </h4>
+                    <h4 id="Viezbucio pavadinimas"> <?php echo $_GET['viezb']; ?> </h4>
                     <!-- <input type="text" class="form-control" id="Viezbucio pavadinimas"> -->
                   </div>
                   <div class="form-group col-md-6">
@@ -87,10 +87,12 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="inputAddress2">Atostogų kaina</label>
+                    <h4 id="ViezbucioKaina">Atostogų kaina <?php echo  $_GET['kaina']; ?></h4>
+                  <label for="inputAddress2" >
+                    Čia galite yrašyti savo komentarą.
+                  </label>
                   <input type="text" class="form-control" id="atostoguKaina" placeholder="">
                 </div>
-
                 <div class="form-group">
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="gridCheck">
