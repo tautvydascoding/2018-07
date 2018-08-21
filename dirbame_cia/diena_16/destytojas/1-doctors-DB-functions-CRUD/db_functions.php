@@ -161,6 +161,39 @@ function getDoctorPaprasta($nr) {
             echo "ERROR: nepavyko koreguoti nr: $nr" . mysqli_error(getPrisijungimas());
         }
     }
-    updateDoctor(4, 'Onute', 'Griebliauskiene');
-    // 7. updateDoctor($nr, $vardas, $pavarde)
-    // 8. getDoctors($kiekGydytoju=99999)
+    // updateDoctor(4, 'Onute', 'Griebliauskiene');
+
+    /*
+        get all docotrs form DB
+        $kiekGydytoju - kiek paimti gydytoju is DB. Jei nenurodytas - paimisim 9999.
+        O jeigu nurodytas - paimsim nurodyta kieki
+    */
+    function getDoctors() {
+        $manoSQL = "SELECT * FROM doctors";
+        // mysqli_query - grazina Objekta !!! ne masyva (sio objekto viduje yra daug eiluciu is DB)
+        $resultai = mysqli_query(getPrisijungimas(), $manoSQL);
+        return $resultai;
+    }
+
+    // ==================PANAUDOJIMAS ==================
+    // visu gydytoju isvedimas
+    $visiGydytojai = getDoctors();
+    // AR TURIME  gydytoja? Ar true?
+    while (     $gydytojas = mysqli_fetch_assoc($visiGydytojai) ) {
+        echo "<h2>$gydytojas[name]  $gydytojas[lname]     </h2>";
+    }
+
+    //=========ilgesnis budas - suprantamesnis-------------
+    // // AR TURIME  gydytoja?
+    // $gydytojas = mysqli_fetch_assoc($visiGydytojai); // fetch - paima sekancia eilute
+    // while (     $gydytojas   ) {
+    //     echo "<h2>$gydytojas[name]  $gydytojas[lname]     </h2>";
+    //     $gydytojas = mysqli_fetch_assoc($visiGydytojai); // fetch - paima sekancia eilute
+    // }
+
+    // echo "vardas: $pirmasGydytojas[name]  <br />";
+    // // var_dump($pirmasGydytojas ); // vieno gydytojo masyvas
+    // echo "<br />";
+    // echo "<br />";
+    // echo "<br />";
+    // // var_dump($visiGydytojai );  // OBJEKTAS
