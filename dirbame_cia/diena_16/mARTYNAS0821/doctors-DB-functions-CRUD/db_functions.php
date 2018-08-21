@@ -51,7 +51,7 @@ function getDoctor($nr)
 
         // jei DB-je radome
     if (mysqli_num_rows($rezultatai) > 0) {
-            // is "$rezultatai" objekto  paimam duomenis i Array
+            // is "$rezultatai" objekto  paimam vienus duomenis i masyva.
         $resultataiMasyvas = mysqli_fetch_assoc($rezultatai);
         return $resultataiMasyvas;
     } else {
@@ -72,7 +72,16 @@ function getDoctor($nr)
     //
 
 
-    //FUNKCIJA SUKURTI DAKTARA
+
+
+/*
+
+fja i DB ideda $gydytojas1
+$nr - gydytojo 'id' duomenu bazeje
+
+ */
+
+
 //// 5. createDoctor($vardas, $pavarde)
 // PAPRASTASIS VARIANTAS BE SAUGUMO.
 
@@ -90,6 +99,14 @@ function getDoctor($nr)
 // createDoctor("Onute", "Cerkauskaite");
 // createDoctor("Povilas", "Povilaitis");
 // createDoctor("Antanas", "Antanaitis");
+
+
+
+
+
+
+
+
 
 
 // SAUGESNIS VARIANTAS:
@@ -113,15 +130,118 @@ function createDoctor($vardas, $pavarde)
         mysqli_real_escape_string(getPrisijungimas(), $vardas),
         mysqli_real_escape_string(getPrisijungimas(), $pavarde)
     );
-
-
     $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
 // patikrina ar pavyko prisijungti.
     if ($arPavyko == false) {
         echo " error : nepavyko sukurti naujo gydytojo : $vardas, $pavarde < br / > " . mysqli_error(getPrisijungimas());
     }
 }
-createDoctor(" Krista ", " Cerkauskaite ");
+
+
+// createDoctor(" Krista ", " Cerkauskaite ");
+
+
+
+
 // 6. deleteDoctor($nr)
-// 7. updateDoctor($nr, $vardas, $pavarde)
+
+/*
+
+fja is DB salina $gydytojas1
+$nr - gydytojo 'id' duomenu bazeje
+
+ */
+
+function deleteDoctor($nr)
+{
+    // $nr = mysqli_real_escape_string(getPrisijungimas(), $nr);
+
+    $manoSQL = sprintf(
+        "DELETE FROM doctors 
+                WHERE id = '%s' 
+                LIMIT 1 /* cia imitas, kad gali ( klaidos atveju) istrinti tik viena.  */
+                ",
+        mysqli_real_escape_string(getPrisijungimas(), $nr)
+
+    );
+// nesumaisyti!        queris   prisijungimas     ir manoSQL uzklausa
+    $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+
+    if ($arPavyko == false) {
+        echo " error : nepavyko istrinti  gydytojo, kurio nr: $nr < br / > " . mysqli_error(getPrisijungimas());
+    }
+}
+// deleteDoctor(1);
+
+
+
+
+//7. updateDoctor($nr, $vardas, $pavarde)
+
+
+/*
+
+  f-ja updeitina/ pakeicia informacija DB
+  $nr - gydytojo 'id' duomenu bazeje
+  $vardas - gydytojo vardas DB 
+  $pavarde - gydytojo pavarde BD
+
+ */
+
+
+function updateDoctor($nr, $vardas, $pavarde)
+{
+
+    $manoSQL = sprintf(
+        "UPDATE doctors 
+                            SET 
+                            name = '%s',
+                            lname = '%s'
+                            WHERE id = '%s'
+                            LIMIT 1
+                            ",
+        mysqli_real_escape_string(getPrisijungimas(), $vardas),
+        mysqli_real_escape_string(getPrisijungimas(), $pavarde),
+        mysqli_real_escape_string(getPrisijungimas(), $nr)
+
+    );
+
+    $arVeikia = mysqli_query(getPrisijungimas(), $manoSQL);
+
+    if (!$arVeikia) {
+        echo " error : nepavyko atnaujinti/pakeisti  gydytojo, kurio nr: $nr < br / > " . mysqli_error(getPrisijungimas());
+    }
+}
+// updateDoctor(3, 'Teresyti', 'Teresauskiene');
+
+
 // 8. getDoctors($kiekGydytoju)
+
+/*
+
+  f-ja paima visus gydytojus
+  $kiekGydytoju - kiek paimti gydytoju. Jeigu nenurodytas - paimsim 9999. jEI NURODYTAS, tuomet paimsim tiek, kiek nurodyta.
+
+ */
+
+function getAllDoctors()
+{
+    // salyga, kad paimami visi gydytojai
+    $manoSQL = "SELECT * FROM doctors";
+
+    // paimtas gydytojas issaugomas i kintamaji
+    $visiGydytojai = mysqli_query(getPrisijungimas(), $manoSQL);
+
+    // grazinam paimta gydytoja
+    return $visiGydytojai;
+
+}
+
+
+$visiGydytojai = getAllDoctors();
+
+$pirmasGydytojas = mysqli_fetch_assoc($visiGydytojai); // FETCH paima tik viena eilute.
+
+echo "vardas: $pirmasGydytojas[name] ";
+
+print_r($visiGydytojai);
