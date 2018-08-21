@@ -25,39 +25,25 @@
     <body>
         <div class="container   ">
 
-            <h1> Isijunk Inspect->console </h1>
+            <?php
+                // print_r($_GET);
+                include_once('db_functions.php');
 
-<?php
-// 1. sukurti form'a naudojant metoda (GET) ir  su ivedimo laukais:
-//  vardas, pavarde, telefonas, mygtukas 'registruotis'
-//
-// 2. kai paspaudzia 'registruotis', vartotoja perkelti i registracija.php faila (formoje action='registracija.php')
-// 3. atspausdinti $_GET masyva
- ?>
-    <form  action="registracija.php" method="get">
-         <input type="text" name="vardas" value=""  placeholder="jusu vardas"><br />
-         <input type="text" name="pavarde" value="" autofocus maxlength="30"> <br />
+                // paimama numeri is URI adreso
+                $numeris = $_GET['nr'];
+                // paimam gyd. duomenis is DB
+                $gydyt = getDoctor(   $numeris     );
+             ?>
 
-         <label for="telefonas">Jusu tel. numeris</label><br />
-         <input type="text" name="tel" value="" autocomplete="true"   pattern="370[0-9]{8}"   title="Reik ivesti +370 ..."><br />
-
-         <button type="submit" name="button">   registruotis </button>
-         <!-- ARBA -->
-         <input type="submit" name="" value="registracija">
-    </form>
+            <h1 class="bg-info"> Gydytojas nr: <?php echo $gydyt['id'] ?> </h1>
+            <h2> Vardas:  <?php echo $gydyt['name'] ?> </h2>
+            <h2> Pavarde: <?php echo $gydyt['lname'] ?> </h2>
 
 
 
 
 
         </div> <!--  end Container-->
-
-
-
-
-
-
-
 
 
                 <!--  =================================== -->

@@ -28,23 +28,46 @@
             <h1> Isijunk Inspect->console </h1>
 
 <?php
-// 1. sukurti form'a naudojant metoda (GET) ir  su ivedimo laukais:
-//  vardas, pavarde, telefonas, mygtukas 'registruotis'
-//
-// 2. kai paspaudzia 'registruotis', vartotoja perkelti i registracija.php faila (formoje action='registracija.php')
-// 3. atspausdinti $_GET masyva
+// uzduotis2: atspausdinti gydytoja i <p> </p>, kurio 'id' yra 4
+    include_once('db_functions.php');
+    $gydyt4 = getDoctor(4);
+    // pasitikrinimas:
+    // print_r(  $gydyt4);
+
+
+// uzduotis3: atspausdinti visus gydytojus , kaip list item "ul li"
+echo "<ul>";
+for ($i=1; $i < 6; $i++) {
+    $gydyt = getDoctor($i);
+    echo "<li>
+            <a href='template-doctor.php?nr=$gydyt[id]&vardas=tomas'>  $gydyt[name]   $gydyt[lname]   </a>
+         </li>";
+}
+echo "</ul>";
+
+// uzduotis4: patobulinti 'uzduotis3',
+    // kad paspaudus ant gydytojo vardo/pavardes   atidarytu doctor.php faila
+// uzduotis5: patobulinti uzduotis4,
+    // kad   doctor.php faile isvestu info apie - paspausta gydytoja
+
+// 2.
+
+
+
  ?>
-    <form  action="registracija.php" method="get">
-         <input type="text" name="vardas" value=""  placeholder="jusu vardas"><br />
-         <input type="text" name="pavarde" value="" autofocus maxlength="30"> <br />
 
-         <label for="telefonas">Jusu tel. numeris</label><br />
-         <input type="text" name="tel" value="" autocomplete="true"   pattern="370[0-9]{8}"   title="Reik ivesti +370 ..."><br />
 
-         <button type="submit" name="button">   registruotis </button>
-         <!-- ARBA -->
-         <input type="submit" name="" value="registracija">
-    </form>
+<!-- <ul>
+    <?php    for ($i=1; $i < 6; $i++) :
+        $gydyt = getDoctor($i);
+        ?>
+        <li>
+            <a href="template-doctor.php?nr=<?php        echo   $gydyt['id']; ?>">
+                    <? echo  $gydyt['name'] . $gydyt['lname']  ?>
+             </a>
+        </li>
+    <?php   endfor; ?>
+</ul> -->
 
 
 
