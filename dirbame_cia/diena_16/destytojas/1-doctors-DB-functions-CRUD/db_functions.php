@@ -114,6 +114,22 @@ function getDoctorPaprasta($nr) {
     // createDoctor("Povilas", "Povilaitis");
     // createDoctor("Antanas", "Kalauskaitis");
 
-    // 6. deleteDoctor($nr)
+    /*
+        f-ja is DB salina $gydytojas
+        $nr - gydytojo 'id' duomenu bazeje
+    */
+    function deleteDoctor($nr) {
+        $manoSQL = sprintf("DELETE FROM doctors
+                                   WHERE id = %s
+                                   LIMIT 1
+                          ",
+                                    mysqli_real_escape_string(getPrisijungimas(), $nr)
+                            );
+        $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+        if ($arPavyko == false) { //
+            echo "ERRRO: nemavyko istrinti gydytojo nr: $nr <BR />";
+        }
+    }
+    deleteDoctor(1);
     // 7. updateDoctor($nr, $vardas, $pavarde)
     // 8. getDoctors($kiekGydytoju=99999)
