@@ -1,3 +1,4 @@
+<?php include_once('db_functions.php'); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,20 +28,23 @@
 
             <h1> Isijunk Inspect->console </h1>
 
+            <ul>
+                <?php
+                    $sql = 'SELECT id, model, number FROM cars;';
+                    $result = mysqli_query($connection, $sql);
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<li id='list-" . $row['id'] . "' value='" . $row['id'] . "'><a href='auto.php?number=" . $row['number'] . "'>" . $row['model'] . " " . $row['number'] . "</a></li>";
+                    }
+                ?>
+            </ul>
 
-<img src="public/img/aaa.jpg" alt="tomas tomaiskis veidas">
-
-
-
+            <div id='detail' class='d-none'>
+                
+            </div>
 
         </div> <!--  end Container-->
 
-
-
-
-
-
-
+        
 
 
                 <!--  =================================== -->

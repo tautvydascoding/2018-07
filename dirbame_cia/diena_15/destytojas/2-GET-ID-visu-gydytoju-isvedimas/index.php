@@ -27,8 +27,48 @@
 
             <h1> Isijunk Inspect->console </h1>
 
+<?php
+// uzduotis2: atspausdinti gydytoja i <p> </p>, kurio 'id' yra 4
+    include_once('db_functions.php');
+    $gydyt4 = getDoctor(4);
+    // pasitikrinimas:
+    // print_r(  $gydyt4);
 
-<img src="public/img/aaa.jpg" alt="tomas tomaiskis veidas">
+
+// uzduotis3: atspausdinti visus gydytojus , kaip list item "ul li"
+echo "<ul>";
+for ($i=1; $i < 6; $i++) {
+    $gydyt = getDoctor($i);
+    echo "<li>
+            <a href='template-doctor.php?nr=$gydyt[id]&vardas=tomas'>  $gydyt[name]   $gydyt[lname]   </a>
+         </li>";
+}
+echo "</ul>";
+
+// uzduotis4: patobulinti 'uzduotis3',
+    // kad paspaudus ant gydytojo vardo/pavardes   atidarytu doctor.php faila
+// uzduotis5: patobulinti uzduotis4,
+    // kad   doctor.php faile isvestu info apie - paspausta gydytoja
+
+// 2.
+
+
+
+ ?>
+
+
+<!-- <ul>
+    <?php    for ($i=1; $i < 6; $i++) :
+        $gydyt = getDoctor($i);
+        ?>
+        <li>
+            <a href="template-doctor.php?nr=<?php        echo   $gydyt['id']; ?>">
+                    <? echo  $gydyt['name'] . $gydyt['lname']  ?>
+             </a>
+        </li>
+    <?php   endfor; ?>
+</ul> -->
+
 
 
 

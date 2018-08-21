@@ -25,22 +25,25 @@
     <body>
         <div class="container   ">
 
-            <h1> Isijunk Inspect->console </h1>
+            <?php
+                // print_r($_GET);
+                include_once('db_functions.php');
 
+                // paimama numeri is URI adreso
+                $numeris = $_GET['nr'];
+                // paimam gyd. duomenis is DB
+                $gydyt = getDoctor(   $numeris     );
+             ?>
 
-<img src="public/img/aaa.jpg" alt="tomas tomaiskis veidas">
+            <h1 class="bg-info"> Gydytojas nr: <?php echo $gydyt['id'] ?> </h1>
+            <h2> Vardas:  <?php echo $gydyt['name'] ?> </h2>
+            <h2> Pavarde: <?php echo $gydyt['lname'] ?> </h2>
+
 
 
 
 
         </div> <!--  end Container-->
-
-
-
-
-
-
-
 
 
                 <!--  =================================== -->

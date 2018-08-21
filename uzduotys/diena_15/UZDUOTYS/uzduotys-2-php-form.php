@@ -9,3 +9,9 @@ print_r( $_GET);
 
 // PASIBANDYTI PAPILDOMAI
 pvz.: print_r( $GLOBALS)
+
+
+
+// UZDUOTIS
+// pasisveikinti su katik uzsiregistravusius zmogumi ir
+// graziai atspausdinti uzsiregistravusio zmoguas duomenis

@@ -27,8 +27,15 @@
 
             <h1> Isijunk Inspect->console </h1>
 
+            <form action="registracija.php" method="get">
+                <input name="vardas" type="text" autofocus maxlength="30"><br>
+                <input name="pavarde" type="text" autocomplete="on"><br>
+                <label for="telefonas">Tel. nr.</label><br>
+                <input name="telefonas" type="number" pattern="370[0-9]{8}" title="Reikia ivesti +370..."><br>
+                <textarea name="komentaras" id="" cols="30" rows="10"></textarea><br>                
+                <input name="mygtukas" type="submit" value="Registruotis"><br>
+            </form>
 
-<img src="public/img/aaa.jpg" alt="tomas tomaiskis veidas">
 
 
 

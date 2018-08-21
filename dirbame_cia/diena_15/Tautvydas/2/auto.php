@@ -1,3 +1,13 @@
+<?php include_once('db_functions.php'); 
+
+$sql = 'SELECT * FROM cars WHERE number="' . $_GET['number'] . '";';
+$result = mysqli_query($connection, $sql);
+$car_info = array();
+while ($row = mysqli_fetch_assoc($result)) {
+    $car_info += $row;
+}
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,12 +35,12 @@
     <body>
         <div class="container   ">
 
-            <h1> Isijunk Inspect->console </h1>
+            <h1> <?php echo $car_info['model'] . " (" . $car_info['number'] . ")"; ?> </h1>
 
-
-<img src="public/img/aaa.jpg" alt="tomas tomaiskis veidas">
-
-
+            <div>Model: <?php echo $car_info['model'] ?></div>
+            <div>Number: <?php echo $car_info['number'] ?></div>
+            <div>Year: <?php echo $car_info['year_made'] ?></div>
+            
 
 
         </div> <!--  end Container-->

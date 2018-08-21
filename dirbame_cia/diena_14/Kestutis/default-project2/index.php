@@ -8,7 +8,7 @@
 
         <!-- Bootstrap CSS -->
          <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
-        <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="libs/css/bootstrap.min.css">
 
         <link rel="stylesheet" href="css/normalize.css">
         <!-- !!!! mano CSS failas visas patas zemiausias -->
@@ -25,12 +25,29 @@
     <body>
         <div class="container   ">
 
-            <h1> Isijunk Inspect->console </h1>
+            <h1> Labas </h1>
+
+<?php include 'db_functions.php';
+
+$gydytojas2 = getDoctor(2);
+print_r( $gydytojas2 );
 
 
-<img src="public/img/aaa.jpg" alt="tomas tomaiskis veidas">
+foreach ($gydytojas2 as $stalcius) {
+    echo "<h3>$stalcius</h3>";
+}
+echo "<h2><em>$stalcius ['id']</em></h2>";
+printf("<h2><em>($stalcius ['id'])</em></h2>");
 
+?>
 
+<h2 class= "bg-success aukstis-100 m-5">
+    <em>
+      <?php echo $gydytojas2['id'] ?>
+    </em>
+    <?php echo $gydytojas2['name'] . $gydytojas2['lname'] ?>
+
+</h2>
 
 
         </div> <!--  end Container-->
