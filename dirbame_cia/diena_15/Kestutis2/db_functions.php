@@ -28,33 +28,33 @@ mysqli_set_charset($prisijungimas, 'utf8');
         return $prisijungimas;
     }
 //--------------paprastas-----
-function getDoctorPaprasta($nr) {
-    $manoSQL = "SELECT * FROM doctors WHERE id=$nr ";
-
-    // grista obj !!! ne masyvas
-    $rezultatai = mysqli_query( getPrisijungimas() , $manoSQL);
-    // is "$rezultatai" objekto  paimam duomenis i Array
-    $resultataiMasyvas = mysqli_fetch_assoc($rezultatai);
-
-    return $resultataiMasyvas;
-}
+// function getDoctorPaprasta($nr) {
+//     $manoSQL = "SELECT * FROM doctors WHERE id=$nr ";
+//
+//     // grista obj !!! ne masyvas
+//     $rezultatai = mysqli_query( getPrisijungimas() , $manoSQL);
+//     // is "$rezultatai" objekto  paimam duomenis i Array
+//     $resultataiMasyvas = mysqli_fetch_assoc($rezultatai);
+//
+//     return $resultataiMasyvas;
+// }
 //--------------end paprasta-----------
-    function getDoctor($nr) {
-        $manoSQL = "SELECT * FROM doctors WHERE id=$nr ";
-
-        // grista obj !!! ne masyvas
-        $rezultatai = mysqli_query( getPrisijungimas() , $manoSQL);
-
-        // jei DB-je radome
-        if (mysqli_num_rows($rezultatai) > 0) {
-            // is "$rezultatai" objekto  paimam duomenis i Array
-            $resultataiMasyvas = mysqli_fetch_assoc($rezultatai);
-            return $resultataiMasyvas;
-        } else {
-        echo "<div class='bg-danger'> ERRRO: gytytojo nr:" . $nr . " neradome</div> ";
-        }
-
-    }
+    // function getDoctor($nr) {
+    //     $manoSQL = "SELECT * FROM doctors WHERE id=$nr ";
+    //
+    //     // grista obj !!! ne masyvas
+    //     $rezultatai = mysqli_query( getPrisijungimas() , $manoSQL);
+    //
+    //     // jei DB-je radome
+    //     if (mysqli_num_rows($rezultatai) > 0) {
+    //         // is "$rezultatai" objekto  paimam duomenis i Array
+    //         $resultataiMasyvas = mysqli_fetch_assoc($rezultatai);
+    //         return $resultataiMasyvas;
+    //     } else {
+    //     echo "<div class='bg-danger'> ERRRO: gytytojo nr:" . $nr . " neradome</div> ";
+    //     }
+    //
+    // }
 
     //  testing
     // $gydytojas1 = getDoctor(10000);
@@ -70,14 +70,14 @@ function getDoctorPaprasta($nr) {
 //
 // 5. createDoctor($vardas, $pavarde)
 
-function createDoctor($vardas, $pavarde) {
-  // Saugumas
-  $vardas = mysqli_real_esceape_string(getPrisijungimas(), $vardas);
-  $pavarde = mysqli_real_esceape_string(getPrisijungimas(), $pavarde);
-  $manoSQL = "INSERT INTO doctors VALUES (NULL, '$vardas', '$pavarde'); ";
-  // mysqli_query(getPrisijungimas(), $manoSQL);
-}
-  // $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+// function createDoctor($vardas, $pavarde) {
+//   // Saugumas
+//   $vardas = mysqli_real_esceape_string(getPrisijungimas(), $vardas);
+//   $pavarde = mysqli_real_esceape_string(getPrisijungimas(), $pavarde);
+//   $manoSQL = "INSERT INTO doctors VALUES (NULL, '$vardas', '$pavarde'); ";
+//   // mysqli_query(getPrisijungimas(), $manoSQL);
+// }
+//   // $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
   // ($arPavyko == false ) {
   //   echo "ERROR nepavyko sukurti gydytojo";
 
@@ -113,24 +113,21 @@ function createDoctor($vardas, $pavarde) {
 // }
 // deleteDoctor2(10);
 
-$kiekGydytoju jai nurodytaspaimsim kelis jai ne 999999.
- function getDoctors() {
-     $manoSQL = "SELECT * FROM doctors name ";
-     $daugGydytoju = mysqli_query(getPrisijungimas(), $manoSQL);
-     $rezultatai = mysqli_fetch_assoc($daugGydytoju);
-     return $rezultatai;
- }
-
+//?
+include 'header.php';
 
  // ?
-// function getDoctors() {
-//     $manoSQL = "SELECT * FROM doctors name";
-//     $daugGydytoju = mysqli_query(getPrisijungimas(), $manoSQL);
-//     $rezultatai = mysqli_fetch_assoc($daugGydytoju);
-//     while ($rezultatai) {
-//         echo "<h2>$rezultatai[name] </h2>";
-//         $rezultatai = mysqli_fetch_assoc($visiGydytojai);
-//     }
-// }
-//
-// getDoctor();
+ function getDoctors() {
+    $manoSQL = "SELECT * FROM doctors name";
+     $rezultatai = mysqli_query(getPrisijungimas(), $manoSQL);
+     return $rezultatai;
+    }
+
+
+
+$visiGydytojai = getDoctors();
+
+while ( $gydytojas = mysqli_fetch_assoc($visiGydytojai) ) {
+    echo "<h4>$gydytojas[name] $gydytojas[lname] </h4>
+          <a class='btn btn-primary' href='delete-doctor.php?nr=$gydytojas[id]' role='button'>Trinti</a>";
+}
