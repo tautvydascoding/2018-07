@@ -26,25 +26,24 @@
         <div class="container   ">
 
             <h1> Isijunk Inspect->console </h1>
+<!-- 1. sukurti form'a naudojant metoda (GET) ir  su ivedimo laukais:
+ vardas, pavarde, telefonas, mygtukas 'registruotis'
+
+2. kai paspaudzia 'registruotis', vartotoja perkelti i registracija.php faila (formoje action='registracija.php')
+
+3. registracija.php faile pasinaudojant globaliu PHP masyvu $_GET atspausdinti vartotojo ivestu duomenis
+pvz.:
+print_r( $_GET);
+
+// PASIBANDYTI PAPILDOMAI
+pvz.: print_r( $GLOBALS) -->
 
 <?php
-// 1. sukurti form'a naudojant metoda (GET) ir  su ivedimo laukais:
-//  vardas, pavarde, telefonas, mygtukas 'registruotis'
-//
-// 2. kai paspaudzia 'registruotis', vartotoja perkelti i registracija.php faila (formoje action='registracija.php')
-// 3. atspausdinti $_GET masyva
- ?>
-    <form  action="registracija.php" method="get">
-         <input type="text" name="vardas" value=""  placeholder="jusu vardas"><br />
-         <input type="text" name="pavarde" value="" autofocus maxlength="30"> <br />
 
-         <label for="telefonas">Jusu tel. numeris</label><br />
-         <input type="text" name="tel" value="" autocomplete="true"   pattern="370[0-9]{8}"   title="Reik ivesti +370 ..."><br />
+require("form.php")
 
-         <button type="submit" name="button">   registruotis </button>
-         <!-- ARBA -->
-         <input type="submit" name="" value="registracija">
-    </form>
+
+?>
 
 
 
