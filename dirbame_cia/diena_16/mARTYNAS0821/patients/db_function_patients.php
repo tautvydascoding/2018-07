@@ -203,6 +203,8 @@ function deletePatient($nr)
 function updatePacient($nr, $vardas, $pavarde, $gydNr)
 {
 
+  // echo "labas"; // tikrinti, ar veikia paeiliui
+
   $manoSQL = sprintf(
     "UPDATE patients 
                             SET 
