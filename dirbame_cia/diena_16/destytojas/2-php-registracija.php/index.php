@@ -37,7 +37,7 @@
                     $vard = "";
                  }
              ?>
-
+ 
             <form   action="#" method="post">
                 <input type="text" name="vardas" value="<?php echo $vard; ?>" placeholder="Vardenis" autocomplete="on">
                 <input type="text" name="pavarde" value="<?php echo $pavard; ?>" placeholder="Paverdenis" autocomplete="on">
