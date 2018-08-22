@@ -25,68 +25,43 @@
     <body>
         <div class="container   ">
 
-            <h1> Isijunk Inspect->console </h1>
+            <h1> STATIC </h1>
 
-<?php
-
-function test () {
-    static $a = 100;
-    echo $a . "<br />";
-    $a-= 12;
-
-}
-test();
-test();
-test();
-test();
-
-//atspausdins kelinta karta ji suveike
+            <?php
+            function test() {
+                static $a = 100; //!!! sita eilute suveiks viena karta
+                echo $a . "<br>";
+                $a-=12;
+            }
+            test();
+            test();
+            test();
+            test();
+            test();
 
 
+            // rekursija - tai fucnkcija kuri iskviecia pati save
+            // UZDUOTIS
+            // iskviesti funkcija viena karta
+            // bet si funkcija turi suveikti 10 kartu
+            // (atspaudinti kelinta karta ji suveike)
+            function test2() {
+                static $i = 1;
+                echo "Paleidimo numeris: $i <br>";
+                $i++;
+                if ($i < 11) {
+                    test2();
+                }
+            }
+            test2();
+
+            
 
 
-Class Zmogus {
-  public $ugis = 180;
-  public $vardas = "Antanas";
-  public function einu (){
-  echo "Einu, einu...";
-  }
-}
-
- $objMonika = new Zmogus();
- $objTadas = new Zmogus();
- $objKestas = new Zmogus();
 
 
 
-$objMonika->ugis = 160;
-$objTadas->ugis = 190;
-$objTadas->vardas = "Tadas";
-$objMonika->vardas = "Monika";
-
-echo $objMonika->vardas."<br />";
-
-Class Zmogus2 {
-  private $ugis = 180;
-  private $vardas = "Antanas";
-public function getManoUgis(){
-  return $this->ugis;
-   }
-
-   public function getManoVardas(){
-     return $this->vardas;
-      }
-}
-
-$objZmogausUgis = new Zmogus2();
-$atspausdinsim = $objZmogausUgis->getManoUgis();
-echo $atspausdinsim."<br />";
-
-$objZmogausVardas = new Zmogus2();
-$atspausdinsimV = $objZmogausVardas->getManoVardas();
-echo $atspausdinsimV."<br />";
-
- ?>
+             ?>
 
 
 
