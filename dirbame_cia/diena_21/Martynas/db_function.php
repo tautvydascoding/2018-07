@@ -110,15 +110,15 @@ function getGallerylImg($nr)
     echo "<div class='bg-danger'> ERRRO: gallery IMG nr:" . $nr . " neradome</div> ";
   }
 }
-// $galImg1=getGallerylImg(1);
-// $galImg2=getGallerylImg(2);
-// $galImg3=getGallerylImg(3);
-// $galImg4=getGallerylImg(4);
-// $galImg5=getGallerylImg(5);
-// $galImg6=getGallerylImg(6);
-// $galImg7=getGallerylImg(7);
-// $galImg8=getGallerylImg(8);
-// $galImg9=getGallerylImg(9);
+$galImg1 = getGallerylImg(1);
+$galImg2 = getGallerylImg(2);
+$galImg3 = getGallerylImg(3);
+$galImg4 = getGallerylImg(4);
+$galImg5 = getGallerylImg(5);
+$galImg6 = getGallerylImg(6);
+$galImg7 = getGallerylImg(7);
+$galImg8 = getGallerylImg(8);
+$galImg9 = getGallerylImg(9);
 
 
     //  testing  
