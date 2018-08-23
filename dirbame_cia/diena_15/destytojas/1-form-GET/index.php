@@ -36,10 +36,10 @@
  ?>
     <form  action="registracija.php" method="get">
          <input type="text" name="vardas" value=""  placeholder="jusu vardas"><br />
-         <input type="text" name="pavarde" value=""> <br />
+         <input type="text" name="pavarde" value="" autofocus maxlength="30"> <br />
 
          <label for="telefonas">Jusu tel. numeris</label><br />
-         <input type="number" name="telefonas" value=""   pattern="370[0-9]{8}"   title="Reik ivesti +370 ..."><br />
+         <input type="text" name="tel" value="" autocomplete="true"   pattern="370[0-9]{8}"   title="Reik ivesti +370 ..."><br />
 
          <button type="submit" name="button">   registruotis </button>
          <!-- ARBA -->

@@ -1,0 +1,20 @@
+<?php
+// UZDUOTIS 1:
+// sukurti  klase: 'zmogus'
+
+// zmogus turi:
+// private ugis,
+// private vardas
+// public f-ja 'manoUgis()'
+// public f-ja 'manoVardas()'
+* kintamojo paemimas f-je:    $this->vardas
+
+// UZDUOTIS 2:
+// susikurti konstruktoriu
+// UZDUOTIS 2.1
+// susikurti  objektus: Monika, Tadas
+
+// UZDUOTIS 2.1
+// Atspasudinti varda ir ugi naudojant
+// f-ja 'manoUgis()'
+// f-ja 'manoVardas()'
