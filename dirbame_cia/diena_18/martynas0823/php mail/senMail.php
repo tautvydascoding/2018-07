@@ -1,10 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<style>
+
+body {background-color: black;}
+.mailer {
+  color:#fff;
+  }
+
+</style>
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
 <?php
 
 $klientoVardas = $_POST['name'];
 $klientoQuestion = $_POST['question'];
 $klientoEmail = $_POST['email'];
 
-
+echo " <META http-equiv='refresh' content='0;URL=sent.php' ";
 
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
@@ -14,7 +45,7 @@ $klientoEmail = $_POST['email'];
 //Load Composer's autoloader
 require_once('libs/PHPMailer-master/PHPMailerAutoload.php');
 
-$mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+$mail = new PHPMailer(false);                              // Passing `true` enables exceptions
 try {
 
   $mail->SMTPOptions = array(
@@ -29,7 +60,7 @@ try {
   $mail->Port = 465;                                      // TCP port to connect to
 
 //Server settings
-  $mail->SMTPDebug = 3;                                 // Enable verbose debug output
+  $mail->SMTPDebug = 0;                                 // Enable verbose debug output
   $mail->isSMTP();                                      // Set mailer to use SMTP
 
   $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -56,7 +87,9 @@ try {
   $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
   $mail->send();
-  echo 'Message has been sent';
+  // echo " <h1 class='mailer'> Jusu zinute issiusta! </h2>";
+
+
 } catch (Exception $e) {
   echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }

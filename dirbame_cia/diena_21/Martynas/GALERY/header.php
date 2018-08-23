@@ -1,3 +1,10 @@
+<?php
+require_once("../db_function.php"); #tekstai is DB.
+$tekstas1 = getTextas(1);
+$tekstas2 = getTextas(2);
+$tekstas3 = getTextas(3);
+?>
+
 <!DOCTYPE html>
 <html>
 
