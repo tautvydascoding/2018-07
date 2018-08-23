@@ -5,7 +5,7 @@
 // b) sukurti f-ja, kuri paima visas informacija apie gydytoja
 // c) panaudoti sia f-ja, ir atvaizduoti visus gydytojus
 
-$rodytiZinutes = true;
+$rodytiZinutes = false;
     // $debugMode = 1;
 
     // konstantos
@@ -30,9 +30,9 @@ function getPrisijungimas()
   return $prisijungimas;
 }
 //--------------paprastas-----
-function getPatientsPaprasta($nr)
+function getTextPaprasta($nr)
 {
-  $manoSQL = "SELECT * FROM patients WHERE id=$nr ";
+  $manoSQL = "SELECT * FROM aboutUsText WHERE id=$nr ";
 
     // grista obj !!! ne masyvas
   $rezultatai = mysqli_query(getPrisijungimas(), $manoSQL);
@@ -42,9 +42,10 @@ function getPatientsPaprasta($nr)
   return $resultataiMasyvas;
 }
 //--------------end paprasta-----------
-function getPatient($nr)
+// =-=-=-=-=-=-= About us teksto F-JA -=-=-=-=-=-=
+function getTextas($nr)
 {
-  $manoSQL = "SELECT * FROM patients WHERE id=$nr ";
+  $manoSQL = "SELECT * FROM aboutUsText WHERE id=$nr ";
 
         // grista obj !!! ne masyvas
   $rezultatai = mysqli_query(getPrisijungimas(), $manoSQL);
@@ -55,25 +56,81 @@ function getPatient($nr)
     $resultataiMasyvas = mysqli_fetch_assoc($rezultatai);
     return $resultataiMasyvas;
   } else {
-    echo "<div class='bg-danger'> ERRRO: paciento nr:" . $nr . " neradome</div> ";
+    echo "<div class='bg-danger'> ERRRO: tokio teksto nr:" . $nr . " neradome</div> ";
   }
 
 }
 
+// =-=-=-=-=-=-= KARUSELES F-JA -=-=-=-=-=-=
+
+
+function getCaruselImg($nr)
+{
+  $manoSQL = "SELECT * FROM caruselIMG WHERE id=$nr ";
+
+        // grista obj !!! ne masyvas
+  $rezultatai = mysqli_query(getPrisijungimas(), $manoSQL);
+
+        // jei DB-je radome
+  if (mysqli_num_rows($rezultatai) > 0) {
+            // is "$rezultatai" objekto  paimam vienus duomenis i masyva.
+    $resultataiMasyvas = mysqli_fetch_assoc($rezultatai);
+    return $resultataiMasyvas;
+  } else {
+    echo "<div class='bg-danger'> ERRRO: caruselIMG nr:" . $nr . " neradome</div> ";
+  }
+}
+//KARUSELES IMG PAEMIMAS
+$img1 = getCaruselImg(1);
+$img2 = getCaruselImg(2);
+$img3 = getCaruselImg(3);
+$img4 = getCaruselImg(4);
+$img5 = getCaruselImg(5);
+$img6 = getCaruselImg(6);
+$img7 = getCaruselImg(7);
+$img8 = getCaruselImg(8);
+$img9 = getCaruselImg(9);
+
+
+// =-=-=-=-=-=-= Galerijos F-JA -=-=-=-=-=-=
+
+function getGallerylImg($nr)
+{
+  $manoSQL = "SELECT * FROM galleryIMG WHERE id=$nr";
+
+        // grista obj !!! ne masyvas
+  $rezultatai = mysqli_query(getPrisijungimas(), $manoSQL);
+
+        // jei DB-je radome
+  if (mysqli_num_rows($rezultatai) > 0) {
+            // is "$rezultatai" objekto  paimam vienus duomenis i masyva.
+    $resultataiMasyvas = mysqli_fetch_assoc($rezultatai);
+    return $resultataiMasyvas;
+  } else {
+    echo "<div class='bg-danger'> ERRRO: gallery IMG nr:" . $nr . " neradome</div> ";
+  }
+}
+// $galImg1=getGallerylImg(1);
+// $galImg2=getGallerylImg(2);
+// $galImg3=getGallerylImg(3);
+// $galImg4=getGallerylImg(4);
+// $galImg5=getGallerylImg(5);
+// $galImg6=getGallerylImg(6);
+// $galImg7=getGallerylImg(7);
+// $galImg8=getGallerylImg(8);
+// $galImg9=getGallerylImg(9);
+
+
     //  testing  
+
+// $tekstas1 = getTextas(1); // veikia
+
+// echo "<h2> $tekstas1[article]  </h2>";
 
 // $pacientas1 = getPatient(1);
 // print_r($pacientas1);
 // echo "<h2> Pacientas <br> vardas: $pacientas1[name], pavarde:$pacientas1[lname], paciento id:$pacientas1[id], pacientas priskirtas gydytojui, kurio id:$pacientas1[doctor_id] </h2>";
-    // $gydytojas1 = getDoctor(10000);
-    // print_r(   $gydytojas1  );
-    //
-    // $gydytojas2 = getDoctor(2);
-    // print_r(   $gydytojas2  );
-    //
-    // $gydytojas5 = getDoctor(5);
-    // print_r(   $gydytojas5  );
-    //
+
 
 
 
@@ -116,7 +173,7 @@ $nr - gydytojo 'id' duomenu bazeje
 
 // SAUGESNIS VARIANTAS:
 
-function createPatient($vardas, $pavarde, $gydNr)
+function createTekstas($vardas, $article)
 {
 
     //saugumas: real_escape_string - uzkoduoja spec simbolius: " ' < <> 
@@ -130,21 +187,20 @@ function createPatient($vardas, $pavarde, $gydNr)
 
     //totorialuose daznai daroma itin saugus variantas:
   $manoSQL = sprintf(
-    "INSERT INTO patients
+    "INSERT INTO aboutUsText
      VALUES (NULL, 
      '%s', 
-     '%s',
      '%s'
+     
      
      )",
     mysqli_real_escape_string(getPrisijungimas(), $vardas),
-    mysqli_real_escape_string(getPrisijungimas(), $pavarde),
-    mysqli_real_escape_string(getPrisijungimas(), $gydNr)
+    mysqli_real_escape_string(getPrisijungimas(), $article)
   );
   $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
 // patikrina ar pavyko prisijungti.
   if ($arPavyko == false) {
-    echo " error : nepavyko sukurti naujo paciento : $vardas, $pavarde, $gydNr < br / > " . mysqli_error(getPrisijungimas());
+    echo " error : nepavyko sukurti naujo article : $vardas, $article < br / > " . mysqli_error(getPrisijungimas());
   }
 }
 
@@ -163,12 +219,12 @@ $nr - gydytojo 'id' duomenu bazeje
 
  */
 
-function deletePatient($nr)
+function deleteTekstas($nr)
 {
     // $nr = mysqli_real_escape_string(getPrisijungimas(), $nr);
 
   $manoSQL = sprintf(
-    "DELETE FROM patients 
+    "DELETE FROM aboutUsText 
                 WHERE id = '%s' 
                 LIMIT 1 /* cia imitas, kad gali ( klaidos atveju) istrinti tik viena.  */
                 ",
@@ -179,7 +235,7 @@ function deletePatient($nr)
   $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
 
   if ($arPavyko == false) {
-    echo " error : nepavyko istrinti paciento, kurio nr: $nr < br / > " . mysqli_error(getPrisijungimas());
+    echo " error : nepavyko istrinti article, kurio nr: $nr < br / > " . mysqli_error(getPrisijungimas());
   }
 }
 // deleteDoctor(1);
@@ -200,26 +256,21 @@ function deletePatient($nr)
  */
 
 
-function updatePacient($nr, $vardas, $pavarde, $gydNr)
+function updatePacient($nr, $vardas, $article)
 {
 
   // echo "labas"; // tikrinti, ar veikia paeiliui
 
   $manoSQL = sprintf(
-    "UPDATE patients 
+    "UPDATE aboutUsText 
                             SET 
                             name = '%s',
-                            lname = '%s',
-                            doctor_id = '%s'
+                            article = '%s'
                             WHERE id = '%s'
                             LIMIT 1
                             ",
     mysqli_real_escape_string(getPrisijungimas(), $vardas),
     mysqli_real_escape_string(getPrisijungimas(), $pavarde),
-    mysqli_real_escape_string(
-      getPrisijungimas(),
-      $gydNr
-    ),
     mysqli_real_escape_string(getPrisijungimas(), $nr)
 
   );
@@ -227,7 +278,7 @@ function updatePacient($nr, $vardas, $pavarde, $gydNr)
   $arVeikia = mysqli_query(getPrisijungimas(), $manoSQL);
 
   if (!$arVeikia) {
-    echo " error : nepavyko atnaujinti/pakeisti  paciento, kurio nr: $nr < br / > " . mysqli_error(getPrisijungimas());
+    echo " error : nepavyko atnaujinti/pakeisti  article, kurio nr: $nr < br / > " . mysqli_error(getPrisijungimas());
   }
 }
 // updateDoctor(3, 'Teresyti', 'Teresauskiene');
@@ -244,21 +295,27 @@ function updatePacient($nr, $vardas, $pavarde, $gydNr)
 
  */
 
-function getAllPatients()
+function getAllTekstai()
 {
     // salyga, kad paimami visi gydytojai
-  $manoSQL = "SELECT * FROM patients";
+  $manoSQL = "SELECT * FROM aboutUsText";
 
     // query grazina OBJEKTA NE MASYVA!!!!!!! sio objekto viduje yra daug eiluciu is DB. Siuo metu, visi duomenys is doctors lenteles yra musu php faile ir $visiGydytojai kintamajame
-  $visiPacientai = mysqli_query(getPrisijungimas(), $manoSQL);
+  $visiTekstai = mysqli_query(getPrisijungimas(), $manoSQL);
 
     // grazinam paimta gydytoja
-  return $visiPacientai;
+  return $visiTekstai;
 
 }
 
-$visiPacientai = getAllPatients();
-$pacientas = mysqli_fetch_assoc($visiPacientai);
+$visiTekstai = getAllTekstai();
+$tekstas = mysqli_fetch_assoc($visiTekstai);
+
+// while ($tekstas) {
+//   echo " <h2> $tekstas[name] </h2 <br>
+//   <h3> $tekstas[article] </h3>";
+//   $tekstas = mysqli_fetch_assoc($visiTekstai);
+// }
 // $visiPacientai = getAllDoctors();
 // echo "<h2> $pacientas[name] </h2>";
 // while ($pacientas) {

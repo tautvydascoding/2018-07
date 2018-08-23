@@ -5,6 +5,7 @@ include_once("zmogus.php");
 class Vyras extends Zmogus
 {
   private $testosteronas = 6122;
+
   function setTestosteronas($newTestoteronas)
   {
     $this->testosteronas = $newTestoteronas;
@@ -38,7 +39,8 @@ echo $vyras->getTestosteronas();
 // UZDUOTIS 2  (private-protected skirtumas)
 // Vyras klases viduje atspausdinti:
 
-echo $vyras->printVyrDuomenys();
 // f-ja printVyroDuomenys()
 // ugi, pusrycius, turtas
+echo $vyras->printVyrDuomenys();
+
 
