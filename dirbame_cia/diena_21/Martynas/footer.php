@@ -1,5 +1,5 @@
 <?php 
-include("db_function.php")
+include("db_function.php");
 ?>
         <footer>
             <div class="mdl-grid footer_wrapper">
