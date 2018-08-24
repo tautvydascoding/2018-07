@@ -1,0 +1,12 @@
+<?php
+// UZDUOTIS 1:
+// sukurti  klase: 'zmogus'
+// zmogus turi: public ugis, public vardas
+// f-ja 'einu()'
+
+// UZDUOTIS 2:
+// susikurti  objektus: Monika, Tadas, Kestas
+
+// UZDUOTIS 2.1
+// Atspasudinti varda ir ugi
+// paleisti f-ja 'einu()'
