@@ -1,0 +1,97 @@
+$h100:100px;
+$mainColor: #f1f1f1;
+$mainBgColor:#a1a1a1;
+$text16:16px;
+$text29:29px;
+$textSv100: 100;
+$textSv600: 600;
+* {
+    box-sizing: border-box;
+}
+
+.float {
+    float: left;
+}
+
+.float-fix {
+    clear: both;
+}
+
+.aukstis-100 {
+    height: 100px;
+}
+
+.aukstis-200 {
+    height: 200px;
+}
+
+.aukstis-300 {
+    height: 300px;
+}
+
+.aukstis-400 {
+    height: 400px;
+}
+
+.aukstis-500 {
+    height: 500px;
+}
+
+.fonas-rud {
+    background-color: brown;
+}
+
+.fonas-gelt {
+    background-color: yellow;
+}
+
+.fonas-oran {
+    background-color: orange;
+}
+
+/* ------- */
+
+div {
+    h2 {
+        color: red;
+        font-size: $text29;
+        font-weight: $textSv600;
+    }
+    & p {
+        color: $text16;
+        font-weight: $textSv100;
+    }
+}
+
+aside {
+    h2 {
+        color: blue;
+        font-size: $text29;
+        font-weight: $textSv100;
+    }
+    & p {
+        color: $text16;
+        font-weight: $textSv600;
+    }
+}
+
+article {
+    background-color: #b185d4;
+    h3 {
+        font: {
+            size: 3rem;
+            weight: 300;
+        }
+        color:#333;
+    }
+    & p {
+        font: {
+            size: 1.4rem;
+            weight: 400;
+        }
+        color: #fff;
+        &:hover {
+            color: black;
+        }
+    }
+}
