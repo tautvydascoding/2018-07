@@ -1,5 +1,7 @@
-<?php 
-include("db_function.php")
+<?php
+$visiIconai = getAllSocIcons();
+$Iconas = mysqli_fetch_assoc($visiIconai);
+
 ?>
         <footer>
             <div class="mdl-grid footer_wrapper">
@@ -21,24 +23,31 @@ include("db_function.php")
                     </ul>
                     <div class="">
                         <ul class="social-links">
-<?php
-//while ($tekstas) {
-    //   echo " <h2> $tekstas[name] </h2 <br>
-    //   <h3> $tekstas[article] </h3>";
-    //   $tekstas = mysqli_fetch_assoc($visiTekstai);
-    // }
-$visiIconai = getAllSocIcons();
-$Iconas = mysqli_fetch_assoc($visiIconai);
-while ($Iconas) :
-    echo "  <li>  ";
-echo "  <a href='#'>  ";
-echo " <i class='$Iconas[name]'> </i>  ";
-echo "  </a> ";
-echo "  </li> ";
-$Iconas = mysqli_fetch_assoc($visiIconai);
-endwhile;
-?>
-
+                            <li>
+                                <a href="#">
+                                    <i class="icon ion-logo-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon ion-logo-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon ion-logo-googleplus"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon ion-logo-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon ion-logo-pinterest"></i>
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
@@ -51,6 +60,19 @@ endwhile;
 
 
         </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     </div>

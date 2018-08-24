@@ -535,7 +535,7 @@ div#main_div_wraper:after {
   letter-spacing: 0.2rem;
 }
 
-/* ========----- CONTACTS----======== */
+/* ========----- CONTACT US----======== */
 
 /* main wraperis */
 
@@ -566,6 +566,7 @@ div#main_div_wraper:after {
   font-weight: 700;
   letter-spacing: 0.3rem;
 }
+
 .mobh4 {
   opacity: 0;
 }
@@ -657,7 +658,7 @@ div#main_div_wraper:after {
 
 footer {
   background-color: #333;
-  padding: 30px;
+  padding: 52px;
   font-size: 80%;
 }
 
@@ -745,6 +746,7 @@ footer p {
 }
 
 /* -=-=-=-= MEDIA QUERIES=-=--=-=-=-=-=-= */
+
 @media (max-width: 1199px) {
   .undoBlack,
   .undoBlue {
@@ -781,7 +783,6 @@ footer p {
   .img9 {
     width: 820px;
   }
-
   .img_photo {
     margin-bottom: 5rem;
   }
@@ -793,30 +794,25 @@ footer p {
     padding-left: 3rem;
   }
   /* GALERIJA */
-
   .jumbotron {
     background-color: #485167;
     width: 90%;
     height: 200px;
     margin-bottom: 4rem;
   }
-
   .jumbotron h1 {
     font-weight: 800;
     font-size: 4rem;
     letter-spacing: 0.2rem;
     margin: 0;
   }
-
   .lead {
     display: none;
   }
-
   .img9 {
     height: 350px;
     width: 600px;
   }
-
   .img2 {
     width: 360px;
   }
@@ -843,7 +839,6 @@ footer p {
   .naujienlaiskis {
     display: none;
   }
-
   hr.style-eight {
     display: none;
   }
@@ -858,7 +853,6 @@ footer p {
     width: 520px;
     height: 340px;
   }
-
   .jumbotron p:last-child {
     display: none;
   }
@@ -868,7 +862,6 @@ footer p {
     letter-spacing: 0.1rem;
     margin: 0;
   }
-
   .jumbotron {
     height: 180px;
   }
@@ -913,7 +906,6 @@ footer p {
   .ab_karusele {
     display: none;
   }
-
   .laisureh2 {
     display: none;
   }
@@ -921,20 +913,17 @@ footer p {
   .cont_us {
     display: none;
   }
-
   .cont_hq {
     display: none;
   }
   .cont_form {
     text-align: right;
   }
-
   .cont_wraper {
     height: 750px;
     padding-top: 0.01rem;
     width: 400px;
   }
-
   .mobh4 {
     opacity: 1;
     text-align: left;

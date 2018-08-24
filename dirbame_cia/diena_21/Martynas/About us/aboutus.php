@@ -1,14 +1,7 @@
 <?php
 
 require_once("header.php")
-
-
-
-
-
 ?>
-
-
 
 
         <!-- Main container -->
@@ -80,64 +73,7 @@ require_once("header.php")
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
         <!--  end of MAIN Container-->
-
-
 <?php
-require_once("footer.php")
-?>
+require_once("footer.php") ?>

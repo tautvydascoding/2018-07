@@ -295,6 +295,8 @@ function updatePacient($nr, $vardas, $article)
 
  */
 
+
+ //=-=-=--=-=- TEKSTAI
 function getAllTekstai()
 {
     // salyga, kad paimami visi gydytojai
@@ -340,3 +342,20 @@ $tekstas = mysqli_fetch_assoc($visiTekstai);
 // var_dump($pirmasGydytojas); // vieno gyd masyvas
 
 // var_dump($visiGydytojai); //objektas
+
+//-=-=-=-=-=Social icons
+function getAllSocIcons()
+{
+    // salyga, kad paimami visi gydytojai
+  $manoSQL = "SELECT * FROM scIcons";
+
+    // query grazina OBJEKTA NE MASYVA!!!!!!! sio objekto viduje yra daug eiluciu is DB. Siuo metu, visi duomenys is doctors lenteles yra musu php faile ir $visiGydytojai kintamajame
+  $visiIconai = mysqli_query(getPrisijungimas(), $manoSQL);
+
+    // grazinam paimta gydytoja
+  return $visiIconai;
+
+}
+
+// $visiIconai = getAllSocIcons();
+// $Iconas = mysqli_fetch_assoc($visiIconai);
