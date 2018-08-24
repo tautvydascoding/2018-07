@@ -30,7 +30,7 @@ require_once("header.php");
 
                 <div class="col-md-1 soninis1 .d-sm-none .d-md-block ">
 
-                    <img src="../imgN/undoB.jpg" width="90" height="1400" alt="undo_black" class="undoBlack">
+                    <img src="../imgN/<?php echo $galImg1['name'] ?>" width="90" height="1400" alt="undo_black" class="undoBlack">
                 </div>
 
 
@@ -43,12 +43,12 @@ require_once("header.php");
 
                     <div class="row">
                         <div class="col-md-5 mr-1 ml-5 aukstis-300  mb-4 mt-2">
-                            <img src="../imgN/ag4.jpeg" width="390" height="300" alt="Medinis stogas" class="img1">
+                            <img src="../imgN/<?php echo $galImg2['name'] ?>" width="390" height="300" alt="Medinis stogas" class="img1">
                         </div>
 
                         <div class="col-md-5 ml-1 aukstis-300  offset-md-1 ml-5 mb-4 mt-2">
 
-                            <img src="../imgN/ag5.jpeg" width="455" height="300" alt="Ofisas vilniuje" class="img2">
+                            <img src="../imgN/<?php echo $galImg3['name'] ?>" width="455" height="300" alt="Ofisas vilniuje" class="img2">
                         </div>
 
                     </div>
@@ -57,7 +57,7 @@ require_once("header.php");
 
                         <div class="col-md-4 aukstis-700 ml-4 mt-3">
 
-                            <img src="../imgN/ag6.jpg" height="670" width="320" alt="Krepsinio aistele" class="img3">
+                            <img src="../imgN/<?php echo $galImg4['name'] ?>" height="670" width="320" alt="Krepsinio aistele" class="img3">
                         </div>
 
                         <div class="col-md-7 aukstis-700 mt-2 ml-5 mb_nebus">
@@ -65,17 +65,17 @@ require_once("header.php");
 
                             <div class="row">
                                 <div class="col-md-5 aukstis-200  ml-4">
-                                    <img src="../imgN/ag8.jpeg" alt="Baznycios holas" height="200" width="250" class="img4">
+                                    <img src="../imgN/<?php echo $galImg5['name'] ?>" alt="Baznycios holas" height="200" width="250" class="img4">
                                 </div>
 
                                 <div class="col-md-6 aukstis-200  ml-2">
 
-                                    <img src="../imgN/ag9.jpeg" alt="Palepes kambarys" height="200" width="310" class="img5">
+                                    <img src="../imgN/<?php echo $galImg6['name'] ?>" alt="Palepes kambarys" height="200" width="310" class="img5">
                                 </div>
 
                                 <div class="col aukstis-200 mt-3">
 
-                                    <img src="../imgN/ag10.jpeg" alt=" Melynas kambarys" width="570" height="210" class="img6">
+                                    <img src="../imgN/<?php echo $galImg7['name'] ?>" alt=" Melynas kambarys" width="570" height="210" class="img6">
                                 </div>
 
                             </div>
@@ -83,10 +83,10 @@ require_once("header.php");
 
                             <div class="row">
                                 <div class="col-md-5 aukstis-250 mt-2 ml-5">
-                                    <img src="../imgN/ag8.jpeg" alt="" width="250" height="250" class="img7">
+                                    <img src="../imgN/<?php echo $galImg5['name'] ?>" alt="" width="250" height="250" class="img7">
                                 </div>
                                 <div class="col-md-5 aukstis-250 mt-2 ml-3 ">
-                                    <img src="../imgN/ag9.jpeg" alt="Palepes kambarys" height="250" width="280" class="img8">
+                                    <img src="../imgN/<?php echo $galImg6['name'] ?>" alt="Palepes kambarys" height="250" width="280" class="img8">
 
                                 </div>
                             </div>
@@ -96,7 +96,7 @@ require_once("header.php");
                     </div>
 
                     <div class="col-md-11 aukstis-300 ml-5 mt-4">
-                        <img src="../imgN/sen.jpeg" height="340" width="880" alt="medinis senovine palepe" class="img9">
+                        <img src="../imgN/<?php echo $galImg8['name'] ?>" height="340" width="880" alt="medinis senovine palepe" class="img9">
                         <button type="submit" class="btn btn-outline-light gal_btn">Susisiek!</button>
                     </div>
 

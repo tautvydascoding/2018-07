@@ -1,3 +1,7 @@
+<?php
+require_once("../db_function.php");
+?>
+
 <!DOCTYPE html>
 <html>
 
