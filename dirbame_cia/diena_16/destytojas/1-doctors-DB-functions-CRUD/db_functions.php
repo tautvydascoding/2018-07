@@ -81,13 +81,7 @@ function getDoctorPaprasta($nr) {
     // print_r(   $gydytojas5  );
     //
 
-
-    //  createDoctor($vardas, $pavarde)
-    // function createDoctorNotSafe($vardas, $pavarde) {
-    //     // !!! pasitikrinti ar SQL veikai terminale
-    //     $manoSQL = "INSERT INTO  doctors VALUES (NULL, '$vardas', '$pavarde');  ";
-    //     mysqli_query(getPrisijungimas(), $manoSQL);
-    // }
+ 
     function createDoctorTRUMPA($vardas, $pavarde) {
 
             // SAUGUMAS:  uzkoduoja spec. simbolius "  ' \n \t < >
@@ -177,11 +171,11 @@ function getDoctorPaprasta($nr) {
 
     // ==================PANAUDOJIMAS ==================
     // visu gydytoju isvedimas
-    $visiGydytojai = getDoctors();
-    // AR TURIME  gydytoja? Ar true?
-    while (     $gydytojas = mysqli_fetch_assoc($visiGydytojai) ) {
-        echo "<h2>$gydytojas[name]  $gydytojas[lname]     </h2>";
-    }
+    // $visiGydytojai = getDoctors();
+    // // AR TURIME  gydytoja? Ar true?
+    // while (     $gydytojas = mysqli_fetch_assoc($visiGydytojai) ) {
+    //     echo "<h2>$gydytojas[name]  $gydytojas[lname]     </h2>";
+    // }
 
     //=========ilgesnis budas - suprantamesnis-------------
     // // AR TURIME  gydytoja?

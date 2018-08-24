@@ -10,10 +10,7 @@
 <?php
 
 require_once("db_function_patients.php");
-$numeris = $_GET['nr'];
 
-$pacientas = getPatient($numeris)
-// updatePacient($nr, $vardas, $pavarde, $gydNr)
 ?>
 
 
@@ -65,14 +62,25 @@ while ($pacientas) {
 
   $pacientas = mysqli_fetch_assoc($visiPacientai);
 }
+?>
+
+</table>
+</div>
+
+<div>
+  <h2>
+<?php
+
+$pacientas = $_GET;
+
+print_r($pacientas);
+
+updatePacient(null, $pacientas['name'], $pacientas['lname'], $pacientas['doctor_id']);
+
 
 ?>
 
-
-
-</table>
-
-
+  </h2>
 </div>
   
 </body>
