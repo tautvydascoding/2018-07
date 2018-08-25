@@ -1,31 +1,21 @@
-   
+<?php
+
+require_once("../db_function.php");
+
+?>
 
   <div class=" ab_karusele">
     <div class="vidinis">
+<?php
+$visiCaruselIMG = getAllCaruselIMG();
+$caruselImg = mysqli_fetch_assoc($visiCaruselIMG);
 
-      <img src='../IMG/aboutUS/carusel/<?php echo $img1['name'] ?>' alt='foto amazones upe' >
-
-       <img src='../IMG/aboutUS/carusel/<?php echo $img2['name'] ?>' alt='foto kalnai' >
-
-       <img src='../IMG/aboutUS/carusel/<?php echo $img3['name'] ?>' alt='draugyste' >
-
-      <img src='../IMG/aboutUS/carusel/<?php echo $img4['name'] ?>' alt='heloweenas'>
-
-      <img src='../IMG/aboutUS/carusel/<?php echo $img5['name'] ?>' alt='balis pro lektuvo langa' >
-       
-       <img src='../IMG/aboutUS/carusel/<?php echo $img6['name'] ?>' alt='longboard' >
-
-       <img src='../IMG/aboutUS/carusel/<?php echo $img7['name'] ?>' alt='jura ir krosinis mocas' >
-
-       <img src='../IMG/aboutUS/carusel/<?php echo $img8['name'] ?>' alt='britvos' >
-
-       <img src='../IMG/aboutUS/carusel/<?php echo $img9['name'] ?>' alt='kreta' >
-
-    </div>
-<div>
-  <p>  </p>
-</div>
-
+while ($caruselImg) :
+  echo " <img src='../IMG/aboutUS/carusel/$caruselImg[name]' alt='Undo kolektyvo keliones:balis,krta,kaunas' class='zemesnis' >  ";
+$caruselImg = mysqli_fetch_assoc($visiCaruselIMG);
+endwhile;
+?>
+  </div>
     <div class="prev"></div>
     <div class="next"></div>
   </div>

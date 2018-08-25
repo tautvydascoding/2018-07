@@ -1,6 +1,8 @@
 <?php
 
-require_once("header.php")
+require_once("header.php");
+$visiTekstai = getAllTekstai();
+$tekstas = mysqli_fetch_assoc($visiTekstai);
 ?>
 
 

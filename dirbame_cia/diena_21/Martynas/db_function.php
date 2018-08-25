@@ -310,8 +310,7 @@ function getAllTekstai()
 
 }
 
-$visiTekstai = getAllTekstai();
-$tekstas = mysqli_fetch_assoc($visiTekstai);
+
 
 // while ($tekstas) {
 //   echo " <h2> $tekstas[name] </h2 <br>
@@ -328,6 +327,8 @@ $tekstas = mysqli_fetch_assoc($visiTekstai);
 
 // visu gydytoju isvedimas
 // AR TURIME GYDYTOJA? ar true?
+
+//=-=-=-=-=WHILE PVZDYS
 // while ($gydytojas) {
 //     echo " <h2> $gydytojas[name] $gydytojas[lname] </h2>";
 //     $gydytojas = mysqli_fetch_assoc($visiGydytojai);
@@ -359,3 +360,44 @@ function getAllSocIcons()
 
 // $visiIconai = getAllSocIcons();
 // $Iconas = mysqli_fetch_assoc($visiIconai);
+
+//-=-=-=--=-=  HOME TEXT
+
+
+function getAllHomText()
+{
+    // salyga, kad paimami visi gydytojai
+  $manoSQL = "SELECT * FROM HomeText";
+
+    // query grazina OBJEKTA NE MASYVA!!!!!!! sio objekto viduje yra daug eiluciu is DB. Siuo metu, visi duomenys is doctors lenteles yra musu php faile ir $visiGydytojai kintamajame
+  $visiHomeText = mysqli_query(getPrisijungimas(), $manoSQL);
+
+    // grazinam paimta gydytoja
+  return $visiHomeText;
+
+}
+
+
+//-=-=-=-=-==---=-= carusel img
+
+
+function getAllCaruselIMG()
+{
+    // salyga, kad paimami visi gydytojai
+  $manoSQL = "SELECT * FROM caruselIMG";
+
+    // query grazina OBJEKTA NE MASYVA!!!!!!! sio objekto viduje yra daug eiluciu is DB. Siuo metu, visi duomenys is doctors lenteles yra musu php faile ir $visiGydytojai kintamajame
+  $visiCaruselIMG = mysqli_query(getPrisijungimas(), $manoSQL);
+
+    // grazinam paimta gydytoja
+  return $visiCaruselIMG;
+
+}
+
+$visiCaruselIMG = getAllCaruselIMG();
+$caruselImg = mysqli_fetch_assoc($visiCaruselIMG);
+
+// while ($CaruselImg) {
+//   echo " <h2> $CaruselImg[name]  </h2>";
+//   $CaruselImg = mysqli_fetch_assoc($visiCaruselIMG);
+// }

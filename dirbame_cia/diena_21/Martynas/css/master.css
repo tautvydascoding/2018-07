@@ -299,11 +299,7 @@ body {
 }
 
 div#main_div_wraper {
-  background-image: -webkit-linear-gradient(
-      rgba(49, 42, 88, 0.2),
-      rgba(67, 65, 100, 0.2)
-    ),
-    url(../IMG/home/yellow.jpg);
+  background-image: -webkit-linear-gradient( rgba(49, 42, 88, 0.2), rgba(67, 65, 100, 0.2)), url(../IMG/home/yellow.jpg);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -400,11 +396,7 @@ div#main_div_wraper:after {
 /* -=-==--=-=--=   AABOUT  UUUSSSS -=-=-=-=-=-=-=-=-=-= */
 
 .mainAbout_wraper {
-  background-image: -webkit-linear-gradient(
-      rgba(49, 42, 88, 0.4),
-      rgba(67, 65, 100, 0.4)
-    ),
-    url(../IMG/aboutUS/jump.jpeg);
+  background-image: -webkit-linear-gradient( rgba(49, 42, 88, 0.4), rgba(67, 65, 100, 0.4)), url(../IMG/aboutUS/jump.jpeg);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -434,6 +426,7 @@ div#main_div_wraper:after {
   position: absolute;
   left: 0;
   transition: 1.5s ease-out;
+  position: relative;
 }
 
 .next::after,
@@ -540,11 +533,7 @@ div#main_div_wraper:after {
 /* main wraperis */
 
 .mainCont_wraper {
-  background-image: -webkit-linear-gradient(
-      rgba(49, 42, 88, 0.5),
-      rgba(67, 65, 100, 0.5)
-    ),
-    url(../IMG/contacts/pexels-photo.jpg);
+  background-image: -webkit-linear-gradient( rgba(49, 42, 88, 0.5), rgba(67, 65, 100, 0.5)), url(../IMG/contacts/pexels-photo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }

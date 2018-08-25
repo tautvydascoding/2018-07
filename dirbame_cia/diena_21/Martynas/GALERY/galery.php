@@ -117,11 +117,7 @@ require_once("header.php");
 
                     <img src="../imgN/undoBlue.jpg" alt="undo blue" width="80" height="1400" class="undoBlue">
                 </div>
-
             </div>
-
-
-
 
         </div>
 

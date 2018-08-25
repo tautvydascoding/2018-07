@@ -2,7 +2,7 @@
     <?php
 
     require_once("header.php");
-
+    require_once("db_function.php");
 
     ?>
     
@@ -15,25 +15,21 @@
 
         <main class=" home_main">
             <div class="home_text">
-                <h1>Welcome to
-                    <br> UNDO STUDIJA!
-                </h1>
-                <br>
-                <br>
-                <br>
-                <br>
-                <h3>A place where all the magic is happening!</h3>
-            </div>
+<?php
+$visiHomeText = getAllHomText();
+$hText = mysqli_fetch_assoc($visiHomeText);
+while ($hText) :
+    echo "<h1> $hText[Title] </h1>";
+echo "<br> ";
+echo " <br> ";
+echo "<br>  ";
+echo "<br>  ";
+echo "<h3> $hText[Subtitle] </h3>";
+$hText = mysqli_fetch_assoc($visiHomeText);
+endwhile; ?>  </div>
         </main>
 
-
-
     <?php
-
     require_once("footer.php");
-
-
     ?>
-
-
 

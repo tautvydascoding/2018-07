@@ -1,6 +1,4 @@
-<?php 
-include("db_function.php");
-?>
+
         <footer>
             <div class="mdl-grid footer_wrapper">
                 <div class="footer_link_wrapper">
@@ -22,11 +20,7 @@ include("db_function.php");
                     <div class="">
                         <ul class="social-links">
 <?php
-//while ($tekstas) {
-    //   echo " <h2> $tekstas[name] </h2 <br>
-    //   <h3> $tekstas[article] </h3>";
-    //   $tekstas = mysqli_fetch_assoc($visiTekstai);
-    // }
+
 $visiIconai = getAllSocIcons();
 $Iconas = mysqli_fetch_assoc($visiIconai);
 while ($Iconas) :
