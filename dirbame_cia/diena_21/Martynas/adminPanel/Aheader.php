@@ -1,3 +1,7 @@
+<?php
+include("../db_function.php");
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -26,11 +30,13 @@
             <nav class="navigacija">
 
                 <ul>
-                    <li class="HF_ul"><a href="../index.php">Socoal Icons</a> </li>
-                    <li class="HF_ul"><a href="../index.php">Carusel img</a> </li>
-                    <li class="HF_ul"><a href="../index.php">Home text</a> </li>
-                    <li class="HF_ul"><a href="../index.php">Lankytoju duomenys</a> </li>
+                    <li class="HF_ul"><a href="socialIcons.php">Social Icons</a> </li>
+                    <li class="HF_ul"><a href="carusel.php">Carusel img</a> </li>
+                    <li class="HF_ul"><a href="hometext.php">Home text</a> </li>
+                    <li class="HF_ul"><a href="lankytojai.php">Lankytoju duomenys</a> </li>
+                    <li class="HF_ul admin"> <a href="indexadmin.php">Admin </a> </li>
                 </ul>
+                
                 
             </nav>
 

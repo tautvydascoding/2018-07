@@ -1,18 +1,16 @@
 <?php 
-include("../db_function.php");
+// include("../db_function.php");
 ?>
+ <div class="mainCont_wraper">
+        <footer >
 
-        <footer>
-            <div class="mainCont_wraper">
                   
-                        
-
-                    <div class="copyright">
-                        <p>Copyright &copy; 2018 by Martynas.</p>
-                    </div>
+                <div class="copyright">
+                    <p>Copyright &copy; 2018 by Martynas.</p>
+                </div>
               
 
-            </div>
+           
 
 
         </footer>

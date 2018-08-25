@@ -437,3 +437,23 @@ $caruselImg = mysqli_fetch_assoc($visiCaruselIMG);
 //   echo " <h2> $CaruselImg[name]  </h2>";
 //   $CaruselImg = mysqli_fetch_assoc($visiCaruselIMG);
 // }
+
+
+//-=-=-==-=-=- lankytojai-=-=-=- 
+
+
+function getAllInfoData()
+{
+    // salyga, kad paimami visi gydytojai
+  $manoSQL = "SELECT * FROM duom_info";
+
+    // query grazina OBJEKTA NE MASYVA!!!!!!! sio objekto viduje yra daug eiluciu is DB. Siuo metu, visi duomenys is doctors lenteles yra musu php faile ir $visiGydytojai kintamajame
+  $visaData = mysqli_query(getPrisijungimas(), $manoSQL);
+
+    // grazinam paimta gydytoja
+  return $visaData;
+
+}
+
+$visaData = getAllInfoData();
+$data = mysqli_fetch_assoc($visaData);
