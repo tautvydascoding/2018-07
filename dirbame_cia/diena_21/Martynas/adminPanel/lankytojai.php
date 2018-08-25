@@ -21,15 +21,15 @@ $visaData = getAllInfoData();
 $data = mysqli_fetch_assoc($visaData);
 
 while ($data) :
-  echo "<tr>";
+  echo "<tr class='table_info'>";
 echo " <th> $data[id]</th>";
 echo " <th> $data[vardas]</th>";
 echo " <th> $data[pavarde]</th>";
 echo " <th> $data[el_pastas]</th>";
 echo " <th> $data[tel_nr]</th>";
 echo " <th> $data[zinute]</th>";
-echo " <th> <a class='delete' href='delete.php?nr=$data[id] & title=$data[vardas]'</a> Pasalinti </th>";
-echo " <th> <a class='update' href='update.php?nr=$data[id] & title=$data[vardas]'</a> Naujinti </th>";
+echo " <th> <a class='btn btn-outline-danger' href='delete.php?nr=$data[id] & title=$data[vardas]'</a> Pasalinti </th>";
+echo " <th> <a class='btn btn-outline-primary' href='update.php?nr=$data[id] & title=$data[vardas]'</a> Naujinti </th>";
 echo "</tr>";
 
 $data = mysqli_fetch_assoc($visaData);

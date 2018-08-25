@@ -24,11 +24,11 @@ body {
 
 .admin {
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  padding-left: 6rem;
+  padding-left: 5rem;
 }
 
 .HF_ul {
@@ -62,6 +62,12 @@ footer p {
 .mainh2 {
   text-align: center;
   font-weight: 600;
+  margin-top: 2.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.table_info th {
+  font-weight: 300;
 }
 
 .mainText {
@@ -79,5 +85,10 @@ footer p {
 .soc_table th {
   padding-left: 1rem;
   padding-right: 1rem;
-  height: 5vh;
+  height: 11vh;
+}
+
+.soc_table u {
+  font-size: 1.2rem;
+  font-weight: 600;
 }

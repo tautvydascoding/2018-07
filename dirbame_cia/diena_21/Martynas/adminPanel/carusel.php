@@ -18,12 +18,12 @@ $visiCaruselIMG = getAllCaruselIMG();
 $caruselImg = mysqli_fetch_assoc($visiCaruselIMG);
 
 while ($caruselImg) :
-  echo "<tr>";
+  echo "<tr class='table_info'>";
 echo " <th> $caruselImg[id] </th>";
 echo " <th> $caruselImg[name]</th>";
 echo " <th> $caruselImg[article]</th>";
-echo " <th> <a class='delete' href='delete.php?nr=$caruselImg[id] & name=$caruselImg[name]'</a> Pasalinti </th>";
-echo " <th> <a class='update' href='update.php?nr=$caruselImg[id] & name=$caruselImg[name]'</a> Naujinti </th>";
+echo " <th> <a class='btn btn-outline-danger' href='delete.php?nr=$caruselImg[id] & name=$caruselImg[name]'</a> Pasalinti </th>";
+echo " <th> <a class='btn btn-outline-primary' href='update.php?nr=$caruselImg[id] & name=$caruselImg[name]'</a> Naujinti </th>";
 echo "</tr>";
 
 $caruselImg = mysqli_fetch_assoc($visiCaruselIMG);
