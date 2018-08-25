@@ -1,17 +1,10 @@
 
     <?php
-
     require_once("header.php");
     require_once("db_function.php");
-
     ?>
-    
-    
-    
     </div>
-        <!-- WRAPERIO PABAIGA-->
-
-
+        <!-- WRAPERIO PABAIGA -->
 
         <main class=" home_main">
             <div class="home_text">

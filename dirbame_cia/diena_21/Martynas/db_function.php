@@ -80,16 +80,7 @@ function getCaruselImg($nr)
     echo "<div class='bg-danger'> ERRRO: caruselIMG nr:" . $nr . " neradome</div> ";
   }
 }
-//KARUSELES IMG PAEMIMAS
-$img1 = getCaruselImg(1);
-$img2 = getCaruselImg(2);
-$img3 = getCaruselImg(3);
-$img4 = getCaruselImg(4);
-$img5 = getCaruselImg(5);
-$img6 = getCaruselImg(6);
-$img7 = getCaruselImg(7);
-$img8 = getCaruselImg(8);
-$img9 = getCaruselImg(9);
+//KARUSELES IMG PAEMIM
 
 
 // =-=-=-=-=-=-= Galerijos F-JA -=-=-=-=-=-=
@@ -208,6 +199,51 @@ function createTekstas($vardas, $article)
 // createDoctor(" Krista ", " Cerkauskaite ");
 
 
+
+
+//=-=-=-=-=-=-=-=-=-=-  create uzklausas -=-=-=-=-=-
+
+
+function createUzklausa($vardas, $pavarde, $elpastas, $tel, $zinute)
+{
+    //saugumas: real_escape_string - uzkoduoja spec simbolius: " ' < <> 
+
+    //DARANT BE SPRINTF 
+    // $vardas = mysqli_real_escape_string(getPrisijungimas(), $vardas);
+    // $pavarde = mysqli_real_escape_string(getPrisijungimas(), $pavarde);
+    //DARANT BE SPRINTF
+    // toliau tas pats. 
+    // $manoSQL = "INSERT INTO doctors VALUES (NULL, '$vardas', '$pavarde')";
+
+    //totorialuose daznai daroma itin saugus variantas:
+  $manoSQL = sprintf(
+    "INSERT INTO duom_info
+     VALUES (NULL, 
+     '%s', 
+     '%s',
+     '%s',
+     '%s',
+     '%s'
+     
+     )",
+    mysqli_real_escape_string(getPrisijungimas(), $vardas),
+    mysqli_real_escape_string(getPrisijungimas(), $pavarde),
+    mysqli_real_escape_string(getPrisijungimas(), $elpastas),
+    mysqli_real_escape_string(getPrisijungimas(), $tel),
+    mysqli_real_escape_string(getPrisijungimas(), $zinute)
+  );
+  $result = mysqli_query(getPrisijungimas(), $manoSQL);
+// patikrina ar pavyko prisijungti.
+
+  if ($result == false) {
+    echo " error : nepavyko sukurti naujo: $vardas, $pavarde < br / > " . mysqli_error(getPrisijungimas());
+  }
+}
+
+// $bandymas1 = createUzklausa("linas", "pakas", "as@as.lt", 232323, "ka tu cia nori");
+
+
+// echo "eik naxui";
 
 
 // 6. deleteDoctor($nr)

@@ -19,15 +19,8 @@
     <!-- !!!! mano CSS failas visas patas zemiausias -->
 <link rel="stylesheet" href="css/master.css">
 
-    <title>Galery</title>
+    <title>Undo studija</title>
 
-    <!-- NOTE: jeigu neveikia:
-        1) ar failo pavadinimas geras
-        2) ar kelias geras?   (ar "/" teisingi; direktorija ar gere )
-        3) ar   rel="stylesheet"
-        4) ar link gale uzdalete ">"
-        5) ar tuo adresu nuejai internete (pvz: ar ne praeitos dienos projektas)
-    -->
 </head>
 
 <body>

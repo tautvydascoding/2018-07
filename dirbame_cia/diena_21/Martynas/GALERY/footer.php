@@ -59,7 +59,9 @@
 
 
     <!-- !!! mano js failas pats zemiausias; visada failo -->
-   <script src="JS/main.js"></script>
+    <script src="../JS/fetch.js"></script>
+   <script src="../JS/main.js"></script>
+   
 
 </body>
 

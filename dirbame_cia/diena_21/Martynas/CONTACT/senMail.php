@@ -1,3 +1,11 @@
+<?php
+require_once("../db_function.php");
+
+$interesantas = $_POST;
+
+createUzklausa($interesantas['vardas'], $interesantas['pavarde'], $interesantas['el_pastas'], $interesantas['tel'], $interesantas['zinute']); ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,10 +24,6 @@ body {background-color: black;}
 </head>
 <body>
   
-
-
-
-
 </body>
 </html>
 
@@ -31,9 +35,9 @@ body {background-color: black;}
 
 <?php
 
-$klientoVardas = $_POST['name'];
-$klientoUzklausa = $_POST['uzklausa'];
-$klientoEmail = $_POST['email'];
+$klientoVardas = $_POST['vardas'];
+$klientoUzklausa = $_POST['zinute'];
+$klientoEmail = $_POST['el_pastas'];
 
 echo " <META http-equiv='refresh' content='0;URL=msgSent.php' ";
 

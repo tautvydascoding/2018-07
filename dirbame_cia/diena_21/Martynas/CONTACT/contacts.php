@@ -30,25 +30,25 @@ require_once("header.php")
                 <div class="mdl-cell mdl-cell--12-col aukstis-450">
                     <form action="senMail.php" class="cont_form" method="POST">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="sample3" name="name">
+                            <input class="mdl-textfield__input" type="text" id="sample3" name="vardas">
                             <label class="mdl-textfield__label labelc_balt" for="sample3">Vardas...</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="sample3" name="lname">
+                            <input class="mdl-textfield__input" type="text" id="sample3" name="pavarde">
                             <label class="mdl-textfield__label labelc_balt" for="sample3">Pavarde...</label>
                         </div>
 
                         <div class="mdl-textfield mdl-js-textfield">
-                            <input class="mdl-textfield__input" type="email" id="sample1" name="email">
+                            <input class="mdl-textfield__input" type="email" id="sample1" name="el_pastas">
                             <label class="mdl-textfield__label labelc_balt" for="sample1">Elektroninis pastas...</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield">
-                            <input class="mdl-textfield__input labelc_balt" type="number" id="sample1" name="number">
+                            <input class="mdl-textfield__input labelc_balt" type="number" id="sample1" name="tel">
                             <label class="mdl-textfield__label labelc_balt" for="sample1">Jusu tel. nr...</label>
                         </div>
 
                         <div class="mdl-textfield mdl-js-textfield">
-                            <textarea class="mdl-textfield__input" type="text" rows="3" id="sample5" maxlength="250" name="uzklausa"></textarea>
+                            <textarea class="mdl-textfield__input" type="text" rows="3" id="sample5" maxlength="250" name="zinute"></textarea>
                             <label class="mdl-textfield__label labelc_balt" for="sample5">Parasykite mums ...</label>
                         </div>
                         <div class="cont_btn">
