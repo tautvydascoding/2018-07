@@ -22,7 +22,7 @@ while ($hText) :
 echo " <th> $hText[id] </th>";
 echo " <th> $hText[Title]</th>";
 echo " <th> $hText[Subtitle]</th>";
-echo " <th> <a class='btn btn-outline-danger' href='delete.php?nr=$hText[id]'</a> Pasalinti </th>";
+echo " <th> <a class='btn btn-outline-danger' href='validation.php?nr=$hText[id]'</a> Pasalinti </th>";
 echo " <th> <a class='btn btn-outline-primary' href='update.php?nr=$hText[id] '</a> Naujinti </th>";
 echo "</tr>";
 

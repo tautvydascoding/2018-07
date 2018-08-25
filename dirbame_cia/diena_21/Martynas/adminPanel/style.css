@@ -66,6 +66,10 @@ footer p {
   margin-bottom: 1.5rem;
 }
 
+.mainh5 {
+  text-align: center;
+}
+
 .table_info th {
   font-weight: 300;
 }
@@ -91,4 +95,14 @@ footer p {
 .soc_table u {
   font-size: 1.2rem;
   font-weight: 600;
+}
+
+.validate {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.validate a {
+  margin-top: 2rem;
 }

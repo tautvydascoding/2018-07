@@ -15,8 +15,6 @@ while ($hText) :
     echo "<h1> $hText[Title] </h1>";
 echo "<br> ";
 echo " <br> ";
-echo "<br>  ";
-echo "<br>  ";
 echo "<h3> $hText[Subtitle] </h3>";
 $hText = mysqli_fetch_assoc($visiHomeText);
 endwhile; ?>  </div>

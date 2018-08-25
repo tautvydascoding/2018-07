@@ -240,7 +240,9 @@ function createUzklausa($vardas, $pavarde, $elpastas, $tel, $zinute)
   }
 }
 
-// $bandymas1 = createUzklausa("linas", "pakas", "as@as.lt", 232323, "ka tu cia nori");
+// createUzklausa("linas", "pakas", "as@as.lt", 232323, "ka tu cia nori");
+
+
 
 
 // echo "eik naxui";
@@ -276,6 +278,100 @@ function deleteTekstas($nr)
 }
 // deleteDoctor(1);
 // deletePatient(8);
+
+//-=-=-=-=-=-=- homeText
+
+
+function deleteHomeTekstas($nr)
+{
+    // $nr = mysqli_real_escape_string(getPrisijungimas(), $nr);
+
+  $manoSQL = sprintf(
+    "DELETE FROM HomeText 
+                WHERE id = '%s' 
+                LIMIT 1 /* cia imitas, kad gali ( klaidos atveju) istrinti tik viena.  */
+                ",
+    mysqli_real_escape_string(getPrisijungimas(), $nr)
+
+  );
+// nesumaisyti!        queris   prisijungimas     ir manoSQL uzklausa
+  $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+
+  if ($arPavyko == false) {
+    echo " error : nepavyko istrinti article, kurio nr: $nr < br / > " . mysqli_error(getPrisijungimas());
+  }
+}
+
+//-=-=-=-=-=--=-=-=LANKYTOJAI
+
+
+function deleteLankytojoData($nr)
+{
+    // $nr = mysqli_real_escape_string(getPrisijungimas(), $nr);
+
+  $manoSQL = sprintf(
+    "DELETE FROM duom_info 
+                WHERE id = '%s' 
+                LIMIT 1 /* cia imitas, kad gali ( klaidos atveju) istrinti tik viena.  */
+                ",
+    mysqli_real_escape_string(getPrisijungimas(), $nr)
+
+  );
+// nesumaisyti!        queris   prisijungimas     ir manoSQL uzklausa
+  $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+
+  if ($arPavyko == false) {
+    echo " error : nepavyko istrinti lankytojo, kurio nr: $nr < br / > " . mysqli_error(getPrisijungimas());
+  }
+}
+
+//-=-=-=-=-=-=-social iconai
+
+
+
+function deleteSocIcon($nr)
+{
+    // $nr = mysqli_real_escape_string(getPrisijungimas(), $nr);
+
+  $manoSQL = sprintf(
+    "DELETE FROM scIcons 
+                WHERE id = '%s' 
+                LIMIT 1 /* cia imitas, kad gali ( klaidos atveju) istrinti tik viena.  */
+                ",
+    mysqli_real_escape_string(getPrisijungimas(), $nr)
+
+  );
+// nesumaisyti!        queris   prisijungimas     ir manoSQL uzklausa
+  $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+
+  if ($arPavyko == false) {
+    echo " error : nepavyko istrinti icono, kurio nr: $nr < br / > " . mysqli_error(getPrisijungimas());
+  }
+}
+
+
+//-=-=-=-=-=--==-=carusele-=--
+
+
+function deleteCaruselImg($nr)
+{
+    // $nr = mysqli_real_escape_string(getPrisijungimas(), $nr);
+
+  $manoSQL = sprintf(
+    "DELETE FROM caruselIMG 
+                WHERE id = '%s' 
+                LIMIT 1 /* cia imitas, kad gali ( klaidos atveju) istrinti tik viena.  */
+                ",
+    mysqli_real_escape_string(getPrisijungimas(), $nr)
+
+  );
+// nesumaisyti!        queris   prisijungimas     ir manoSQL uzklausa
+  $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+
+  if ($arPavyko == false) {
+    echo " error : nepavyko istrinti icono, kurio nr: $nr < br / > " . mysqli_error(getPrisijungimas());
+  }
+}
 
 
 
