@@ -25,7 +25,7 @@
         <div class="container">
           <div class="row">
             <div class="col text-center align-self-center">
-              <h1 class="antraste lead">
+              <h1 class="antraste">
               Kalnų turizmas
               </h1>
               <p><b>Mes padėsime jums išsirinkti jūsų svajonių nuotykį kalnuose </b></p>
