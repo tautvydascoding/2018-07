@@ -121,6 +121,21 @@ function toggleMenu() {
 //   }
 // })
 
+// -=-========= FOOOORMOS VALIDACIJA ===-=-==--==
+
+
+function validateForm() {
+  var vardoIvedimas = document.forms["manoForma"]["vardas"].value;
+  if (vardoIvedimas == "") {
+    alert("Atsiprasome, bet vardas privalo buti ivestas");
+    return false;
+  }
+  var pavardesIvedimas = document.forms["manoForma"]["pavarde"].value;
+  if (pavardesIvedimas == "") {
+    alert("Atsiprasome, bet pavarde privalo buti ivestas");
+    return false;
+  }
+}
 
 
 

@@ -28,7 +28,7 @@ require_once("header.php")
 
             <section class="mdl-grid">
                 <div class="mdl-cell mdl-cell--12-col aukstis-450">
-                    <form action="senMail.php" class="cont_form" method="POST">
+                    <form action="senMail.php" class="cont_form" method="POST" name='manoForma' onsubmit="return validateForm()">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" id="sample3" name="vardas">
                             <label class="mdl-textfield__label labelc_balt" for="sample3">Vardas...</label>
