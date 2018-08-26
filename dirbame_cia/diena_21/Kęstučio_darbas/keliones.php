@@ -8,6 +8,16 @@
         <?php include('nav.php') ?>
         <!-- IDEA: Pabaigem meniu -->
 
+        <?php
+
+        $viezbutis1 = getViezbutis(1);
+        $viezbutis2 = getViezbutis(2);
+        $viezbutis3 = getViezbutis(3);
+        $viezbutis4 = getViezbutis(4);
+
+        ?>
+
+
         <div class="float-fix"></div>
         <!-- IDEA: isisvalom float left -->
       </div>
@@ -52,8 +62,8 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="./img/kalnaiMaza.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title"> Karpatai </h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title"> <?php echo $viezbutis1['Viežbučio_pavadinimas']; ?> </h5>
+            <p class="card-text"> <?php echo $viezbutis1['aprašymas'];  ?> </p>
             <a href="detales.php?viezb=Viežbutis karpatų kalnuose&kaina=1200" id="karpatai" class="btn btn-primary"> Užsisakyti kelionę </a>
           </div>
         </div>
@@ -63,8 +73,8 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="./img/bright-clouds-cold-618833.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title"> Kalifornijos kalnai</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title"> <?php echo $viezbutis2['Viežbučio_pavadinimas']; ?> </h5>
+            <p class="card-text"> <?php echo $viezbutis2['aprašymas']; ?> </p>
             <a href="detales.php?viezb=Viežbutis Kalifornijos kalnuose&kaina=3150" id="kalifornija" class="btn btn-primary"> Užsisakyti kelionę </a>
           </div>
         </div>
@@ -74,8 +84,8 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="./img/landscape-mountains-nature-67517.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title"> Islandijos kalnai</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title"> <?php echo $viezbutis3['Viežbučio_pavadinimas']; ?> </h5>
+            <p class="card-text"> <?php echo $viezbutis3['aprašymas']; ?> </p>
             <a href="detales.php?viezb=Viežbutis Islandijos kalnuose&kaina=1980" id="islandija" class="btn btn-primary"> Užsisakyti kelionę </a>
           </div>
         </div>
@@ -85,8 +95,8 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="./img/alps-barn-clouds-358532.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title"> Alpės </h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title"> <?php echo $viezbutis4['Viežbučio_pavadinimas']; ?> </h5>
+            <p class="card-text"> <?php echo $viezbutis4['aprašymas']; ?> </p>
             <a href="detales.php?viezb=Viežbutis  Apėse&kaina=1500" id="alpes" class="btn btn-primary">Užsisakyti kelionę</a>
           </div>
         </div>
