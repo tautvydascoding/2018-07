@@ -13,7 +13,7 @@ include("Aheader.php");
         <?php
         if (isset($_GET['newName'])) {
           $sukurti = createSocIcon($_GET['newName'], $_GET['newTitle']);
-          echo "<h2> Nauja iconele sekmingai sukurta! </h2>";
+          echo "<h2 class='mainh2'> Nauja iconele sekmingai sukurta! </h2>";
           echo "<META http-equiv='refresh' content='3;URL=socialIcons.php'> ";
         } else {
           echo "Iveskite duomenis";

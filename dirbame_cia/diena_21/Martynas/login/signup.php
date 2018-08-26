@@ -1,5 +1,6 @@
 <?php
 include("Lhead.php");
+
 ?>
 
 
@@ -12,14 +13,9 @@ include("Lhead.php");
       <input type="text" name="last" placeholder="lastname">
       <input type="email" name="email" placeholder="email">
       <input type="text" name="uid" placeholder="User name">
-      <input type="tpassword" name="pwd" placeholder="password">
+      <input type="password" name="pwd" placeholder="password">
       <button type='submit' name="submit">Sign up</button>
     </form>
-
-
-
-
-
 
   </div>
 

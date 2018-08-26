@@ -14,7 +14,7 @@ include("Aheader.php");
         <?php
         if (isset($_GET['newName'])) {
           $sukurti = createCaruselImg($_GET['newName'], $_GET['newTitle']);
-          echo "<h2> Nauja nuotrauka sekmingai sukurta! </h2>";
+          echo "<h2 class='mainh2'> Nauja nuotrauka sekmingai sukurta! </h2>";
           echo "<META http-equiv='refresh' content='3;URL=carusel.php'> ";
         } else {
           echo "Iveskite duomenis";

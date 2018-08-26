@@ -96,6 +96,11 @@ select {
   width: 1000px;
 }
 
+.main-wraper ul li {
+  display: inline-block;
+  padding-left: 2rem;
+}
+
 a {
   text-decoration: none;
 }

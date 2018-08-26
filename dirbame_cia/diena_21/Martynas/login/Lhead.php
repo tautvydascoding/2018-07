@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,12 +19,14 @@
     <div class='main-wraper'>
       <ul>
           <li><a href="index.php">Home</a></li>
+          <li><a href="../index.php">Undo</a></li>
+          <li><a href="../adminPanel/indexadmin.php">Admin</a></li>
       </ul>
       <div class='nav-login'>
-        <form action="" method="">
+        <form action="login-inc.php" method="POST">
           <input type="text" name="uid" placeholder="username/email">
-          <input type="pasword" name="pwd" placeholder="pasword">
-          <button type="submit" name="submit">submit</button>
+          <input type="password" name="pwd" placeholder="password">
+          <button type="submit" name="submit">Login</button>
         </form>
         <a href="signup.php">Sign up</a>
       </div>

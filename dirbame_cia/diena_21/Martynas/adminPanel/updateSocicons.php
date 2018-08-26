@@ -14,7 +14,7 @@ include("Aheader.php");
         <?php
         if (isset($_GET['newName'])) {
           $atnaujinti = socIconsUpdate($_GET['id'], $_GET['newName'], $_GET['newTitle']);
-          echo " <h2>Sekmingai atnaujinta </h2><br>";
+          echo " <h2 class='mainh2'>Sekmingai atnaujinta </h2><br>";
           echo "<META http-equiv='refresh' content='3;URL=socialIcons.php'>";
         } else {
           echo "  Iveskite naujus iconeles duomenis<br>";
