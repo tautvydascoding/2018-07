@@ -539,6 +539,9 @@ body {
   -o-transition: 0.9s;
   transition: 0.9s; }
 
+.nauj_input {
+  padding: .5rem; }
+
 .naujien_btn {
   position: relative; }
   .naujien_btn p {

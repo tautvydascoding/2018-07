@@ -36,9 +36,6 @@ endwhile;
                         </ul>
                     </div>
 
-                    <div class="copyright">
-                        <p>Copyright &copy; 2018 by Martynas.</p>
-                    </div>
                 </div>
 
             </div>

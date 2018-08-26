@@ -125,14 +125,21 @@ function toggleMenu() {
 
 
 function validateForm() {
+
   var vardoIvedimas = document.forms["manoForma"]["vardas"].value;
   if (vardoIvedimas == "") {
-    alert("Atsiprasome, bet vardas privalo buti ivestas");
+    alert("Ooo NE! pamirsote irasyti savo varda! ");
     return false;
   }
-  var pavardesIvedimas = document.forms["manoForma"]["pavarde"].value;
-  if (pavardesIvedimas == "") {
-    alert("Atsiprasome, bet pavarde privalo buti ivestas");
+
+  var elPIvedimas = document.forms["manoForma"]["el_pastas"].value;
+  if (elPIvedimas == "") {
+    alert("Oo Ne! Nenurodete savo el. pasto! Negalesime su Jumis susisiekti, jei jo neivesite.");
+    return false;
+  }
+  var zinIvedimas = document.forms["manoForma"]["zinute"].value;
+  if (zinIvedimas == "") {
+    alert("Oo Ne!Siunciate tuscia zinute. Uzduokite mums klausima ar parasykite savo pastebejimus. Mums tai labai svarbu!");
     return false;
   }
 }

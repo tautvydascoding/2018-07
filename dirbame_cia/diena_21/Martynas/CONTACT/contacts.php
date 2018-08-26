@@ -30,11 +30,11 @@ require_once("header.php")
                 <div class="mdl-cell mdl-cell--12-col aukstis-450">
                     <form action="senMail.php" class="cont_form" method="POST" name='manoForma' onsubmit="return validateForm()">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="sample3" name="vardas">
+                            <input class="mdl-textfield__input" type="text" id="sample3" name="vardas"min="3" autofocus>
                             <label class="mdl-textfield__label labelc_balt" for="sample3">Vardas...</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="sample3" name="pavarde">
+                            <input class="mdl-textfield__input" type="text" id="sample3" name="pavarde" min="4">
                             <label class="mdl-textfield__label labelc_balt" for="sample3">Pavarde...</label>
                         </div>
 
@@ -80,15 +80,15 @@ require_once("header.php")
                         <strong>Musu naujienlaiskis</strong>
                     </div>
                     <div class="mdl-card__media">
-                        <p>2018-08 menesio aktualijos</p>
+                    <input class="mdl-textfield__input nauj_input" type="email" name="nauj_pastas" placeholder="Jusu el. pastas naujienlaiskiui...">
                     </div>
                     <div class="mdl-card__supporting-text">
                         Ar norite gauti musu naujienlaiski?
                     </div>
                     <div class="mdl-card__actions">
-                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored naujien_btn">
+                       <a href="naujienlaiskis.php"><button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored naujien_btn">
                             <p>Taaip!</p>
-                        </button>
+                        </button> </a> 
                     </div>
                 </div>
             </article>

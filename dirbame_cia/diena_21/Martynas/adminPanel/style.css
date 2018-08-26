@@ -70,6 +70,12 @@ footer p {
   text-align: center;
 }
 
+.mainh3 {
+  text-align: center;
+  padding-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+
 .table_info th {
   font-weight: 300;
 }
@@ -105,4 +111,46 @@ footer p {
 
 .validate a {
   margin-top: 2rem;
+}
+
+.socinos_form {
+  padding-left: 2rem;
+}
+
+.btn-vidury {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 63%;
+  top: 30%;
+}
+
+.btn-upd {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 48%;
+  top: 40%;
+  margin-top: 1rem;
+}
+
+.btn-crt {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 64%;
+  top: 40%;
+  margin-top: 1rem;
+}
+
+.carusel_form input,
+.mainT_form input {
+  width: 40%;
+  height: 50px;
+}
+
+.btn-carusel,
+.btn-homet {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 78%;
+  top: 30%;
+  margin-top: 1rem;
 }
