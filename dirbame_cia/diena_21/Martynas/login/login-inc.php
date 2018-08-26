@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
     header("Location: index.php?login=empty");
     exit();
   } else {
-    $sql = "SELECT * FROM users WHERE user_uid='$uid'";
+    $sql = "SELECT * FROM users WHERE user_uid='$uid' OR user_email='$user_email' ";
     $result = mysqli_query(getPrisijungimas(), $sql);
     $resultcheck = mysqli_num_rows($result);
     if ($resultcheck < 1) {
@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
         if ($hashedPwdCheck == false) {
           header("Location: index.php?login=error2");
           exit();
-        } elseif ($hashedPwdCheck == true) {
+        } else if ($hashedPwdCheck == true) {
           //log in user here
           $_SESSION['u_id'] = $row['user_id'];
           $_SESSION['u_first'] = $row['user_first'];

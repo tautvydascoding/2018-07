@@ -23,12 +23,21 @@ session_start();
           <li><a href="../adminPanel/indexadmin.php">Admin</a></li>
       </ul>
       <div class='nav-login'>
-        <form action="login-inc.php" method="POST">
-          <input type="text" name="uid" placeholder="username/email">
-          <input type="password" name="pwd" placeholder="password">
-          <button type="submit" name="submit">Login</button>
-        </form>
-        <a href="signup.php">Sign up</a>
+      <?php
+      if (isset($_SESSION['u_id'])) {
+        echo "<form action='logout-inc.php' method='POST'>
+              <button type='submit' name='submit'>Logout</button>
+            </form>";
+      } else {
+        echo ' <form action="login-inc.php" method="POST">
+      <input type="text" name="uid" placeholder="username/email">
+      <input type="password" name="pwd" placeholder="password">
+      <button type="submit" name="submit">Login</button>
+      </form>
+      <a href="signup.php">Sign up</a>';
+      }
+      ?>
+
       </div>
     </div>
   </nav>
