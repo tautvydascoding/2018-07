@@ -219,8 +219,7 @@ hr.style-eight:after {
   -o-transition: all 0.8s ease-out;
   transition: all 0.8s ease-out;
   margin-left: 1.5rem;
-  margin-top: 1.5rem;
-  position: fixed; }
+  margin-top: 1.5rem; }
 
 /* _=-=-=-=-  HAMBURGERIS =-=-=-=-=-*/
 .meniu_btn .btn_linija {
@@ -271,14 +270,12 @@ body {
     right: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
-    /* background: rgba(68, 68, 68, 0.5); */ }
+    z-index: -1; }
 
 /* /* -----==NAVIGACIJA--=== */
 .navigacija {
   position: fixed;
   top: 0;
-  /* width: 100%; */
   opacity: 0.9;
   z-index: 1; }
 
@@ -314,7 +311,6 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   float: left;
-  /* width: 35%; */
   height: 100vh;
   overflow: hidden;
   margin: 0;
@@ -368,7 +364,7 @@ body {
 .laisureh2 {
   text-align: center; }
 
-/* CARUSEEEEEL */
+/* =-=-=-=-==--   CARUSEEEEEL =-=-=-=-==-=- */
 .ab_karusele {
   width: 640px;
   height: 480px;

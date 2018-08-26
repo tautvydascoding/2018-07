@@ -26,22 +26,18 @@ include("../db_function.php");
 
 
 <body>
-
-    <div class="mainCont_wraper">
-
-        <header>
-
-            <nav class="navigacija">
-
-                <ul>
+<header>
+    <nav class="navigacija">
+        <div class="mainCont_wraper">
+            <ul>
                     <li class="HF_ul"><a href="socialIcons.php">Social Icons</a> </li>
                     <li class="HF_ul"><a href="carusel.php">Carusel img</a> </li>
                     <li class="HF_ul"><a href="hometext.php">Home text</a> </li>
                     <li class="HF_ul"><a href="lankytojai.php">Lankytoju duomenys</a> </li>
-                    <li class="HF_ul admin"> <a href="indexadmin.php">Admin </a> </li>
+                    <li class="HF_ul admin"> <a href="indexadmin.php">ADMIN PANEL </a> </li>
                 </ul>
                 
-                
-            </nav>
+        </div> 
+     </nav>
 
-        </header>
+</header>

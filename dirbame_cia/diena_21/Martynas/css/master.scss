@@ -265,7 +265,6 @@ hr.style-eight:after {
   transition: all 0.8s ease-out;
   margin-left: 1.5rem;
   margin-top: 1.5rem;
-  position: fixed;
 }
 
 /* _=-=-=-=-  HAMBURGERIS =-=-=-=-=-*/
@@ -319,7 +318,6 @@ body {
     width: $width100;
     height: 100%;
     z-index: -1;
-    /* background: rgba(68, 68, 68, 0.5); */
   }
 }
 
@@ -328,7 +326,6 @@ body {
 .navigacija {
   position: fixed;
   top: 0;
-  /* width: 100%; */
   opacity: 0.9;
   z-index: 1;
 }
@@ -355,7 +352,6 @@ body {
   align-items: center;
   justify-content: center;
   float: left;
-  /* width: 35%; */
   height: 100vh;
   overflow: hidden;
   margin: 0;
@@ -413,7 +409,7 @@ body {
   text-align: $textC;
 }
 
-/* CARUSEEEEEL */
+/* =-=-=-=-==--   CARUSEEEEEL =-=-=-=-==-=- */
 
 .ab_karusele {
   width: 640px;
