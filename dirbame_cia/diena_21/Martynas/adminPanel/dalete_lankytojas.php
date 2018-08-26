@@ -11,7 +11,7 @@ if (isset($lankytojas['nr'])) {
   deleteLankytojoData($nr);
 }
 echo "<h2> Informacija buvo pasalinta</h2> ";
-// echo "<META http-equiv='refresh' content='5;URL=indexadmin.php' > ";
+echo "<META http-equiv='refresh' content='5;URL=lankytojai.php' > ";
 
 ?>
 

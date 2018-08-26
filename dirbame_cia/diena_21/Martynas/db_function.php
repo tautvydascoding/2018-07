@@ -201,7 +201,7 @@ function createTekstas($vardas, $article)
 
 
 
-//=-=-=-=-=-=-=-=-=-=-  create uzklausas -=-=-=-=-=-
+//=-=-=-=-=-=-=-=-=-=-  create uzklausas sudetinga -=-=-=-=-=-
 
 
 function createUzklausa($vardas, $pavarde, $elpastas, $tel, $zinute)
@@ -243,9 +243,33 @@ function createUzklausa($vardas, $pavarde, $elpastas, $tel, $zinute)
 // createUzklausa("linas", "pakas", "as@as.lt", 232323, "ka tu cia nori");
 
 
+///-=-=-==-=-===- paprastesne
+///=-=-=-==-=- soc inonai
+function createSocIcon($vardas, $title)
+{
+  // Saugumas: uzkoduoja spec. simbolius "" '' \n \t < >
+  $vardas = mysqli_real_escape_string(getPrisijungimas(), $vardas);
+  $title = mysqli_real_escape_string(getPrisijungimas(), $title);
+  $manoSQL = "INSERT INTO scIcons VALUES (NULL, '$vardas', '$title')";
+  $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+  if ($arPavyko == false) {
+    echo "ERROR: Nepavyko sukurti: $vardas, $title <br>";
+  }
+}
+///=-=-=-==-=- carusel img 
+function createCaruselImg($name, $article)
+{
+  // Saugumas: uzkoduoja spec. simbolius "" '' \n \t < >
+  $name = mysqli_real_escape_string(getPrisijungimas(), $name);
+  $article = mysqli_real_escape_string(getPrisijungimas(), $article);
+  $manoSQL = "INSERT INTO caruselIMG VALUES (NULL, '$name', '$article')";
+  $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+  if ($arPavyko == false) {
+    echo "ERROR: Nepavyko sukurti: $name, $article <br>";
+  }
+}
 
 
-// echo "eik naxui";
 
 
 // 6. deleteDoctor($nr)
@@ -387,7 +411,7 @@ function deleteCaruselImg($nr)
 
  */
 
-
+/// MANDRESNIS UPDATE PATIENTS
 function updatePacient($nr, $vardas, $article)
 {
 
@@ -413,6 +437,41 @@ function updatePacient($nr, $vardas, $article)
     echo " error : nepavyko atnaujinti/pakeisti  article, kurio nr: $nr < br / > " . mysqli_error(getPrisijungimas());
   }
 }
+
+///// PAPRASTESNIS UPDATE DOCTORS
+
+
+///-=-=-=-=- soc iconeles
+function socIconsUpdate($nr, $vardas, $title)
+{
+  $nr = mysqli_real_escape_string(getPrisijungimas(), $nr);
+  $vardas = mysqli_real_escape_string(getPrisijungimas(), $vardas);
+  $title = mysqli_real_escape_string(getPrisijungimas(), $title);
+  $manoSQL = "UPDATE scIcons SET name='$vardas', title='$title' WHERE id='$nr'";
+  $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+  if (!$arPavyko) {
+    echo "ERROR: nepavyko pasalinti gydytojo numeriu: $nr <br>" . mysqli_error();
+  }
+}
+
+
+////=-=-=-=-=-=-=-=  home tekstas
+
+function homeTextUpdate($nr, $title, $subtitle)
+{
+  $nr = mysqli_real_escape_string(getPrisijungimas(), $nr);
+  $title = mysqli_real_escape_string(getPrisijungimas(), $title);
+  $subtitle = mysqli_real_escape_string(getPrisijungimas(), $subtitle);
+  $manoSQL = "UPDATE HomeText SET Title='$title', Subtitle='$subtitle' WHERE id='$nr'";
+  $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+  if (!$arPavyko) {
+    echo "ERROR: nepavyko pasalinti gydytojo numeriu: $nr <br>" . mysqli_error();
+  }
+}
+// doctorUpdate(1, "Onute", "Garbanota");
+
+
+
 // updateDoctor(3, 'Teresyti', 'Teresauskiene');
 
 // updatePacient(4, 'mARTYNASas', 'uRBAUSKAUSas', 1);

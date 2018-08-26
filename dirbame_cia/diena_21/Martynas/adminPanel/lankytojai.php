@@ -29,7 +29,7 @@ echo " <th> $data[el_pastas]</th>";
 echo " <th> $data[tel_nr]</th>";
 echo " <th> $data[zinute]</th>";
 echo " <th> <a class='btn btn-outline-danger' href='dalete_lankytojas.php?nr=$data[id] & title=$data[vardas]'</a> Pasalinti </th>";
-echo " <th> <a class='btn btn-outline-primary' href='update.php?nr=$data[id] & title=$data[vardas]'</a> Naujinti </th>";
+// echo " <th> <a class='btn btn-outline-primary' href='update.php?nr=$data[id] & title=$data[vardas]'</a> Naujinti </th>";
 echo "</tr>";
 
 $data = mysqli_fetch_assoc($visaData);
