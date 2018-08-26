@@ -10,7 +10,7 @@ if (isset($img['nr'])) {
   $nr = $img['nr'];
   deleteCaruselImg($nr);
 }
-echo "<h2> Informacija buvo pasalinta</h2> ";
+echo "<h2 class='mainh2'> Informacija buvo pasalinta</h2> ";
 echo "<META http-equiv='refresh' content='3;URL=carusel.php' > ";
 
 ?>

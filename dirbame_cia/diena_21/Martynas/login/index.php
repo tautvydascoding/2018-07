@@ -1,5 +1,6 @@
 <?php
 include("Lhead.php");
+
 ?>
 
 
@@ -8,6 +9,12 @@ include("Lhead.php");
 
   <div class="main-wraper">
     <h2>Home</h2>
+<?php
+if (isset($_SESSION['u_id'])) {
+  echo "Login success";
+}
+?>
+
   </div>
 
 </section>

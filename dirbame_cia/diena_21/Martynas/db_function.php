@@ -349,6 +349,29 @@ function deleteLankytojoData($nr)
   }
 }
 
+
+//-=-=-=-=-==--= useriai
+
+function deleteUserData($nr)
+{
+    // $nr = mysqli_real_escape_string(getPrisijungimas(), $nr);
+
+  $manoSQL = sprintf(
+    "DELETE FROM users 
+                WHERE id = '%s' 
+                LIMIT 1 /* cia imitas, kad gali ( klaidos atveju) istrinti tik viena.  */
+                ",
+    mysqli_real_escape_string(getPrisijungimas(), $nr)
+
+  );
+// nesumaisyti!        queris   prisijungimas     ir manoSQL uzklausa
+  $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+
+  if ($arPavyko == false) {
+    echo " error : nepavyko istrinti lankytojo, kurio nr: $nr < br / > " . mysqli_error(getPrisijungimas());
+  }
+}
+
 //-=-=-=-=-=-=-social iconai
 
 
@@ -609,6 +632,23 @@ function getAllInfoData()
   return $visaData;
 
 }
-
 $visaData = getAllInfoData();
+$data = mysqli_fetch_assoc($visaData);
+
+//-=-=-==-=-USERIAI 
+
+
+function getAllUsersData()
+{
+    // salyga, kad paimami visi gydytojai
+  $manoSQL = "SELECT * FROM users";
+
+    // query grazina OBJEKTA NE MASYVA!!!!!!! sio objekto viduje yra daug eiluciu is DB. Siuo metu, visi duomenys is doctors lenteles yra musu php faile ir $visiGydytojai kintamajame
+  $visaData = mysqli_query(getPrisijungimas(), $manoSQL);
+
+    // grazinam paimta gydytoja
+  return $visaData;
+
+}
+$visaData = getAllUsersData();
 $data = mysqli_fetch_assoc($visaData);

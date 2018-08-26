@@ -16,6 +16,9 @@
                         <li>
                             <a href="CONTACT/contacts.php">Contact Us!</a>
                         </li>
+                        <li>
+                            <a href="login/signup.php"><i class="icon ion-ios-contact"></i></a>
+                        </li>
                     </ul>
                     <div class="">
                         <ul class="social-links">

@@ -14,7 +14,7 @@ include("Aheader.php");
         <?php
         if (isset($_GET['newTitle'])) {
           $atnaujinti = homeTextUpdate($_GET['id'], $_GET['newTitle'], $_GET['newSubtitle']);
-          echo " <h2>Sekmingai atnaujinta </h2><br>";
+          echo " <h2 class='mainh2'>Sekmingai atnaujinta </h2><br>";
           echo "<META http-equiv='refresh' content='3;URL=hometext.php'>";
         } else {
           echo "  Iveskite naujus teksto duomenis<br>";
