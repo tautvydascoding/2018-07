@@ -25,12 +25,12 @@ $rodytiZinutes = false;
     function getNav($nr) {
            $manoSQL = "SELECT * FROM meniu WHERE meniu_ID=$nr ";
 
-           // grista obj !!! ne masyvas
+
            $rezultatai = mysqli_query( getPrisijungimas() , $manoSQL);
 
-           // jei DB-je radome
+
            if (mysqli_num_rows($rezultatai) > 0) {
-               // is "$rezultatai" objekto  paimam duomenis i Array
+
                $resultataiMasyvas = mysqli_fetch_assoc($rezultatai);
                return $resultataiMasyvas;
            } else {
@@ -42,12 +42,12 @@ $rodytiZinutes = false;
        function getViezbutis($nr) {
               $manoSQL = "SELECT * FROM viežbučių WHERE Viežbučio_id=$nr ";
 
-              // grista obj !!! ne masyvas
+
               $rezultatai = mysqli_query( getPrisijungimas() , $manoSQL);
 
-              // jei DB-je radome
+
               if (mysqli_num_rows($rezultatai) > 0) {
-                  // is "$rezultatai" objekto  paimam duomenis i Array
+
                   $resultataiMasyvas = mysqli_fetch_assoc($rezultatai);
                   return $resultataiMasyvas;
               } else {
@@ -56,16 +56,9 @@ $rodytiZinutes = false;
 
           }
 
-    //    function getViezbuciai() {
-    //     $manoSQL = "SELECT * FROM viežbučių lentelė";
-    //     // mysqli_query - grazina Objekta !!! ne masyva (sio objekto viduje yra daug eiluciu is DB)
-    //     $resultai = mysqli_query(getPrisijungimas(), $manoSQL);
-    //     return $resultai;
-    // }
-    //
-    //
-    //    // visu viežbuciu isvedimas
-    //        $visiviezbuciai = getViezbuciai();
-    //        while (     $viezbutis = mysqli_fetch_assoc($visiviezbuciai) ) {
-    //         echo "<h2>$viezbutis[pavadinimas]  $viezbutis[aprasymas]     </h2>";
-    //        }
+          function getKontaktai() {
+                 $manoSQL = "SELECT * FROM kontaktai";
+                 $rezultatai = mysqli_query( getPrisijungimas() , $manoSQL);
+                 return $rezultatai;
+
+             }

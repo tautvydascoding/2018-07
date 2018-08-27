@@ -14,21 +14,22 @@
 
                 include('nav.php');
 
-            function sukurtiVartotoja() {
-
+            function kontaktai() {
                 $vardas = $_POST['vardas'];
                 $email =  $_POST['email'];
-                $telefonas = $_POST['telefonas'];
-                $komentaras = $_POST['komentaras'];
-                $pavarde = $_POST['pavarde'];
+                $gyvenamoji = $_POST['gyvenamoji'];
+                $kurortas = $_POST['kurortas'];
+                $miestas = $_POST['miestas'];
+                $salis = $_POST['salis'];
+                $pKodas = $_POST['pKodas'];
 
-            $manoSQL = "INSERT INTO `pirkeju` (`vartotojo id`, `vartotojo_vardas`, `vartotojo_pavardė`, `komentaras`, `e_pastas`) VALUES (NULL, '$vardas', '$pavarde', '$komentaras', '$email'); ";
+            $manoSQL = "INSERT INTO `kontaktai` (`registracija`, `E-paštas`, `Vardas`, `Adresas`, `Kalnų-kurorto-adresas`, `Miestas`, `Šalis`, `Pašto-kodas`) VALUES (NULL, '$email', '$vardas', '$gyvenamoji', '$kurortas', '$miestas', '$salis', '$pKodas'); ";
             $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
                   }
 
-                if (isset($_POST['submitted'])){
-                      sukurtiVartotoja();
-                  }
+                  if (isset($_POST['submitas'])){
+                        kontaktai();
+                    }
 
 
 
@@ -55,7 +56,7 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col text-center atsitumiu aukstis-200">
-            <h4> Sekmingai užsisakėte kelionę. <br /> Męs su jumis susieksime 24 valandų laikotarpyje. </h4>
+            <h4> Sekmingai parašėte mums į kontaktus. <br /> Męs su jumis susieksime 24 valandų laikotarpyje. </h4>
             <br /><button class="btn btn-primary" type="button" onclick="document.getElementById('demo').innerHTML = Date()">
                  Dabartinė data ir laikas.</button>
              <h4 id="demo"></h4>
