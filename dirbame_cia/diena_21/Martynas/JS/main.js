@@ -121,6 +121,28 @@ function toggleMenu() {
 //   }
 // })
 
+// -=-========= FOOOORMOS VALIDACIJA ===-=-==--==
+
+
+function validateForm() {
+
+  var vardoIvedimas = document.forms["manoForma"]["vardas"].value;
+  if (vardoIvedimas == "") {
+    alert("Ooo NE! pamirsote irasyti savo varda! ");
+    return false;
+  }
+
+  var elPIvedimas = document.forms["manoForma"]["el_pastas"].value;
+  if (elPIvedimas == "") {
+    alert("Oo Ne! Nenurodete savo el. pasto! Negalesime su Jumis susisiekti, jei jo neivesite.");
+    return false;
+  }
+  var zinIvedimas = document.forms["manoForma"]["zinute"].value;
+  if (zinIvedimas == "") {
+    alert("Oo Ne!Siunciate tuscia zinute. Uzduokite mums klausima ar parasykite savo pastebejimus. Mums tai labai svarbu!");
+    return false;
+  }
+}
 
 
 
@@ -136,3 +158,50 @@ function toggleMenu() {
 //   })
 
 // })
+
+
+// // =-=-=--=-=-=-= AJAX LOAD =-=-=-=-=-=-=
+
+// $(document).ready(function () {
+
+//   var limit = 3;
+//   var start = 0;
+//   var action = 'inactive';
+
+//   function load_country_data(limit, start) {
+//     $.ajax({
+//       url: "fetch.php",
+//       method: "POST",
+//       data: {
+//         limit: limit,
+//         start: start
+//       },
+//       cache: false,
+//       success: function (data) {
+//         $('#load_data').append(data);
+//         if (data == '') {
+//           $('#load_data_msg').html("<button type='button' class='btn btn-info'>Aciu kad ziurejote</button>");
+//           action = 'active';
+//         } else {
+//           $('#load_data_msg').html("<button type='button' class='btn btn-warning'>Prasome palaukti....</button>");
+//           action = "inactive";
+//         }
+//       }
+//     });
+//   }
+
+//   if (action == 'inactive') {
+//     action = 'active';
+//     load_country_data(limit, start);
+//   }
+//   $(window).scroll(function () {
+//     if ($(window).scrollTop() + $(window).height() > $("#load_data").height() && action == 'inactive') {
+//       action = 'active';
+//       start = start + limit;
+//       setTimeout(function () {
+//         load_country_data(limit, start);
+//       }, 1000);
+//     }
+//   });
+
+// });
