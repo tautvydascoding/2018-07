@@ -109,4 +109,17 @@ $(function() {
         }
     });
 
+    $("#search-forma").validate({
+        rules: {
+            ieskomaPreke: {
+                required: true
+            }
+        },
+        messages: {
+            ieskomaPreke: {
+                required: 'Prasome ivesti ieskomos prekes pavadinima.'
+            }
+        }
+    });
+
 });

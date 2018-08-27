@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 22, 2018 at 07:17 PM
+-- Generation Time: Aug 26, 2018 at 07:32 PM
 -- Server version: 5.6.34-log
 -- PHP Version: 7.2.1
 
@@ -46,7 +46,17 @@ INSERT INTO `img` (`id`, `name`, `pozicija`, `prekesid`) VALUES
 (2, 'preke2.jpg', 2, 2),
 (3, 'preke3.jpg', 3, 3),
 (4, 'preke4.jpg', 4, 4),
-(5, 'preke5.jpg', 0, 5);
+(5, 'preke5.jpg', 0, 5),
+(6, 'preke-1.1.jpg', 0, 1),
+(7, 'preke-1.2.jpg', 0, 1),
+(10, 'preke-2.1.jpg', 0, 2),
+(11, 'preke-2.2.jpg', 0, 2),
+(12, 'preke-3.1.jpg', 0, 3),
+(13, 'preke-3.2.jpg', 0, 3),
+(14, 'preke-4.1.jpg', 0, 4),
+(15, 'preke-4.2.jpg', 0, 4),
+(16, 'preke-5.1.jpg', 0, 5),
+(17, 'preke-5.2.jpg', 0, 5);
 
 -- --------------------------------------------------------
 
@@ -73,6 +83,20 @@ INSERT INTO `login` (`id`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pranesimai`
+--
+
+CREATE TABLE `pranesimai` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `vardas` varchar(60) NOT NULL,
+  `tema` varchar(100) NOT NULL,
+  `email` varchar(150) NOT NULL,
+  `pranesimas` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `uzsakymai`
 --
 
@@ -89,13 +113,6 @@ CREATE TABLE `uzsakymai` (
   `patvirtinta` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `uzsakymai`
---
-
-INSERT INTO `uzsakymai` (`id`, `name`, `lname`, `email`, `address`, `postalcode`, `phone`, `comments`, `prekesid`, `patvirtinta`) VALUES
-(13, 'kjabsj', 'jkbasjf', 'jkbhjasbf@jkbasf', ',jhbkjasf', 'jhbajsf5', 6265, 'fasf', 2, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -108,19 +125,20 @@ CREATE TABLE `visosprekes` (
   `name` varchar(100) NOT NULL,
   `price` float DEFAULT NULL,
   `kiekis` int(11) DEFAULT NULL,
-  `pozicija` int(11) DEFAULT NULL
+  `pozicija` int(11) DEFAULT NULL,
+  `aprasymas` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_lithuanian_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `visosprekes`
 --
 
-INSERT INTO `visosprekes` (`id`, `link`, `name`, `price`, `kiekis`, `pozicija`) VALUES
-(1, 'preke-1.php', 'Beelink GT1 Ultimate', 64.57, 5, 1),
-(2, 'preke-2.php', 'Alfawise H96 Pro+', 64.81, 2, 2),
-(3, 'preke-3.php', 'Samsung 850 PRO 256GB', 156.69, 5, 3),
-(4, 'preke-4.php', 'Alfawise X5 Mini PC', 78.34, 5, 4),
-(5, 'preke-top.php', 'Xiaomi Mi TV Box', 56.58, 2, 0);
+INSERT INTO `visosprekes` (`id`, `link`, `name`, `price`, `kiekis`, `pozicija`, `aprasymas`) VALUES
+(1, '', 'Beelink GT1 Ultimate', 64.57, 5, 1, 'Testuojam ar viskas gerai veikia.'),
+(2, 'preke-2.php', 'Alfawise H96 Pro+', 64.81, 2, 2, 'Preke 2 aparasymas, testuojam ar viskas gerai veikia. Jeigu kazkas blogai veiks mes sutvarkysime.'),
+(3, 'preke-3.php', 'Samsung 850 PRO 256GB', 156.69, 5, 3, 'Preke 3 aparasymas, testuojam ar viskas gerai veikia. Jeigu kazkas blogai veiks mes sutvarkysime.'),
+(4, 'preke-4.php', 'Alfawise X5 Mini PC', 78.34, 5, 4, 'Preke 4 aparasymas, testuojam ar viskas gerai veikia. Jeigu kazkas blogai veiks mes sutvarkysime.'),
+(5, 'preke-top.php', 'Xiaomi Mi TV Box', 56.58, 5, 0, 'Preke 5 aparasymas, testuojam ar viskas gerai veikia. Jeigu kazkas blogai veiks mes sutvarkysime.');
 
 --
 -- Indexes for dumped tables
@@ -136,6 +154,12 @@ ALTER TABLE `img`
 -- Indexes for table `login`
 --
 ALTER TABLE `login`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pranesimai`
+--
+ALTER TABLE `pranesimai`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -158,22 +182,27 @@ ALTER TABLE `visosprekes`
 -- AUTO_INCREMENT for table `img`
 --
 ALTER TABLE `img`
-  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
+-- AUTO_INCREMENT for table `pranesimai`
+--
+ALTER TABLE `pranesimai`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
 -- AUTO_INCREMENT for table `uzsakymai`
 --
 ALTER TABLE `uzsakymai`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 --
 -- AUTO_INCREMENT for table `visosprekes`
 --
 ALTER TABLE `visosprekes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;COMMIT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

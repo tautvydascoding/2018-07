@@ -28,6 +28,9 @@ include_once ('session.php');
                             <li class="nav-item">
                               <a class="nav-link" href="images.php">Paveiksliukai</a>
                             </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="parametrai.php">Prekiu parametrai</a>
+                            </li>
                             <li class="nav-item bg-danger">
                               <a class="nav-link" href="logout.php">Atsijungti</a>
                             </li>
