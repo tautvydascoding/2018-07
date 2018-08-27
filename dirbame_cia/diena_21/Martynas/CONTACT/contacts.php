@@ -24,11 +24,15 @@ require_once("header.php")
             </div>
 
 
-
+                    <div id="issiusta"><?php 
+                                        if (isset($_GET['mailSent'])) {
+                                            echo "<h5 class='msg-isvedimas'> Jusu zinute buvo Issiusta! :) </h5>";
+                                        }
+                                        ?></div>
 
             <section class="mdl-grid">
                 <div class="mdl-cell mdl-cell--12-col aukstis-450">
-                    <form action="senMail.php" class="cont_form" method="POST" name='manoForma' onsubmit="return validateForm()">
+                    <form action="senMail.php" class="cont_form" method="POST" name='manoForma' onsubmit="return validateForm()" id='main-forma'>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" id="sample3" name="vardas"min="3" autofocus>
                             <label class="mdl-textfield__label labelc_balt" for="sample3">Vardas...</label>
