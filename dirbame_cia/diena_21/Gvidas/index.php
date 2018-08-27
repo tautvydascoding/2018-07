@@ -35,7 +35,7 @@ include_once('header.php');
                         </a>
                     </div>
                     <!-- karuseles pabaiga -->
-                    <form action="search.php" method="POST" class="mt-4 mb-4">
+                    <form id='search-forma' action="search.php" method="POST" class="mt-4 mb-4">
                         <div class="row">
                           <div class="col-md-10">
                               <input class="form-control form-control-lg" type="text" placeholder="Ieskomos prekes pavadinimas" name="ieskomaPreke" autofocus>

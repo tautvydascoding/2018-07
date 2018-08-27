@@ -8,7 +8,6 @@ include_once('header.php');
             <main class="row">
                 <?php
                 include_once('left-navbar.php');
-                include_once('prekiu-info.php');
                 include_once('db-prekiu-info.php');
                 $preke1 = getPreke($_GET["id"]);
                 $fotos = getImgs1($_GET["id"]);
@@ -32,9 +31,6 @@ include_once('header.php');
                                       // print_r($visosFoto);
                                   }
                                    ?>
-                                  <!-- <div class="carousel-item active">
-                                      <img class="d-block w-100 prekiu-slider" src="image/preke1.jpg" alt="Pirma nuotrauka">
-                                  </div> -->
                               </div>
                               <a class="carousel-control-prev" href="#nuotraukos" role="button" data-slide="prev">
                                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -63,11 +59,18 @@ include_once('header.php');
                           <table class="table">
                           <tbody>
                               <?php
-                              for ($i=0; $i < count($preke1ParametraiK) ; $i++) {
+                              $prekesid = getParametrai($_GET['id']);
+                              $prekesduomenys = getDuomenys($_GET['id']);
+                              $visiParametrai = mysqli_fetch_assoc($prekesid);
+                              $visiDuomenys = mysqli_fetch_assoc($prekesduomenys);
+                              while ($visiParametrai) {
                                   echo "<tr>";
-                                  echo "<th scope='row'>" . $preke1ParametraiK[$i] . "</th>";
-                                  echo "<td>" . $preke1ParametraiD[$i] . "</td>";
+                                  echo "<th scope='row'>" . $visiParametrai['parametrai'] . "</th>";
+                                  echo "<td>" . $visiDuomenys['duomenys'] . "</td>";
                                   echo "</tr>";
+                                  $visiParametrai = mysqli_fetch_assoc($prekesid);
+                                  $visiDuomenys = mysqli_fetch_assoc($prekesduomenys);
+
                               }
                                ?>
                           </tbody>
