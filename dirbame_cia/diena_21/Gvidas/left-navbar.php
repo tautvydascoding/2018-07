@@ -10,7 +10,7 @@ include_once ('db-prekiu-info.php');
 $rezultatai = getPrekes();
 $visosPrekes = mysqli_fetch_assoc($rezultatai);
 while ($visosPrekes) {
-    echo "<a class='nav-link nav_papildymas' href='" . $visosPrekes['link'] . "'>&#10148; " . $visosPrekes['name'] . "</a>";
+    echo "<a class='nav-link nav_papildymas' href='preke.php?id=" . $visosPrekes['id'] . "'>&#10148; " . $visosPrekes['name'] . "</a>";
     $visosPrekes = mysqli_fetch_assoc($rezultatai);
 }
 echo "</nav>";

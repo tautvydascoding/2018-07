@@ -30,3 +30,11 @@ function countdown3() {
     i.innerHTML = parseInt(i.innerHTML)-1;
 }
 setInterval(function(){ countdown3(); },1000);
+function countdown4() {
+    var i = document.getElementById('counter4');
+    if (parseInt(i.innerHTML)<=0) {
+        location.href = 'parametrai.php';
+    }
+    i.innerHTML = parseInt(i.innerHTML)-1;
+}
+setInterval(function(){ countdown4(); },1000);

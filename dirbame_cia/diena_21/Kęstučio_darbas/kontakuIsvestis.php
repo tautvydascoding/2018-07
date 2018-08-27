@@ -13,25 +13,6 @@
             <?php
 
                 include('nav.php');
-
-            function sukurtiVartotoja() {
-
-                $vardas = $_POST['vardas'];
-                $email =  $_POST['email'];
-                $telefonas = $_POST['telefonas'];
-                $komentaras = $_POST['komentaras'];
-                $pavarde = $_POST['pavarde'];
-
-            $manoSQL = "INSERT INTO `pirkeju` (`vartotojo id`, `vartotojo_vardas`, `vartotojo_pavardė`, `komentaras`, `e_pastas`) VALUES (NULL, '$vardas', '$pavarde', '$komentaras', '$email'); ";
-            $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
-                  }
-
-                if (isset($_POST['submitted'])){
-                      sukurtiVartotoja();
-                  }
-
-
-
             ?>
          <!-- IDEA: Pabaigem meniu -->
 
@@ -45,20 +26,31 @@
         <div class="float-fix"> </div>
 
         <div class="jumbotron">
-          <h2 class="display-4">Sveikiname puikus pasirinkimas</h2>
-          <p class="lead">Jai turite klausymų mielai į juos atsakysime.</p>
-          <hr class="my-4">
-          <p>Galime suteikti visą papildomą jus dominančią informaciją apie poilsį kalnuose.</p>
+          <h2 class="display-4"> Kontaktu lentelėje turim tokia informacija </h2>
+
         </div>
 
         <!-- IDEA: Pradedu Antraste su Mygtuku -->
         <div class="container">
           <div class="row align-items-center">
-            <div class="col text-center atsitumiu aukstis-200">
-            <h4> Sekmingai užsisakėte kelionę. <br /> Męs su jumis susieksime 24 valandų laikotarpyje. </h4>
-            <br /><button class="btn btn-primary" type="button" onclick="document.getElementById('demo').innerHTML = Date()">
-                 Dabartinė data ir laikas.</button>
-             <h4 id="demo"></h4>
+            <div class="col text-center aukstis-200">
+            <p>
+
+              <?php
+            $visikontaktai = getKontaktai();
+
+            while ( $kontaktai = mysqli_fetch_assoc($visikontaktai) )
+             {
+              echo $kontaktai['registracija']." ";
+              echo $kontaktai['E-paštas']." ";
+              echo $kontaktai['Vardas']." ";
+              echo $kontaktai['Adresas']." ";
+              echo $kontaktai['Kalnų-kurorto-adresas']." ";
+              echo $kontaktai['Miestas']." ";
+              echo $kontaktai['Šalis']." ";
+              echo $kontaktai['Pašto-kodas']."<br />"; }
+              ?>
+              </p>
             </div>
             </div>
          </div>

@@ -160,48 +160,20 @@ function validateForm() {
 // })
 
 
-// // =-=-=--=-=-=-= AJAX LOAD =-=-=-=-=-=-=
+// // =-=-=--=-=-=-= AJAX sent forma =-=-=-=-=-=-=
 
-// $(document).ready(function () {
-
-//   var limit = 3;
-//   var start = 0;
-//   var action = 'inactive';
-
-//   function load_country_data(limit, start) {
-//     $.ajax({
-//       url: "fetch.php",
-//       method: "POST",
-//       data: {
-//         limit: limit,
-//         start: start
-//       },
-//       cache: false,
-//       success: function (data) {
-//         $('#load_data').append(data);
-//         if (data == '') {
-//           $('#load_data_msg').html("<button type='button' class='btn btn-info'>Aciu kad ziurejote</button>");
-//           action = 'active';
-//         } else {
-//           $('#load_data_msg').html("<button type='button' class='btn btn-warning'>Prasome palaukti....</button>");
-//           action = "inactive";
-//         }
-//       }
-//     });
+// var maildata = new FormData($("main-forma")[0]);
+// $.ajax({
+//   url: 'send.php',
+//   type: 'POST',
+//   data: maildata,
+//   async: true,
+//   dataType: 'text',
+//   processData: false,
+//   success: function (data) {
+//     alert(data);
+//   },
+//   error: function (data) {
+//     alert('An error occurs!');
 //   }
-
-//   if (action == 'inactive') {
-//     action = 'active';
-//     load_country_data(limit, start);
-//   }
-//   $(window).scroll(function () {
-//     if ($(window).scrollTop() + $(window).height() > $("#load_data").height() && action == 'inactive') {
-//       action = 'active';
-//       start = start + limit;
-//       setTimeout(function () {
-//         load_country_data(limit, start);
-//       }, 1000);
-//     }
-//   });
-
 // });

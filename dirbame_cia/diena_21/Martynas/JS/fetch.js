@@ -1,4 +1,5 @@
 // =-=-=--=-=-=-= AJAX LOAD =-=-=-=-=-=-=
+console.log("labas");
 
 $(document).ready(function () {
 

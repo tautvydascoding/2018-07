@@ -13,7 +13,7 @@
                     <input type="text" name="kaina" value="<?php echo $preke['price']; ?>" placeholder="Nauja kaina">
                     <input type="text" name="kiekis" value="<?php echo $preke['kiekis']; ?>" placeholder="Naujas kiekis">
                     <input type="text" name="pozicija" value="<?php echo $preke['pozicija']; ?>" placeholder="Nauja pozicija">
-                    <textarea name="aprasymas" rows="4" cols="60" placeholder="Prekes aprasymas"><?php echo $preke['aprasymas']; ?></textarea>
+                    <textarea name="aprasymas" rows="4" cols="60" placeholder="Prekes aprasymas" maxlength="500"><?php echo $preke['aprasymas']; ?></textarea>
                     <button type="submit" class="btn btn-primary">UPDATE</button>
                 </form>
             </div>

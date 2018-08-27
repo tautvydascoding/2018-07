@@ -15,9 +15,9 @@ createUzklausa($interesantas['vardas'], $interesantas['pavarde'], $interesantas[
 <style>
 
 body {background-color: black;}
-.mailer {
+/* .mailer {
   color:#fff;
-  }
+  } */
 
 </style>
   <title>Document</title>
@@ -39,7 +39,7 @@ $klientoVardas = $_POST['vardas'];
 $klientoUzklausa = $_POST['zinute'];
 $klientoEmail = $_POST['el_pastas'];
 
-echo " <META http-equiv='refresh' content='0;URL=msgSent.php' ";
+// echo " <META http-equiv='refresh' content='0;URL=msgSent.php' ";
 
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
@@ -93,7 +93,12 @@ try {
   $mail->send();
   // echo " <h1 class='mailer'> Jusu zinute issiusta! </h2>";
 
+  if ($mail->send() == true) {
+    header("Location: contacts.php?mailSent=success");
+    exit();
+  }
+
 
 } catch (Exception $e) {
-  echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+  // echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }

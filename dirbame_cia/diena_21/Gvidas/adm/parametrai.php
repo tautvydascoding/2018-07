@@ -39,24 +39,24 @@ include_once ('session.php');
                 </div>
             </header>
             <?php
-            if (isset($_GET['sukurtipavadinimas'])) {
-                $sukurti = createPreke(NULL, $_GET['sukurtipavadinimas'], $_GET['sukurtikaina'], $_GET['sukurtikiekis'], $_GET['sukurtipozicija'], $_GET['aprasymas']);
+            if (isset($_GET['sukurtiparametrai'])) {
+                $sukurti = createParametras($_GET['sukurtiparametrai'], $_GET['sukurtiduomenys'], $_GET['sukurtiprekesid'], 0);
                 echo "<div class='alert alert-success' role='alert'>";
-                echo "Sekmingai sukurete nauja preke (Puslapis automatiskai persikraus uz <span id='counter'>5</span>sec)";
+                echo "Sekmingai sukurete nauja preke (Puslapis automatiskai persikraus uz <span id='counter4'>5</span>sec)";
                 echo "</div>";
                 // echo "<META http-equiv='refresh' content='5;URL=profile.php'> ";
             }
-            if (isset($_GET['pavadinimas'])) {
-                $atnaujinti = prekeUpdate($_GET['id'], NULL, $_GET['pavadinimas'], $_GET['kaina'], $_GET['kiekis'], $_GET['pozicija'], $_GET['aprasymas']);
+            if (isset($_GET['parametrai'])) {
+                $atnaujinti = parametraiUpdate($_GET['id'], $_GET['parametrai'], $_GET['duomenys'], $_GET['prekesid']);
                 echo "<div class='alert alert-success' role='alert'>";
-                echo "Sekmingai atnaujinote duomenis (Puslapis automatiskai persikraus uz <span id='counter'>5</span>sec)";
+                echo "Sekmingai atnaujinote duomenis (Puslapis automatiskai persikraus uz <span id='counter4'>5</span>sec)";
                 echo "</div>";
                 // echo "<META http-equiv='refresh' content='5;URL=profile.php'> ";
             }
             if (isset($_GET['delete'])) {
-                $istrinti = deletePreke($_GET['delete']);
+                $istrinti = deleteParametras($_GET['delete']);
                 echo "<div class='alert alert-success' role='alert'>";
-                echo "Sekmingai pasalinote preke (Puslapis automatiskai persikraus uz <span id='counter'>5</span>sec)";
+                echo "Sekmingai pasalinote preke (Puslapis automatiskai persikraus uz <span id='counter4'>5</span>sec)";
                 echo "</div>";
                 // echo "<META http-equiv='refresh' content='5;URL=profile.php'> ";
             }
@@ -66,26 +66,33 @@ include_once ('session.php');
               <div class="col-md-4">
                   <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#create">
-                  Sukurti nauja preke
+                  Sukurti nauja parametra
                 </button>
                 <!-- Modal -->
                 <div class="modal fade" id="create" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Sukurti nauja preke</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Sukurti nauja parametra</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
                           <form action="#" method="get">
-                              <input type="hidden" name="sukurtilinkas" value="preke.php" placeholder="Pvz: preke-1.php">
-                              <input type="text" name="sukurtipavadinimas" value="" placeholder="Prekes pavadinimas"><br>
-                              <input type="text" name="sukurtikaina" value="" placeholder="Prekes kaina"><br>
-                              <input type="text" name="sukurtikiekis" value="" placeholder="Prekes kiekis"><br>
+                              <input type="text" name="sukurtiparametrai" value="" placeholder="Prekes parametras"><br>
+                              <input type="text" name="sukurtiduomenys" value="" placeholder="Prekes duomenys"><br>
+                              <select class="" name="sukurtiprekesid">
+                                  <?php
+                                  $rezultatai = getPrekes();
+                                  $visosPrekes = mysqli_fetch_assoc($rezultatai);
+                                  while ($visosPrekes) {
+                                      echo "<option value='$visosPrekes[id]'>$visosPrekes[name]</option>";
+                                      $visosPrekes = mysqli_fetch_assoc($rezultatai);
+                                  }
+                                   ?>
+                              </select>
                               <input type="hidden" name="sukurtipozicija" value="" placeholder="Prekes pozicija">
-                              <textarea name="aprasymas" rows="4" cols="60" placeholder="Prekes aprasymas" maxlength="500"></textarea><br>
                               <button type="submit" class="btn btn-primary">Sukurti</button>
                           </form>
                       </div>
@@ -99,27 +106,21 @@ include_once ('session.php');
               <div class="col-md-12 bg-info">
                   <table class="table">
                       <tr>
-                          <th scope="col">Prekes ID (Numeris)</th>
-                          <!-- <th scope="col">link'as (URL nuorada)</th> -->
-                          <th scope="col">Prekes pavadinimas</th>
-                          <th scope="col">Prekes kaina</th>
-                          <th scope="col">Kiekis</th>
-                          <!-- <th scope="col">Pozicija</th> -->
+                          <th scope="col">Prekes parametrai</th>
+                          <th scope="col">Prekes duomenys</th>
+                          <th scope="col">Prekes ID (kuriai bus priskirta)</th>
                       </tr>
                       <?php
-                      $rezultatai = getPrekes();
+                      $rezultatai = getParametrai();
                       $preke = mysqli_fetch_assoc($rezultatai); // fetch - paiima viena eilute
                       while ($preke) {
                           echo "<tr>";
-                          echo "<th>$preke[id]</th>";
-                          // echo "<th>$preke[link]</th>";
-                          echo "<th>$preke[name]</th>";
-                          echo "<th>$preke[price]</th>";
-                          echo "<th>$preke[kiekis]</th>";
-                          // echo "<th>$preke[pozicija]</th>";
+                          echo "<th>$preke[parametrai]</th>";
+                          echo "<th>$preke[Duomenys]</th>";
+                          echo "<th>$preke[prekesid]</th>";
                           echo "<th><a href='#edit$preke[id]' id='link' data-toggle='modal' class='btn-block'><button type='submit' class='btn btn-primary' >EDIT</button></a></th>";
                           echo "<th><a href='?delete=$preke[id]'<button type='submit' class='btn btn-primary'>DELETE</button></a></th>";
-                          include ('modal.php');
+                          include ('modal-parametrai.php');
                           echo "</tr>";
                           $preke = mysqli_fetch_assoc($rezultatai); // fetch - paiima sekancia eilute
                       }

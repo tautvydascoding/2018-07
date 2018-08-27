@@ -20,7 +20,23 @@ session_start();
       <ul>
           <li><a href="index.php">Home</a></li>
           <li><a href="../index.php">Undo</a></li>
-          <li><a href="../adminPanel/indexadmin.php">Admin</a></li>
+          <!-- <a href="../login/signup.php">sign up</a> -->
+          <!-- <li><a href="../adminPanel/indexadmin.php">Admin</a></li> -->
+          <?php 
+          if (isset($_SESSION['u_id'])) {
+            echo '
+              
+                    <li class="HF_ul"><a href="../adminPanel/socialIcons.php">Soc. Icons</a> </li>
+                    <li class="HF_ul"><a href="../adminPanel/carusel.php">Carus. Img</a> </li>
+                    <li class="HF_ul"><a href="../adminPanel/hometext.php">Home Tekstai</a> </li>
+                    <li class="HF_ul"><a href="../adminPanel/lankytojai.php">Lankytojai</a> </li>
+                    <li class="HF_ul"><a href="../adminPanel/useriai.php">Useriai</a> </li>
+                    ';
+
+          }
+
+
+          ?>
       </ul>
       <div class='nav-login'>
       <?php
@@ -34,6 +50,8 @@ session_start();
       <input type="password" name="pwd" placeholder="password">
       <button type="submit" name="submit">Login</button>
       </form>
+
+
       <a href="signup.php">Sign up</a>';
       }
       ?>

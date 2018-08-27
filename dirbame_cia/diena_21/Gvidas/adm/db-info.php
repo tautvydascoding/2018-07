@@ -144,3 +144,39 @@ function deleteKlausimas($id) {
         echo "ERROR: nepavyko pasalinti<br>";
     }
 }
+// parametrai
+function getParametrai() {
+    $manoSQL= "SELECT * FROM parametrai";
+    $rezultatai = mysqli_query( getPrisijungimas(), $manoSQL);
+    return $rezultatai;
+}
+function createParametras($parametrai, $Duomenys, $prekesid) {
+    // Saugumas: uzkoduoja spec. simbolius "" '' \n \t < >
+    $parametrai = mysqli_real_escape_string( getPrisijungimas(), $parametrai);
+    $Duomenys = mysqli_real_escape_string( getPrisijungimas(), $Duomenys);
+    $prekesid = mysqli_real_escape_string( getPrisijungimas(), $prekesid);
+    $manoSQL = "INSERT INTO parametrai VALUES (NULL, '$parametrai', '$Duomenys', '$prekesid', 0)";
+    $arPavyko = mysqli_query( getPrisijungimas(), $manoSQL);
+    if ($arPavyko == false) {
+        echo "ERROR: Nepavyko sukurti naujo parametro<br>";
+    }
+}
+function deleteParametras($id) {
+    $id = mysqli_real_escape_string( getPrisijungimas(), $id);
+    $manoSQL = "DELETE FROM parametrai WHERE id=$id";
+    $arPavyko = mysqli_query( getPrisijungimas(), $manoSQL);
+    if (!$arPavyko) {
+        echo "ERROR: nepavyko pasalinti<br>";
+    }
+}
+function parametraiUpdate($id, $parametrai, $Duomenys, $prekesid) {
+    $id = mysqli_real_escape_string( getPrisijungimas(), $id);
+    $parametrai = mysqli_real_escape_string( getPrisijungimas(), $parametrai);
+    $Duomenys = mysqli_real_escape_string( getPrisijungimas(), $Duomenys);
+    $prekesid = mysqli_real_escape_string( getPrisijungimas(), $prekesid);
+    $manoSQL = "UPDATE parametrai SET parametrai='$parametrai', Duomenys='$Duomenys', prekesid='$prekesid', pozicija=0 WHERE id='$id'";
+    $arPavyko = mysqli_query( getPrisijungimas(), $manoSQL);
+    if (!$arPavyko) {
+        echo "ERROR: nepavyko <br>" . mysqli_error();
+    }
+}

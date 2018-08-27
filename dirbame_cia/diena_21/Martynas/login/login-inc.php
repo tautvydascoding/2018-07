@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+// die("asasasas");
 
 if (isset($_POST['submit'])) {
   include_once("db_include.php");
@@ -9,13 +9,14 @@ if (isset($_POST['submit'])) {
   $uid = mysqli_real_escape_string(getPrisijungimas(), $_POST['uid']);
   $pwd = mysqli_real_escape_string(getPrisijungimas(), $_POST['pwd']);
 
+  var_dump($uid);
   //errors handlers
   //check if empty
   if (empty($uid) || empty($pwd)) {
-    header("Location: index.php?login=empty");
+    // header("Location: index.php?login=empty");
     exit();
   } else {
-    $sql = "SELECT * FROM users WHERE user_uid='$uid' OR user_email='$user_email' ";
+    $sql = "SELECT * FROM users WHERE user_uid='$uid' OR user_email='$uid' ";
     $result = mysqli_query(getPrisijungimas(), $sql);
     $resultcheck = mysqli_num_rows($result);
     if ($resultcheck < 1) {
@@ -30,7 +31,7 @@ if (isset($_POST['submit'])) {
           exit();
         } else if ($hashedPwdCheck == true) {
           //log in user here
-          $_SESSION['u_id'] = $row['user_id'];
+          $_SESSION['u_id'] = $row['id'];
           $_SESSION['u_first'] = $row['user_first'];
           $_SESSION['u_last'] = $row['user_last'];
           $_SESSION['u_email'] = $row['user_email'];

@@ -96,3 +96,14 @@ function createKlausimas($vardas, $tema, $email, $pranesimas) {
         echo "ERROR: Nepavyko sukurti pranesimo<br>";
     }
 }
+// parametrai
+function getParametrai($nr) {
+    $manoSQL1 = "SELECT parametrai.parametrai FROM visosprekes INNER JOIN parametrai ON parametrai.prekesid = visosprekes.id WHERE parametrai.prekesid=$nr";
+    $rezultatai1 = mysqli_query( getPrisijungimas(), $manoSQL1);
+    return $rezultatai1;
+}
+function getDuomenys($nr) {
+    $manoSQL1 = "SELECT parametrai.duomenys FROM visosprekes INNER JOIN parametrai ON parametrai.prekesid = visosprekes.id WHERE parametrai.prekesid=$nr";
+    $rezultatai1 = mysqli_query( getPrisijungimas(), $manoSQL1);
+    return $rezultatai1;
+}
