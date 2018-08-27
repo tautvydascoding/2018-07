@@ -15,17 +15,22 @@
                 include('nav.php');
 
             function sukurtiVartotoja() {
+
                 $vardas = $_POST['vardas'];
                 $email =  $_POST['email'];
                 $telefonas = $_POST['telefonas'];
                 $komentaras = $_POST['komentaras'];
                 $pavarde = $_POST['pavarde'];
 
-            $manoSQL = "INSERT INTO `pirkėjų` (`vartotojo id`, `vartotojo_vardas`, `vartotojo_pavardė`, `komentaras`, `e_pastas`) VALUES (NULL, '$vardas', '$pavarde', '$komentaras', '$email'); ";
+            $manoSQL = "INSERT INTO `pirkeju` (`vartotojo id`, `vartotojo_vardas`, `vartotojo_pavardė`, `komentaras`, `e_pastas`) VALUES (NULL, '$vardas', '$pavarde', '$komentaras', '$email'); ";
             $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
                   }
 
-            sukurtiVartotoja();
+                if (isset($_POST['submitted'])){
+                      sukurtiVartotoja();
+                  }
+
+
 
             ?>
          <!-- IDEA: Pabaigem meniu -->
@@ -51,6 +56,9 @@
           <div class="row align-items-center">
             <div class="col text-center atsitumiu aukstis-200">
             <h4> Sekmingai užsisakėte kelionę. <br /> Męs su jumis susieksime 24 valandų laikotarpyje. </h4>
+            <br /><button class="btn btn-primary" type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+                 Dabartinė data ir laikas.</button>
+             <h4 id="demo"></h4>
             </div>
             </div>
          </div>

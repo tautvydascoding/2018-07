@@ -11,6 +11,10 @@
 // public f-ja 'setManoVardas($x)'
 * kintamojo paemimas f-je:    $this->vardas
 
+$ugis /// ERROE
+$obj->ugis /// ERROE
+$obj->getManoUgis() /// good!  
+
 
 // UZDUOTIS 2.1
 // susikurti  objektus: Monika

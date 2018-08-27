@@ -623,6 +623,20 @@ body {
   color: white;
 }
 
+.issiusta {
+  display: relative;
+}
+
+.msg-isvedimas {
+  position: absolute;
+  top: 7%;
+  right: 32%;
+  color: #fff;
+  background-color: #790330;
+  border-radius: 4%;
+  padding: .4rem;
+}
+
 /*  -===  HOOVER EFFECT */
 
 .mdl-card:hover {

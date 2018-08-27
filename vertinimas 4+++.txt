@@ -6,7 +6,7 @@ Galutinis testas 10%  (php, OOP- objektinis programavimas)
 Baigiamasis projektas 50%
 
 Baigiamasis:
-//——————Front End  (css, js, libs)———
+//——————Front End  (css, js, libs)———-
 0.4 slider/ carusel / bg-video (responsive)
 0.7 responsive visas puslapis 
 -0.5 BOOTSTRAP (jei bent 8 klasiu nepanaudosi)
