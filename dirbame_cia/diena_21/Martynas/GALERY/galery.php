@@ -97,36 +97,31 @@ require_once("header.php");
 
                     <div class="col-md-11 aukstis-300 ml-5 mt-4">
                         <img src="../imgN/<?php echo $galImg8['name'] ?>" height="340" width="880" alt="medinis senovine palepe" class="img9">
-                        <button type="submit" class="btn btn-outline-light gal_btn">Susisiek!</button>
+                        <!-- <button type="submit" class="btn btn-outline-light gal_btn">Susisiek!</button> -->
                     </div>
 
 
 
-
-
-
-
-
                 </div>
-
-
-
-
 
                 <div class="col-md-1 soninis2 .d-sm-none .d-md-block">
 
                     <img src="../imgN/undoBlue.jpg" alt="undo blue" width="80" height="1400" class="undoBlue">
                 </div>
-
             </div>
-
-
-
 
         </div>
 
+                <div class="row" id="load_data">
+                
+                </div>
+                <div id="load_data_msg">
 
-
+                </div>
+    <br>
+    <br>
+    <br>
+  
 
 
 

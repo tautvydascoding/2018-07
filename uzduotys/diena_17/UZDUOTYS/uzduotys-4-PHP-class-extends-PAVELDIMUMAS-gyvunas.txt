@@ -15,7 +15,7 @@
  // pabandyti isvesti visa info apie Vilka:
  // tipas
  // svoris,
- // ligos     // kalida
+ // ligos     // klaida
  // pusryciai // klaida
 
  // UZDUOTIS 3

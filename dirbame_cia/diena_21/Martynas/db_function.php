@@ -80,16 +80,7 @@ function getCaruselImg($nr)
     echo "<div class='bg-danger'> ERRRO: caruselIMG nr:" . $nr . " neradome</div> ";
   }
 }
-//KARUSELES IMG PAEMIMAS
-$img1 = getCaruselImg(1);
-$img2 = getCaruselImg(2);
-$img3 = getCaruselImg(3);
-$img4 = getCaruselImg(4);
-$img5 = getCaruselImg(5);
-$img6 = getCaruselImg(6);
-$img7 = getCaruselImg(7);
-$img8 = getCaruselImg(8);
-$img9 = getCaruselImg(9);
+//KARUSELES IMG PAEMIM
 
 
 // =-=-=-=-=-=-= Galerijos F-JA -=-=-=-=-=-=
@@ -210,6 +201,77 @@ function createTekstas($vardas, $article)
 
 
 
+//=-=-=-=-=-=-=-=-=-=-  create uzklausas sudetinga -=-=-=-=-=-
+
+
+function createUzklausa($vardas, $pavarde, $elpastas, $tel, $zinute)
+{
+    //saugumas: real_escape_string - uzkoduoja spec simbolius: " ' < <> 
+
+    //DARANT BE SPRINTF 
+    // $vardas = mysqli_real_escape_string(getPrisijungimas(), $vardas);
+    // $pavarde = mysqli_real_escape_string(getPrisijungimas(), $pavarde);
+    //DARANT BE SPRINTF
+    // toliau tas pats. 
+    // $manoSQL = "INSERT INTO doctors VALUES (NULL, '$vardas', '$pavarde')";
+
+    //totorialuose daznai daroma itin saugus variantas:
+  $manoSQL = sprintf(
+    "INSERT INTO duom_info
+     VALUES (NULL, 
+     '%s', 
+     '%s',
+     '%s',
+     '%s',
+     '%s'
+     
+     )",
+    mysqli_real_escape_string(getPrisijungimas(), $vardas),
+    mysqli_real_escape_string(getPrisijungimas(), $pavarde),
+    mysqli_real_escape_string(getPrisijungimas(), $elpastas),
+    mysqli_real_escape_string(getPrisijungimas(), $tel),
+    mysqli_real_escape_string(getPrisijungimas(), $zinute)
+  );
+  $result = mysqli_query(getPrisijungimas(), $manoSQL);
+// patikrina ar pavyko prisijungti.
+
+  if ($result == false) {
+    echo " error : nepavyko sukurti naujo: $vardas, $pavarde < br / > " . mysqli_error(getPrisijungimas());
+  }
+}
+
+// createUzklausa("linas", "pakas", "as@as.lt", 232323, "ka tu cia nori");
+
+
+///-=-=-==-=-===- paprastesne
+///=-=-=-==-=- soc inonai
+function createSocIcon($vardas, $title)
+{
+  // Saugumas: uzkoduoja spec. simbolius "" '' \n \t < >
+  $vardas = mysqli_real_escape_string(getPrisijungimas(), $vardas);
+  $title = mysqli_real_escape_string(getPrisijungimas(), $title);
+  $manoSQL = "INSERT INTO scIcons VALUES (NULL, '$vardas', '$title')";
+  $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+  if ($arPavyko == false) {
+    echo "ERROR: Nepavyko sukurti: $vardas, $title <br>";
+  }
+}
+///=-=-=-==-=- carusel img 
+function createCaruselImg($name, $article)
+{
+  // Saugumas: uzkoduoja spec. simbolius "" '' \n \t < >
+  $name = mysqli_real_escape_string(getPrisijungimas(), $name);
+  $article = mysqli_real_escape_string(getPrisijungimas(), $article);
+  $manoSQL = "INSERT INTO caruselIMG VALUES (NULL, '$name', '$article')";
+  $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+  if ($arPavyko == false) {
+    echo "ERROR: Nepavyko sukurti: $name, $article <br>";
+  }
+}
+
+
+
+
 // 6. deleteDoctor($nr)
 
 /*
@@ -241,6 +303,123 @@ function deleteTekstas($nr)
 // deleteDoctor(1);
 // deletePatient(8);
 
+//-=-=-=-=-=-=- homeText
+
+
+function deleteHomeTekstas($nr)
+{
+    // $nr = mysqli_real_escape_string(getPrisijungimas(), $nr);
+
+  $manoSQL = sprintf(
+    "DELETE FROM HomeText 
+                WHERE id = '%s' 
+                LIMIT 1 /* cia imitas, kad gali ( klaidos atveju) istrinti tik viena.  */
+                ",
+    mysqli_real_escape_string(getPrisijungimas(), $nr)
+
+  );
+// nesumaisyti!        queris   prisijungimas     ir manoSQL uzklausa
+  $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+
+  if ($arPavyko == false) {
+    echo " error : nepavyko istrinti article, kurio nr: $nr < br / > " . mysqli_error(getPrisijungimas());
+  }
+}
+
+//-=-=-=-=-=--=-=-=LANKYTOJAI
+
+
+function deleteLankytojoData($nr)
+{
+    // $nr = mysqli_real_escape_string(getPrisijungimas(), $nr);
+
+  $manoSQL = sprintf(
+    "DELETE FROM duom_info 
+                WHERE id = '%s' 
+                LIMIT 1 /* cia imitas, kad gali ( klaidos atveju) istrinti tik viena.  */
+                ",
+    mysqli_real_escape_string(getPrisijungimas(), $nr)
+
+  );
+// nesumaisyti!        queris   prisijungimas     ir manoSQL uzklausa
+  $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+
+  if ($arPavyko == false) {
+    echo " error : nepavyko istrinti lankytojo, kurio nr: $nr < br / > " . mysqli_error(getPrisijungimas());
+  }
+}
+
+
+//-=-=-=-=-==--= useriai
+
+function deleteUserData($nr)
+{
+    // $nr = mysqli_real_escape_string(getPrisijungimas(), $nr);
+
+  $manoSQL = sprintf(
+    "DELETE FROM users 
+                WHERE id = '%s' 
+                LIMIT 1 /* cia imitas, kad gali ( klaidos atveju) istrinti tik viena.  */
+                ",
+    mysqli_real_escape_string(getPrisijungimas(), $nr)
+
+  );
+// nesumaisyti!        queris   prisijungimas     ir manoSQL uzklausa
+  $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+
+  if ($arPavyko == false) {
+    echo " error : nepavyko istrinti lankytojo, kurio nr: $nr < br / > " . mysqli_error(getPrisijungimas());
+  }
+}
+
+//-=-=-=-=-=-=-social iconai
+
+
+
+function deleteSocIcon($nr)
+{
+    // $nr = mysqli_real_escape_string(getPrisijungimas(), $nr);
+
+  $manoSQL = sprintf(
+    "DELETE FROM scIcons 
+                WHERE id = '%s' 
+                LIMIT 1 /* cia imitas, kad gali ( klaidos atveju) istrinti tik viena.  */
+                ",
+    mysqli_real_escape_string(getPrisijungimas(), $nr)
+
+  );
+// nesumaisyti!        queris   prisijungimas     ir manoSQL uzklausa
+  $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+
+  if ($arPavyko == false) {
+    echo " error : nepavyko istrinti icono, kurio nr: $nr < br / > " . mysqli_error(getPrisijungimas());
+  }
+}
+
+
+//-=-=-=-=-=--==-=carusele-=--
+
+
+function deleteCaruselImg($nr)
+{
+    // $nr = mysqli_real_escape_string(getPrisijungimas(), $nr);
+
+  $manoSQL = sprintf(
+    "DELETE FROM caruselIMG 
+                WHERE id = '%s' 
+                LIMIT 1 /* cia imitas, kad gali ( klaidos atveju) istrinti tik viena.  */
+                ",
+    mysqli_real_escape_string(getPrisijungimas(), $nr)
+
+  );
+// nesumaisyti!        queris   prisijungimas     ir manoSQL uzklausa
+  $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+
+  if ($arPavyko == false) {
+    echo " error : nepavyko istrinti icono, kurio nr: $nr < br / > " . mysqli_error(getPrisijungimas());
+  }
+}
+
 
 
 //7. updateDoctor($nr, $vardas, $pavarde)
@@ -255,7 +434,7 @@ function deleteTekstas($nr)
 
  */
 
-
+/// MANDRESNIS UPDATE PATIENTS
 function updatePacient($nr, $vardas, $article)
 {
 
@@ -281,6 +460,41 @@ function updatePacient($nr, $vardas, $article)
     echo " error : nepavyko atnaujinti/pakeisti  article, kurio nr: $nr < br / > " . mysqli_error(getPrisijungimas());
   }
 }
+
+///// PAPRASTESNIS UPDATE DOCTORS
+
+
+///-=-=-=-=- soc iconeles
+function socIconsUpdate($nr, $vardas, $title)
+{
+  $nr = mysqli_real_escape_string(getPrisijungimas(), $nr);
+  $vardas = mysqli_real_escape_string(getPrisijungimas(), $vardas);
+  $title = mysqli_real_escape_string(getPrisijungimas(), $title);
+  $manoSQL = "UPDATE scIcons SET name='$vardas', title='$title' WHERE id='$nr'";
+  $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+  if (!$arPavyko) {
+    echo "ERROR: nepavyko pasalinti gydytojo numeriu: $nr <br>" . mysqli_error();
+  }
+}
+
+
+////=-=-=-=-=-=-=-=  home tekstas
+
+function homeTextUpdate($nr, $title, $subtitle)
+{
+  $nr = mysqli_real_escape_string(getPrisijungimas(), $nr);
+  $title = mysqli_real_escape_string(getPrisijungimas(), $title);
+  $subtitle = mysqli_real_escape_string(getPrisijungimas(), $subtitle);
+  $manoSQL = "UPDATE HomeText SET Title='$title', Subtitle='$subtitle' WHERE id='$nr'";
+  $arPavyko = mysqli_query(getPrisijungimas(), $manoSQL);
+  if (!$arPavyko) {
+    echo "ERROR: nepavyko pasalinti gydytojo numeriu: $nr <br>" . mysqli_error();
+  }
+}
+// doctorUpdate(1, "Onute", "Garbanota");
+
+
+
 // updateDoctor(3, 'Teresyti', 'Teresauskiene');
 
 // updatePacient(4, 'mARTYNASas', 'uRBAUSKAUSas', 1);
@@ -295,6 +509,8 @@ function updatePacient($nr, $vardas, $article)
 
  */
 
+
+ //=-=-=--=-=- TEKSTAI
 function getAllTekstai()
 {
     // salyga, kad paimami visi gydytojai
@@ -308,8 +524,7 @@ function getAllTekstai()
 
 }
 
-$visiTekstai = getAllTekstai();
-$tekstas = mysqli_fetch_assoc($visiTekstai);
+
 
 // while ($tekstas) {
 //   echo " <h2> $tekstas[name] </h2 <br>
@@ -326,6 +541,8 @@ $tekstas = mysqli_fetch_assoc($visiTekstai);
 
 // visu gydytoju isvedimas
 // AR TURIME GYDYTOJA? ar true?
+
+//=-=-=-=-=WHILE PVZDYS
 // while ($gydytojas) {
 //     echo " <h2> $gydytojas[name] $gydytojas[lname] </h2>";
 //     $gydytojas = mysqli_fetch_assoc($visiGydytojai);
@@ -340,3 +557,98 @@ $tekstas = mysqli_fetch_assoc($visiTekstai);
 // var_dump($pirmasGydytojas); // vieno gyd masyvas
 
 // var_dump($visiGydytojai); //objektas
+
+//-=-=-=-=-=Social icons
+function getAllSocIcons()
+{
+    // salyga, kad paimami visi gydytojai
+  $manoSQL = "SELECT * FROM scIcons";
+
+    // query grazina OBJEKTA NE MASYVA!!!!!!! sio objekto viduje yra daug eiluciu is DB. Siuo metu, visi duomenys is doctors lenteles yra musu php faile ir $visiGydytojai kintamajame
+  $visiIconai = mysqli_query(getPrisijungimas(), $manoSQL);
+
+    // grazinam paimta gydytoja
+  return $visiIconai;
+
+}
+
+// $visiIconai = getAllSocIcons();
+// $Iconas = mysqli_fetch_assoc($visiIconai);
+
+//-=-=-=--=-=  HOME TEXT
+
+
+function getAllHomText()
+{
+    // salyga, kad paimami visi gydytojai
+  $manoSQL = "SELECT * FROM HomeText";
+
+    // query grazina OBJEKTA NE MASYVA!!!!!!! sio objekto viduje yra daug eiluciu is DB. Siuo metu, visi duomenys is doctors lenteles yra musu php faile ir $visiGydytojai kintamajame
+  $visiHomeText = mysqli_query(getPrisijungimas(), $manoSQL);
+
+    // grazinam paimta gydytoja
+  return $visiHomeText;
+
+}
+
+
+//-=-=-=-=-==---=-= carusel img
+
+
+function getAllCaruselIMG()
+{
+    // salyga, kad paimami visi gydytojai
+  $manoSQL = "SELECT * FROM caruselIMG";
+
+    // query grazina OBJEKTA NE MASYVA!!!!!!! sio objekto viduje yra daug eiluciu is DB. Siuo metu, visi duomenys is doctors lenteles yra musu php faile ir $visiGydytojai kintamajame
+  $visiCaruselIMG = mysqli_query(getPrisijungimas(), $manoSQL);
+
+    // grazinam paimta gydytoja
+  return $visiCaruselIMG;
+
+}
+
+$visiCaruselIMG = getAllCaruselIMG();
+$caruselImg = mysqli_fetch_assoc($visiCaruselIMG);
+
+// while ($CaruselImg) {
+//   echo " <h2> $CaruselImg[name]  </h2>";
+//   $CaruselImg = mysqli_fetch_assoc($visiCaruselIMG);
+// }
+
+
+//-=-=-==-=-=- lankytojai-=-=-=- 
+
+
+function getAllInfoData()
+{
+    // salyga, kad paimami visi gydytojai
+  $manoSQL = "SELECT * FROM duom_info";
+
+    // query grazina OBJEKTA NE MASYVA!!!!!!! sio objekto viduje yra daug eiluciu is DB. Siuo metu, visi duomenys is doctors lenteles yra musu php faile ir $visiGydytojai kintamajame
+  $visaData = mysqli_query(getPrisijungimas(), $manoSQL);
+
+    // grazinam paimta gydytoja
+  return $visaData;
+
+}
+$visaData = getAllInfoData();
+$data = mysqli_fetch_assoc($visaData);
+
+//-=-=-==-=-USERIAI 
+
+
+function getAllUsersData()
+{
+    // salyga, kad paimami visi gydytojai
+  $manoSQL = "SELECT * FROM users";
+
+    // query grazina OBJEKTA NE MASYVA!!!!!!! sio objekto viduje yra daug eiluciu is DB. Siuo metu, visi duomenys is doctors lenteles yra musu php faile ir $visiGydytojai kintamajame
+  $visaData = mysqli_query(getPrisijungimas(), $manoSQL);
+
+    // grazinam paimta gydytoja
+  return $visaData;
+
+}
+$visaData = getAllUsersData();
+$data = mysqli_fetch_assoc($visaData);

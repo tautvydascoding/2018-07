@@ -24,31 +24,35 @@ require_once("header.php")
             </div>
 
 
-
+                    <div id="issiusta"><?php 
+                                        if (isset($_GET['mailSent'])) {
+                                            echo "<h5 class='msg-isvedimas'> Jusu zinute buvo Issiusta! :) </h5>";
+                                        }
+                                        ?></div>
 
             <section class="mdl-grid">
                 <div class="mdl-cell mdl-cell--12-col aukstis-450">
-                    <form action="senMail.php" class="cont_form" method="POST">
+                    <form action="senMail.php" class="cont_form" method="POST" name='manoForma' onsubmit="return validateForm()" id='main-forma'>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="sample3" name="name">
+                            <input class="mdl-textfield__input" type="text" id="sample3" name="vardas"min="3" autofocus>
                             <label class="mdl-textfield__label labelc_balt" for="sample3">Vardas...</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="sample3" name="lname">
+                            <input class="mdl-textfield__input" type="text" id="sample3" name="pavarde" min="4">
                             <label class="mdl-textfield__label labelc_balt" for="sample3">Pavarde...</label>
                         </div>
 
                         <div class="mdl-textfield mdl-js-textfield">
-                            <input class="mdl-textfield__input" type="email" id="sample1" name="email">
+                            <input class="mdl-textfield__input" type="email" id="sample1" name="el_pastas">
                             <label class="mdl-textfield__label labelc_balt" for="sample1">Elektroninis pastas...</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield">
-                            <input class="mdl-textfield__input labelc_balt" type="number" id="sample1" name="number">
+                            <input class="mdl-textfield__input labelc_balt" type="number" id="sample1" name="tel">
                             <label class="mdl-textfield__label labelc_balt" for="sample1">Jusu tel. nr...</label>
                         </div>
 
                         <div class="mdl-textfield mdl-js-textfield">
-                            <textarea class="mdl-textfield__input" type="text" rows="3" id="sample5" maxlength="250" name="uzklausa"></textarea>
+                            <textarea class="mdl-textfield__input" type="text" rows="3" id="sample5" maxlength="250" name="zinute"></textarea>
                             <label class="mdl-textfield__label labelc_balt" for="sample5">Parasykite mums ...</label>
                         </div>
                         <div class="cont_btn">
@@ -80,15 +84,15 @@ require_once("header.php")
                         <strong>Musu naujienlaiskis</strong>
                     </div>
                     <div class="mdl-card__media">
-                        <p>2018-08 menesio aktualijos</p>
+                    <input class="mdl-textfield__input nauj_input" type="email" name="nauj_pastas" placeholder="Jusu el. pastas naujienlaiskiui...">
                     </div>
                     <div class="mdl-card__supporting-text">
                         Ar norite gauti musu naujienlaiski?
                     </div>
                     <div class="mdl-card__actions">
-                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored naujien_btn">
+                       <a href="naujienlaiskis.php"><button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored naujien_btn">
                             <p>Taaip!</p>
-                        </button>
+                        </button> </a> 
                     </div>
                 </div>
             </article>

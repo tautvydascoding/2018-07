@@ -1,16 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
         <footer>
             <div class="mdl-grid footer_wrapper">
                 <div class="footer_link_wrapper">
@@ -28,59 +16,35 @@
                         <li>
                             <a href="CONTACT/contacts.php">Contact Us!</a>
                         </li>
+                        <li>
+                            <a href="login/index.php"><i class="icon ion-ios-contact"></i></a>
+                        </li>
                     </ul>
                     <div class="">
                         <ul class="social-links">
-                            <li>
-                                <a href="#">
-                                    <i class="icon ion-logo-facebook"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="icon ion-logo-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="icon ion-logo-googleplus"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="icon ion-logo-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="icon ion-logo-pinterest"></i>
-                                </a>
-                            </li>
+<?php
+
+$visiIconai = getAllSocIcons();
+$Iconas = mysqli_fetch_assoc($visiIconai);
+while ($Iconas) :
+    echo "  <li>  ";
+echo "  <a href='#'>  ";
+echo " <i class='$Iconas[name]'> </i>  ";
+echo "  </a> ";
+echo "  </li> ";
+$Iconas = mysqli_fetch_assoc($visiIconai);
+endwhile;
+?>
+
                         </ul>
                     </div>
 
-                    <div class="copyright">
-                        <p>Copyright &copy; 2018 by Martynas.</p>
-                    </div>
                 </div>
 
             </div>
 
 
         </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     </div>

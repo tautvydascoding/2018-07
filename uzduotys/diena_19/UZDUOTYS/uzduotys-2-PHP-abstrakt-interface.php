@@ -1,7 +1,7 @@
 <?php
     // uzduotis:
     // 1) sukurti interface "Edit" :
-    //  1.1) kuri turi funkcijas: (kurios nera aprasytos (privalomos)!
+    //  1.1) kuri turi funkcijas: (kurios nera aprasytos )!
         // changeName($a)
         // getName()
         // isLogin()
@@ -11,7 +11,7 @@
         // A) sukurti kintamuosius:
             // name, password , createdDate, lastLogin
         // B) abstrakti funkcija "Loguot()"
-        // C) NE abstrakti funkcija clearlastLoginTime()
+        // C) NEabstrakti funkcija clearlastLoginTime()
     // 3) sukurti klase Admin :
         // A)  kuri panaudoja Edit ir User ~klases (implementuoti ir paveldeti)
     // 4)

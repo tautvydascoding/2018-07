@@ -1,3 +1,11 @@
+<?php
+require_once("../db_function.php");
+
+$interesantas = $_POST;
+
+createUzklausa($interesantas['vardas'], $interesantas['pavarde'], $interesantas['el_pastas'], $interesantas['tel'], $interesantas['zinute']); ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,19 +15,15 @@
 <style>
 
 body {background-color: black;}
-.mailer {
+/* .mailer {
   color:#fff;
-  }
+  } */
 
 </style>
   <title>Document</title>
 </head>
 <body>
   
-
-
-
-
 </body>
 </html>
 
@@ -31,11 +35,11 @@ body {background-color: black;}
 
 <?php
 
-$klientoVardas = $_POST['name'];
-$klientoUzklausa = $_POST['uzklausa'];
-$klientoEmail = $_POST['email'];
+$klientoVardas = $_POST['vardas'];
+$klientoUzklausa = $_POST['zinute'];
+$klientoEmail = $_POST['el_pastas'];
 
-echo " <META http-equiv='refresh' content='0;URL=msgSent.php' ";
+// echo " <META http-equiv='refresh' content='0;URL=msgSent.php' ";
 
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
@@ -83,13 +87,18 @@ try {
     //Content
   $mail->isHTML(true);                                  // Set email format to HTML
   $mail->Subject = $klientoUzklausa;
-  $mail->Body = 'This is the HTML message body <b>in bold!</b>';
+  $mail->Body = $klientoUzklausa;
   $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
   $mail->send();
   // echo " <h1 class='mailer'> Jusu zinute issiusta! </h2>";
 
+  if ($mail->send() == true) {
+    header("Location: contacts.php?mailSent=success");
+    exit();
+  }
+
 
 } catch (Exception $e) {
-  echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+  // echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }

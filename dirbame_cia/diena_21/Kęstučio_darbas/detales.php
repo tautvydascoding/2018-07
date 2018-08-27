@@ -10,8 +10,8 @@
           <div class="row meniu">
             <div class="col">
 
-              <?php include('nav.php') ?>
-         <!-- IDEA: Pabaigem meniu -->
+              <?php include('nav.php')?>
+             <!-- IDEA: Pabaigem meniu -->
 
             </div>
             <!-- IDEA: Pabaigiu Header col -->
@@ -35,76 +35,48 @@
             <div class="col text-center">
               <h4>Užpildykite trūkstamus laukus.</h4>
               <!-- IDEA: Ikeliu forma -->
-              <form>
+              <form action="poApsipirkimo.php" method="post">
                 <div class="form-row">
 
                   <div class="form-group col-md-6">
                     <label for="inputAddress">Telefono numeris</label>
-                    <input type="text" class="form-control" id="telefonas" placeholder="+370">
+                    <input type="text" class="form-control" name="telefonas" id="telefonas" placeholder="+370">
                   </div>
 
                   <div class="form-group col-md-6">
                     <label for="inputEmail4">E-paštas</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="El. paštas">
+                    <input type="email" class="form-control" name="email" id="inputEmail4" placeholder="El. paštas">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="idėti vardą">Vardas</label>
-                    <input type="text" class="form-control" id="klientoVardas" placeholder="Vardas">
+                    <input type="text" class="form-control" name="vardas" id="klientoVardas" placeholder="Vardas">
                   </div>
 
                 <div class="form-group col-md-6">
-                  <label for="idėti vardą">Pavardė</label>
-                  <input type="text" class="form-control" id="klientoPavardė" placeholder="Pavardė">
+                  <label for="idėti pavarde">Pavardė</label>
+                  <input type="text" class="form-control" name="pavarde" id="klientoPavardė" placeholder="Pavardė">
                 </div>
               </div>
 
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="inputCity">Viežbučio pavadinimas</label>
-                    <h4 id="Viezbucio pavadinimas"> <?php echo $_GET['viezb']; ?> </h4>
-                    <!-- <input type="text" class="form-control" id="Viezbucio pavadinimas"> -->
+                    <h4 id="Viezbucio pavadinimas">
+                       <h4> <?php echo $_GET['viezb']; ?> </h4>
                   </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputState">Dienų skaičius</label>
-                    <select id="inputState" class="form-control">
-                      <option selected>Pasirinkite...</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                      <option>6</option>
-                      <option>7</option>
-                      <option>8</option>
-                      <option>9</option>
-                      <option>10</option>
-                      <option>11</option>
-                      <option>12</option>
-                      <option>13</option>
-                      <option>14</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
+                <div class="form-group col-md-6">
                     <h4 id="ViezbucioKaina">Atostogų kaina <?php echo  $_GET['kaina']; ?></h4>
-                  <label for="inputAddress2" >
+                </div>
+                <div class="form-group col-md-12">
+                  <label for="komentaras" >
                     Čia galite yrašyti savo komentarą.
                   </label>
-                  <input type="text" class="form-control" id="atostoguKaina" placeholder="">
-                </div>
-                <div class="form-group">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                      Sutinku pateikti savo asmeninius duomenis
-                    </label>
+                  <input type="text" class="form-control" name="komentaras" placeholder="">
                   </div>
+                  <div class="form-check col-md-12">
+                    <button type="submit" name="submitted" class="btn btn-primary">Patvirtinti užsakymą</button>
                 </div>
-                <button type="submit" class="btn btn-primary">Patvirtinti užsakymą</button>
               </form>
             <!-- IDEA: Užbaigiu forma -->
-
              </div>
             </div>
          </div>

@@ -1,0 +1,957 @@
+/*  -=== GLOBAL==-- */
+
+$mainBlack: #333;
+$mainWhite:#fff;
+$weight6:600;
+$weight7:700;
+$weight9:900;
+$width100:100%;
+$textC:center;
+$textR:right;
+$textL:left;
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+/* ------======== REUSABLE=======----- */
+
+.bg-geltona {
+  background-color: #e2e046;
+}
+
+.bg-raudona {
+  background-color: #c73724;
+}
+
+.bg-pilka {
+  background-color: #92949c;
+}
+
+.bg-melyna {
+  background-color: #3550e7;
+}
+
+.bg-zalia {
+  background-color: #43b44d;
+}
+
+/* flautas */
+
+.float {
+  float: left;
+}
+
+/* flauto fixsas */
+
+.float-fix {
+  clear: both;
+}
+
+/* === A U K S C I A I====----- */
+
+.aukstis-100 {
+  height: 100px;
+}
+
+.aukstis-150 {
+  height: 150px;
+}
+
+.aukstis-200 {
+  height: 200px;
+}
+
+.aukstis-250 {
+  height: 250px;
+}
+
+.aukstis-300 {
+  height: 300px;
+}
+
+.aukstis-320 {
+  height: 320px;
+}
+
+.aukstis-350 {
+  height: 350px;
+}
+
+.aukstis-400 {
+  height: 400px;
+}
+
+.aukstis-450 {
+  height: 450px;
+}
+
+.aukstis-420 {
+  height: 420px;
+}
+
+.aukstis-500 {
+  height: 500px;
+}
+
+.aukstis-700 {
+  height: 700px;
+}
+
+.aukstis-900 {
+  height: 900px;
+}
+
+.aukstis-1100 {
+  height: 1100px;
+}
+
+.aukstis-1400 {
+  height: 1400px;
+}
+
+.aukstis-1500 {
+  height: 1500px;
+}
+
+.aukstis-1800 {
+  height: 1800px;
+}
+
+/*  ROTATE KLASES */
+
+.rotated-90 {
+  transform: rotate(-90deg);
+}
+
+.rotated-50 {
+  transform: rotate(50deg);
+}
+
+/* ROTATE I DESINE */
+
+.rotateD-20 {
+  transform: rotate(20deg);
+}
+
+.rotateD-10 {
+  transform: rotate(10deg);
+}
+
+.rotateD-5 {
+  transform: rotate(5deg);
+}
+
+.rotateD-2 {
+  transform: rotate(2deg);
+}
+
+/* ROTATE I KAIRE */
+
+.rotateD-20 {
+  transform: rotate(20deg);
+}
+
+.rotateK-10 {
+  transform: rotate(-10deg);
+}
+
+.rotateK-5 {
+  transform: rotate(-5deg);
+}
+
+.rotateK-2 {
+  transform: rotate(-2deg);
+}
+
+/* -=-=-=-=- BOOTSTRAPO KEITIMAI*/
+
+.col-md,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-auto {
+  padding: 0.3rem;
+}
+
+.ml-4,
+.mx-4 {
+  margin-left: 1.2rem !important;
+}
+
+.ml-5,
+.mx-5 {
+  margin-left: 1.3rem !important;
+}
+
+.mt-4,
+.my-4 {
+  margin-top: 0.1rem !important;
+}
+
+/* -=-=-=- END OF BOOTSTRAP KEITIMAI-=-=-=- */
+
+/* -==-=  H R -=-=-=-= H R -=-=-=-=- H R=-=-=- */
+
+hr.style-eight {
+  overflow: visible;
+  padding: 0;
+  border: none;
+  border-top: medium double #b8d2fc;
+  color: #b8d2fc;
+  text-align: $textC;
+  width: 89%;
+  margin: 0 auto;
+}
+
+hr.style-eight:after {
+  content: "⎌";
+  color: #b8d2fc;
+  display: inline-block;
+  position: relative;
+  top: -1.6rem;
+  font-size: 2.3em;
+  padding: 0px 0.25em;
+  background: #485167;
+}
+
+.dabartinis {
+  color: #eece1a !important;
+}
+
+/* ------- */
+
+/* -=-=-=-=-=-=-=-=-=-=  H   O   M   E  -=-=-=-=-=-=-=-=-=-=-=-  H  O  M  E  -=-=-=-=-=-=-=-=-=-=- */
+
+/* MENIU BUTONAS */
+
+.home_main {
+  height: 100vh;
+}
+
+.home_text {
+  font-size: 2rem;
+  font-weight: $weight7;
+  text-align: $textC;
+  margin-top: 20rem;
+  h1 {
+    font-weight: $weight9;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    text-align: $textL;
+    padding-left: 8rem;
+  }
+}
+
+.meniu_btn {
+  position: fixed;
+  z-index: 5;
+  left: 35px;
+  top: 40px;
+  cursor: pointer;
+  transition: all 0.8s ease-out;
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* _=-=-=-=-  HAMBURGERIS =-=-=-=-=-*/
+
+.meniu_btn {
+  .btn_linija {
+    width: 2.3rem;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: $mainWhite;
+    transition: all 0.8s ease-out;
+    /* position: fixed; */
+  }
+  &.close {
+    transform: rotate(180deg);
+    position: fixed;
+  }
+}
+
+.meniu_btn.close .btn_linija:nth-child(1) {
+  transform: rotate(43deg) translate(5px, 5px);
+}
+
+.meniu_btn.close .btn_linija:nth-child(2) {
+  opacity: 0;
+}
+
+.meniu_btn.close .btn_linija:nth-child(3) {
+  transform: rotate(-43deg) translate(6px, -6px);
+}
+
+/* BODIS */
+
+body {
+  background: #766;
+  color: $mainWhite;
+  margin: 0;
+  font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+#main_div_wraper {
+  background-image: -webkit-linear-gradient( rgba(49, 42, 88, 0.2), rgba(67, 65, 100, 0.2)), url(../IMG/home/yellow.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: $width100;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+/* /* -----==NAVIGACIJA--=== */
+
+.navigacija {
+  position: fixed;
+  top: 0;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.navigacija.show {
+  visibility: visible;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.undo_logo {
+  width: 20%;
+  height: 55px;
+  margin: 2rem;
+  border-radius: 15%;
+}
+
+.nav_meniu {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding-right: 9rem;
+  background: #373737;
+  list-style: none;
+  transform: translate3d(0, -100%, 0);
+  transition: all 0.8s ease-out;
+  &.show {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.navigacija {
+  .nav_itemas {
+    transform: translate3d(100px, 0, 0);
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .nav_linkas {
+    display: inline-block;
+    position: relative;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 1em 0;
+    font-weight: $weight6;
+    color: $mainWhite;
+    text-decoration: none;
+    &:hover {
+      color: #eece1a;
+      transition: 0.7s;
+    }
+  }
+}
+
+.dabartinis {
+  color: #eece1a;
+}
+
+/* -=-==--=-=--=   AABOUT  UUUSSSS -=-=-=-=-=-=-=-=-=-= */
+
+.mainAbout_wraper {
+  background-image: -webkit-linear-gradient( rgba(49, 42, 88, 0.4), rgba(67, 65, 100, 0.4)), url(../IMG/aboutUS/jump.jpeg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.borderRadius {
+  border-radius: 5%;
+}
+
+.laisureh2 {
+  text-align: $textC;
+}
+
+/* =-=-=-=-==--   CARUSEEEEEL =-=-=-=-==-=- */
+
+.ab_karusele {
+  width: 640px;
+  height: 480px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.vidinis {
+  margin-top: 3rem;
+  display: flex;
+  position: absolute;
+  left: 0;
+  transition: 1.5s ease-out;
+  position: relative;
+}
+
+.next::after,
+.prev::after {
+  content: ">";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 18px;
+  width: 1em;
+  height: 2em;
+  font-weight: bold;
+  transform: translateY(-50%);
+  line-height: 2em;
+  box-sizing: border-box;
+  padding-left: 0.23em;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity 0.3s linear;
+  background-color: $mainWhite;
+  color: $mainBlack;
+  border-radius: 10%;
+}
+
+.next:hover::after,
+.prev:hover::after {
+  opacity: 1;
+}
+
+.prev::after {
+  content: "<";
+  left: 0;
+}
+
+/* -=-==--=-=--=  EEEEEENNNNNNDDDDD  AABOUT  UUUSSSS -=-=-=-=-=-=-=-=-=-= */
+
+/* ======= ----- GALERY ----- ========= */
+
+.img_photo {
+  img {
+    opacity: 0.7;
+    /* TRANZITION */
+    transition: transform 0.5s, opacity 0.5s;
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+/* HOOVER */
+
+.galer_title {
+  /* background-image: url(../IMG/gal-title/blue.jpeg); */
+  /* background-image: url(../IMG/gal-title/trees.jpeg); */
+  /* background-image: url(../IMG/gal-title/evening.jpeg); */
+  background-image: url(../IMG/gal-title/manholdskid.jpeg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: animate 20s linear infinite;
+}
+
+/* animacija */
+
+@-webkit-keyframes animate {
+  from {
+    background-position: top;
+  }
+  to {
+    background-position: bottom;
+  }
+}
+
+@keyframes animate {
+  from {
+    background-position: top;
+  }
+  to {
+    background-position: bottom;
+  }
+}
+
+.jumbotron {
+  background-color: #485167;
+  width: 65%;
+  height: 300px;
+  h1 {
+    font-weight: $weight9;
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+    margin: 0;
+    padding-bottom: 1.2rem;
+  }
+}
+
+.gal_btn {
+  position: absolute;
+  transform: translate(-50% -50%);
+  top: 50%;
+  left: 50%;
+  width: 130px;
+  height: 45px;
+  font-weight: $weight6;
+  letter-spacing: 0.2rem;
+}
+
+.gal_mrg {
+  margin: .2rem;
+}
+
+/* ========----- CONTACT US----======== */
+
+/* main wraperis */
+
+.mainCont_wraper {
+  background-image: -webkit-linear-gradient( rgba(49, 42, 88, 0.5), rgba(67, 65, 100, 0.5)), url(../IMG/contacts/pexels-photo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cont_wraper {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* vieniintelios h1 stilius */
+
+.cont_us h1,
+.abouth1,
+.laisureh2 {
+  font-size: 3.5rem;
+  margin-bottom: 0;
+  font-weight: $weight7;
+  letter-spacing: 0.3rem;
+}
+
+.mobh4 {
+  opacity: 0;
+}
+
+/*  ====---  HQ ---======  */
+
+.cont_hq {
+  width: $width100;
+  text-align: $textR;
+  a {
+    text-decoration: none;
+    &:hover,
+    &:active {
+      color: #790330;
+    }
+  }
+}
+
+/* ==---- MYGTUKAI ----====== */
+
+.cont_btn button.mdl-button {
+  width: 250px;
+  height: 50px;
+  font-size: 1.2rem;
+  font-weight: $weight6;
+  letter-spacing: 0.2rem;
+  margin-left: 2rem;
+}
+
+.cont_btn button.mdl-button:hover,
+.cont_btn button.mdl-button:active {
+  background-color: #ceb5c3;
+  transition: 0.9s;
+}
+
+.nauj_input {
+  padding: .5rem;
+}
+
+.naujien_btn {
+  position: relative;
+  p {
+    font-size: 1rem;
+    position: absolute;
+    top: 16px;
+    right: 9px;
+  }
+  &:hover,
+  &:active {
+    color: #790330;
+  }
+}
+
+.labelc_balt {
+  color: white;
+}
+
+.issiusta {
+  display: relative;
+}
+
+.msg-isvedimas {
+  position: absolute;
+  top: 7%;
+  right: 32%;
+  color: #fff;
+  background-color: #790330;
+  border-radius: 4%;
+  padding: .4rem;
+}
+
+/*  -===  HOOVER EFFECT */
+
+.mdl-card:hover {
+  background-color: #ceb5c3;
+  color: $mainBlack;
+  transition: 0.9s;
+}
+
+.mdl-card__media {
+  p {
+    padding-right: 0.8rem;
+    padding-top: 0.8rem;
+  }
+}
+
+/* ----===== NAUJIENLAISKIS ----====== */
+
+.mdl-card {
+  background-color: $mainBlack;
+  box-shadow: 9px 12px 8px #c7b9bec2;
+  width: 250px;
+  position: relative;
+  transform: rotate(12deg);
+  color: $mainWhite;
+  border-radius: 3%;
+}
+
+.mdl-card__supporting-text,
+.mdl-card__title {
+  color: $mainWhite;
+}
+
+/* =-=-=-=-=- FOOOOOTERIS-=-=-=-=-=-=-= */
+
+footer {
+  background-color: $mainBlack;
+  padding: 52px;
+  font-size: 80%;
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+
+.social-links {
+  list-style: none;
+  float: right;
+}
+
+.footer-nav li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: #888;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 160%;
+}
+
+.ion-logo-facebook,
+.ion-logo-twitter,
+.ion-logo-googleplus,
+.ion-logo-instagram,
+.ion-logo-pinterest {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.ion-logo-facebook:hover {
+  color: #3b5998;
+}
+
+.ion-logo-twitter:hover {
+  color: #1da1f2;
+}
+
+.ion-logo-googleplus:hover {
+  color: #db4437;
+}
+
+.ion-logo-instagram:hover {
+  color: rgb(196, 98, 60);
+}
+
+.ion-logo-pinterest:hover {
+  color: #bd081c;
+}
+
+footer p {
+  color: #888;
+  text-align: $textC;
+  margin-top: 20px;
+  font-size: 70%;
+}
+
+.footer_wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* -=-=-=-= MEDIA QUERIES=-=--=-=-=-=-=-= */
+
+@media (max-width: 1199px) {
+  .undoBlack,
+  .undoBlue {
+    display: none;
+  }
+  .jumbotron {
+    background-color: #485167;
+    width: 90%;
+    height: 300px;
+  }
+  .img1,
+  .img2,
+  .img3,
+  .img4,
+  .img5,
+  .img6,
+  .img7,
+  .img8,
+  .img9 {
+    width: $width100;
+  }
+  .img2 {
+    width: 480px;
+  }
+  .img5 {
+    width: 330px;
+  }
+  .img8 {
+    width: 320px;
+  }
+  .img6 {
+    width: 550px;
+  }
+  .img9 {
+    width: 820px;
+  }
+  .img_photo {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  /* home tekstas */
+  .neverStop {
+    padding-left: 3rem;
+  }
+  /* GALERIJA */
+  .jumbotron {
+    background-color: #485167;
+    width: 90%;
+    height: 200px;
+    margin-bottom: 4rem;
+  }
+  .jumbotron h1 {
+    font-weight: 800;
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+    margin: 0;
+  }
+  .lead {
+    display: none;
+  }
+  .img9 {
+    height: 350px;
+    width: 600px;
+  }
+  .img2 {
+    width: 360px;
+  }
+  .img5 {
+    width: 240px;
+  }
+  .img8 {
+    width: 230px;
+  }
+  .img6 {
+    width: 410px;
+  }
+}
+
+@media (max-width: 790px) {
+  /* kontaktu psl */
+  .cont_wraper {
+    display: flex;
+  }
+  .cont_hq {
+    width: 40%;
+    text-align: $textC;
+  }
+  .naujienlaiskis {
+    display: none;
+  }
+  hr.style-eight {
+    display: none;
+  }
+  hr.style-eight:after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* karusele */
+  .ab_karusele {
+    width: 520px;
+    height: 340px;
+  }
+  .jumbotron p:last-child {
+    display: none;
+  }
+  .jumbotron h1 {
+    font-weight: 800;
+    font-size: 3.6rem;
+    letter-spacing: 0.1rem;
+    margin: 0;
+  }
+  .jumbotron {
+    height: 180px;
+  }
+  .mb_nebus {
+    display: none;
+  }
+  .gal_btn {
+    transform: translate(-50% -40%);
+    top: 50%;
+    left: 35%;
+  }
+  .img9 {
+    width: 485px;
+  }
+  .img3 {
+    width: 500px;
+  }
+  .img1 {
+    width: 500px;
+  }
+  .img2 {
+    width: 500px;
+  }
+}
+
+@media (max-width: 550px) {
+  /* home tekstai */
+  .home_text h1 {
+    font-size: 2.5rem;
+  }
+  .home_text h3 {
+    font-size: 1.5rem;
+  }
+  /* logo */
+  .undo_logo {
+    width: 40%;
+    height: 60px;
+    margin: 2rem;
+    border-radius: 15%;
+  }
+  /* karuse;e */
+  .ab_karusele {
+    display: none;
+  }
+  .laisureh2 {
+    display: none;
+  }
+  /* kontaktai */
+  .cont_us {
+    display: none;
+  }
+  .cont_hq {
+    display: none;
+  }
+  .cont_form {
+    text-align: $textR;
+  }
+  .cont_wraper {
+    height: 750px;
+    padding-top: 0.01rem;
+    width: 400px;
+  }
+  .mobh4 {
+    opacity: 1;
+    text-align: $textL;
+    font-size: 2rem;
+  }
+  /* kontaktu mygtukas */
+  .cont_btn button.mdl-button {
+    width: 150px;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: $weight6;
+    letter-spacing: 0.2rem;
+    margin-left: 2rem;
+    margin-right: 3rem;
+  }
+}
