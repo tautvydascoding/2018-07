@@ -4,7 +4,7 @@
 // 1. google download wordpress
 // 2. !! ideti ne i projekta (nes jis yra tukstanciai failu)
 // 3. MAMP -> PReference-> ServerSettings pakeisti kelia i ten Kur jusu Wordpress'as
-// 4. Sukurti DB 'worepress1'
+// 4. S  
 // 5. isijugnti narsykle (Chrome) ir nueiti localhost:80
 // 6. vykdyti nurodytus zinksnius:
 // duoti DB name: worepress1
@@ -21,4 +21,3 @@
 // Prisijungimas prie WP
 // einate localhost:80/wp-admin
 // ivedate savo varda ir slaptazodi: (D2. ir D3. punktai auksiau)
-
