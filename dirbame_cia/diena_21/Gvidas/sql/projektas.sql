@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 26, 2018 at 07:32 PM
+-- Generation Time: Aug 27, 2018 at 12:35 PM
 -- Server version: 5.6.34-log
 -- PHP Version: 7.2.1
 
@@ -83,16 +83,63 @@ INSERT INTO `login` (`id`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `parametrai`
+--
+
+CREATE TABLE `parametrai` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `parametrai` varchar(60) NOT NULL,
+  `Duomenys` varchar(100) NOT NULL,
+  `prekesid` int(11) NOT NULL,
+  `pozicija` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `parametrai`
+--
+
+INSERT INTO `parametrai` (`id`, `parametrai`, `Duomenys`, `prekesid`, `pozicija`) VALUES
+(1, 'RAM', '3GB', 1, 0),
+(2, 'Procesorius', 'Amlogic S912 2.0GHz', 1, 0),
+(3, 'Atmintis', '32G ROM', 1, 0),
+(4, 'wifi', 'Integruotas', 1, 0),
+(5, 'RAM', '2GB', 2, 0),
+(6, 'Procesorius', 'Amlogic S912 2.0GHz, Octa Core', 2, 0),
+(7, 'Atmintis', '16G ROM', 2, 0),
+(8, 'wifi', 'Integruotas', 2, 0),
+(10, 'Modelis', '850 PRO', 3, 0),
+(11, 'External Interface', 'SATA 3', 3, 0),
+(12, 'Supporting Max. Hard Drive Capacity', '256GB', 3, 0),
+(13, 'Read Speed', '550MB/s', 3, 0),
+(14, 'RAM', '2GB', 4, 0),
+(15, 'Procesorius', 'Intel Atom X5-Z8350', 4, 0),
+(16, 'Atmintis', '32G ROM', 4, 0),
+(17, 'wifi', 'Integruotas', 4, 0),
+(18, 'RAM', '2GB', 5, 0),
+(19, 'Procesorius', 'Cortex A53 2.0GHz, Quad Core', 5, 0),
+(20, 'Atmintis', '8G ROM', 5, 0),
+(21, 'wifi', 'Integruotas', 5, 0);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pranesimai`
 --
 
 CREATE TABLE `pranesimai` (
   `id` int(10) UNSIGNED NOT NULL,
   `vardas` varchar(60) NOT NULL,
-  `tema` varchar(100) NOT NULL,
   `email` varchar(150) NOT NULL,
+  `tema` varchar(100) NOT NULL,
   `pranesimas` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pranesimai`
+--
+
+INSERT INTO `pranesimai` (`id`, `vardas`, `email`, `tema`, `pranesimas`) VALUES
+(3, 'tetsas', 'tets@aaaa.lt', 'kamsfk', 'kjnaksmfkals ajsnfk ajksf\r\n');
 
 -- --------------------------------------------------------
 
@@ -112,6 +159,15 @@ CREATE TABLE `uzsakymai` (
   `prekesid` int(11) NOT NULL,
   `patvirtinta` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `uzsakymai`
+--
+
+INSERT INTO `uzsakymai` (`id`, `name`, `lname`, `email`, `address`, `postalcode`, `phone`, `comments`, `prekesid`, `patvirtinta`) VALUES
+(1, 'gvidas', 'ulozevicius', 'gvidas.ulozevicius@gmail.com', 'Kazkokia g. 10, Kaunas', '2154', 2147483647, '', 2, 0),
+(2, 'Testas', 'Testenis', 'bulvesdykai@gmail.com', 'Kazkokia g. 10, Kaunas', '21515', 2147483647, '', 1, 0),
+(3, 'vardenis', 'pavardenis', 'bulvesdykai@gmail.com', 'Kazio g. 19', '21588', 2147483647, '', 2, 0);
 
 -- --------------------------------------------------------
 
@@ -134,11 +190,11 @@ CREATE TABLE `visosprekes` (
 --
 
 INSERT INTO `visosprekes` (`id`, `link`, `name`, `price`, `kiekis`, `pozicija`, `aprasymas`) VALUES
-(1, '', 'Beelink GT1 Ultimate', 64.57, 5, 1, 'Testuojam ar viskas gerai veikia.'),
-(2, 'preke-2.php', 'Alfawise H96 Pro+', 64.81, 2, 2, 'Preke 2 aparasymas, testuojam ar viskas gerai veikia. Jeigu kazkas blogai veiks mes sutvarkysime.'),
-(3, 'preke-3.php', 'Samsung 850 PRO 256GB', 156.69, 5, 3, 'Preke 3 aparasymas, testuojam ar viskas gerai veikia. Jeigu kazkas blogai veiks mes sutvarkysime.'),
-(4, 'preke-4.php', 'Alfawise X5 Mini PC', 78.34, 5, 4, 'Preke 4 aparasymas, testuojam ar viskas gerai veikia. Jeigu kazkas blogai veiks mes sutvarkysime.'),
-(5, 'preke-top.php', 'Xiaomi Mi TV Box', 56.58, 5, 0, 'Preke 5 aparasymas, testuojam ar viskas gerai veikia. Jeigu kazkas blogai veiks mes sutvarkysime.');
+(1, '', 'Beelink GT1 Ultimate', 64.57, 5, 1, 'The Beelink GT1 Ultimate featuring the latest processor. It is equipped with the Amlogic S912 CPU which enables you to have a smooth entertainment experience. It also has a 3D noise reduction filter.'),
+(2, '', 'Alfawise H96 Pro+', 64.81, 2, 2, 'PriedÄ—lÄ¯ paprasta pajungti ir juo naudotis. Vartotojo sÄ…saja ir valdymas aiÅ¡kiai suprantamas. Tereikia Ä¯renginÄ¯ pajungti Ä¯ maitinimo lizdÄ…, pajungti prie televizoriaus HDMI laidu, bei prijungti interneto kabelÄ¯ arba WI-FI belaidÅ¾iu ryÅ¡iu.'),
+(3, '', 'Samsung 850 PRO 256GB', 156.69, 5, 3, 'The Samsung 850 PRO SSD redefines storage with the worldâ€™s first drive based on 3D VNAND flash, offering exceptional read/write performance, reliability and power management efficiency. The 850 Pro delivers up to 2x the speed, density and endurance of conventional flash. The next leading SSD for performance, endurance and energy efficiency.'),
+(4, '', 'Alfawise X5 Mini PC', 78.34, 5, 4, 'Alfawise X5 adopts latest Intel Atom x5-Z8350 ( 2M Cache, up to 1.92 GHz ) CPU, and Intel HD Graphics 400 processor, enable you to get your favorite shows and movies fast, with smooth and responsive navigation and Apps that launch quickly. Support Windows 10 and Android 5.1 dual OS, which can meet your needs perfectly, not only entertainment but also office work. The Alfawise X5 is your best partner!'),
+(5, '', 'Xiaomi Mi TV Box', 56.58, 5, 0, 'Connect to a world of content and entertainment at home with Mi Box. It runs on the latest Android TV 6.0 which is easy to use, supports voice controls and Google CastTM. Catch your favorite TV shows, play games, watch the news or switch to radio. Mi Box also recommends videos based on your personal Youtube and Google Play preferences!d output using the embedded platform sXP (smart Extendable Platform.). Go from small screen to big with a single tap.');
 
 --
 -- Indexes for dumped tables
@@ -154,6 +210,12 @@ ALTER TABLE `img`
 -- Indexes for table `login`
 --
 ALTER TABLE `login`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `parametrai`
+--
+ALTER TABLE `parametrai`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -182,27 +244,32 @@ ALTER TABLE `visosprekes`
 -- AUTO_INCREMENT for table `img`
 --
 ALTER TABLE `img`
-  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
+-- AUTO_INCREMENT for table `parametrai`
+--
+ALTER TABLE `parametrai`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+--
 -- AUTO_INCREMENT for table `pranesimai`
 --
 ALTER TABLE `pranesimai`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `uzsakymai`
 --
 ALTER TABLE `uzsakymai`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `visosprekes`
 --
 ALTER TABLE `visosprekes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;COMMIT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
