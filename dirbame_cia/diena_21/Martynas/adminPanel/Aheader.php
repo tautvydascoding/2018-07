@@ -30,7 +30,7 @@ include("../db_function.php");
     <nav class="navigacija">
         <div class="mainCont_wraper">
             <ul>
-            <a href="../login/signup.php">sign up</a>
+            <a href="../login/index.php">Home</a>
                     <li class="HF_ul"><a href="socialIcons.php">Social Icons</a> </li>
                     <li class="HF_ul"><a href="carusel.php">Carusel img</a> </li>
                     <li class="HF_ul"><a href="hometext.php">Home text</a> </li>

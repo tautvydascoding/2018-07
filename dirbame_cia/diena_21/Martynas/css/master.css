@@ -481,6 +481,9 @@ body {
   font-weight: 600;
   letter-spacing: 0.2rem; }
 
+.gal_mrg {
+  margin: .2rem; }
+
 /* ========----- CONTACT US----======== */
 /* main wraperis */
 .mainCont_wraper {

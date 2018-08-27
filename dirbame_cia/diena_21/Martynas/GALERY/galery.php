@@ -112,7 +112,7 @@ require_once("header.php");
 
         </div>
 
-                <div class="row load_data">
+                <div class="row" id="load_data">
                 
                 </div>
                 <div id="load_data_msg">
