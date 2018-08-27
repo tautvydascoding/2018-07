@@ -1,0 +1,490 @@
+$bg1: #97baa4;
+$bg2: #499360;
+$bg3: #295651;
+$bg4: #232941;
+
+$block-shadow: 0px 0px 3px #000;
+
+html,
+body {
+  box-sizing: border-box;
+  // font-family: 'Palanquin Dark', sans-serif;
+  // letter-spacing: -0.5px;
+  font-family: 'Palanquin', sans-serif;
+  letter-spacing: 0.5px;
+  color: white;
+  background-color: $bg2;
+  // font-size: 16px;
+}
+// td, th {
+//   padding: 0 10px;
+// }
+.navbar {
+  z-index: +2;
+  position: sticky;
+  top: 0;
+  transition: all ease .1s;
+}
+.navbar > * {
+  // z-index: +1;
+  // position: sticky;
+  // top: 0;
+  // margin-top: 20px;
+  transition: all ease .1s;
+}
+.navbar.shrink {
+  height: 60px;
+  transition: all ease .1s;
+}
+.navbar > *.shrink {
+  padding-top: 10px;
+  transition: all ease .1s;
+}
+header {
+  height: 80px;
+  background-color: $bg4;
+  box-shadow: 0px 1px 5px #000;
+}
+h1 {
+  text-align: center;
+  font-family: 'Palanquin Dark', sans-serif;
+}
+nav {
+  font-family: 'Palanquin Dark', sans-serif;
+}
+nav > ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+}
+nav > ul > li {
+  font-family: 'Palanquin', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.1s, background-color 0.1s;
+}
+nav > ul > li:hover {
+  color: $bg4;
+  background-color: #fff;
+  text-decoration: underline $bg4;
+}
+.login > form {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+}
+.login > form > * {
+  height: 30px;
+  width: 120px;
+  margin-left: 0.5rem;
+}
+.login > form > input {
+  background-color: $bg4;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+.login > form > input::placeholder {
+  color: #fff
+}
+.login > form > input:focus {
+  outline-width: 0;
+}
+.login > form > button, .login-register {
+  font-family: 'Palanquin', sans-serif;
+  // letter-spacing: 1px;
+  background-color: $bg4;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.1s, background-color 0.1s;
+}
+.login > form > button:hover {
+  color: $bg4;
+  background-color: #fff;
+}
+.login-register {
+  background-color: #fff;
+  color: $bg4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-register:hover {
+  text-decoration: none;
+  color: $bg4;
+}
+.user-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.user-info > * {
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: color 0.1s, background-color 0.1s;
+}
+.user-info > *:hover, .user-info > * > a:hover {
+  background-color: white;
+  color: $bg4;
+}
+.logout {
+  background: none;
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+.logout:hover {
+  color: $bg4;
+}
+.timezone {
+  display: flex;
+  flex-direction: column;
+}
+.timezone-menu {
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+.timezone-item {
+  font-size: 0.75rem;
+}
+aside {
+  // background-color: $bg3;
+  height: 1000px;
+  // position: sticky;
+  // top: 60px;
+}
+.menu {
+  list-style-type: none;
+  width: 100%;
+  // position: relative;
+}
+.element {
+  cursor: pointer;
+  filter: drop-shadow(0.5px 0.5px 1px #000);
+}
+a, a:hover {
+  text-decoration: none;
+  color: white;
+}
+$plotis: 100%;
+$polygon: polygon(6.25% 0, 100% 0, 100% 100%, 0 100%);
+$plotis1: ($plotis - $plotis/2.4)*0.5;
+.element > a > li {
+  display: block;
+  margin-bottom: 3px;
+  height: 40px;
+  position: relative;
+  background-color: #a9a9a9;
+  padding: 10px;
+  // width: $plotis1;
+  // float: left;
+  -webkit-clip-path: $polygon;
+  clip-path: $polygon;
+  padding-left: $plotis1 / 2.4;
+  padding-top: 0.4em;
+  background-color: $bg3;
+  box-shadow: 0px 0px 1px #000;
+  transition: margin-left 0.2s, background-color 0.2s;
+}
+.element:hover > a > li {
+  margin-left: 40px;
+  background-color: $bg1;
+}
+.element > img {
+  $height: 40px;
+  height: $height;
+  width: $height/3*4;
+  position: absolute;
+}
+.alertbox, .cardb-alert {
+  background-color: #ba9797;
+  color: #c10000;
+  box-shadow: 0px 0px 3px #c10000;
+  // box-shadow: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.alertbox > a, .alertbox > a:hover {
+  color: #c10000;
+}
+.offer {
+  box-shadow: $block-shadow;
+  background-image: url('../images/offer1.jpg');
+  background-repeat: no-repeat;
+  // background-size: 640px 360px;
+  background-size: 100%;
+  height: 300px;
+  padding: 5%;
+}
+.offer-h1 {
+  font-family: 'Palanquin Dark', sans-serif;
+  font-size: 50px;
+  margin: 0;
+  text-shadow: 1px 1px 1px solid #000;
+}
+.offer-date {
+  // font-family: 'Palanquin Dark', sans-serif;
+  font-size: 30px;
+  text-shadow: 1px solid #000;
+}
+.offer-list {
+  margin-top: 3rem;
+}
+.odds {
+  background-color: $bg3;
+  box-shadow: $block-shadow;
+}
+$polygonOdds: polygon(4.3rem 0, 100% 0, 100% 100%, 2.4rem 100%);
+.odds-h1 {
+  font-family: 'Palanquin Dark', sans-serif;
+  font-size: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  // background: linear-gradient(to bottom right, rgba(0, 0, 0, 0)60%, $bg1);
+  -webkit-clip-path: $polygonOdds;
+  clip-path: $polygonOdds;
+  padding-left: 5rem;
+  background-color: $bg4;
+  position: relative;
+  z-index: 1;
+}
+.odds-flag {
+  position: absolute;
+  height: 3.2rem;
+}
+$polygonOddsLarge: polygon(10rem 0, 100% 0, 100% 100%, 7.2rem 100%);
+.odds-h1-large {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  -webkit-clip-path: $polygonOddsLarge;
+  clip-path: $polygonOddsLarge;
+  padding-left: 12.5rem;
+  height: 8rem;
+}
+.odds-flag-large {
+  height: 8rem;
+}
+.odds-upcoming {
+  font-family: 'Palanquin', sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  box-shadow: 0px -3px 10px -5px #000;
+}
+.odds-upcoming-count {
+  font-size: 1.5rem;
+}
+.odds-date {
+  padding: 5px 3% 0 3%;
+  box-shadow: 0px -3px 10px -5px #000;
+}
+.odds-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 3% 5px 3%;
+}
+.odds-item {
+  width: 30%;
+  height: 30px;
+  background-color: $bg1;
+  color: $bg4;
+  cursor: pointer;
+  box-shadow: 0px 0px 1px $bg4;
+  padding: 0 1% 0 1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.1s, color 0.1s;
+}
+.odds-item:hover, .odds-item-selected {
+  background-color: $bg4;
+  color: #fff;
+}
+.cardb {
+  background-color: $bg3;
+  height: 100%;
+  position: sticky;
+  top: 60px;
+  box-shadow: $block-shadow;
+}
+.cardb-header {
+  font-family: 'Palanquin Dark', sans-serif;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.cardb-item {
+  background-color: $bg1;
+  color: $bg4;
+  padding: 5px;
+  // border: 1px 0 1px 0 #000 solid;
+  box-shadow: 0px -3px 10px -5px #000;
+}
+.cardb-item-info {
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+.card-item-more {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.card-item-clear {
+  display: block;
+  cursor: pointer;
+}
+.card-item-clear:hover {
+  background-color: $bg4;
+  color: $bg1;
+}
+.cardb-final {
+  padding: 5px 10px 0 10px;
+  // letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cardb-bet {
+  padding: 5px 10px 0 10px;
+  letter-spacing: 1px;  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cardb-bet > input {
+  width: 25%;
+  background-color: $bg1;
+  // color: $bg4;
+  border: none;
+  border-bottom: 2px $bg4 solid;
+  text-align: right;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  appearance: none; 
+  margin: 0; 
+}
+.cardb-bet > input:focus {
+  // background-color: white;
+  outline: none;
+}
+.cardb-cash {
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.cardb-possible {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.cardb-btn {
+  background-color: $bg4;
+  color: white;
+  border: 1px white solid;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 10px 5px;
+  padding: 5px 0;
+  width: 100%;
+  transition: color 0.1s, background-color 0.1s;
+}
+.cardb-btn:hover {
+  background-color: white;
+  color: $bg4;
+}
+footer {
+  height: 50px;
+  background-color: #3d3d3d;
+  display: flex;
+  align-items: center;
+}
+.register-form {
+  display: flex;
+  flex-direction: column;
+  background-color: $bg1;
+}
+.register-form > input {
+  width: 250px;
+  margin-top: 1rem;
+  background-color: $bg1;
+  color: $bg4;
+  border: none;
+  border-bottom: 2px $bg4 solid;
+}
+.register-form > input:focus {
+  // background-color: white;
+  outline: none;
+}
+.register-form > button {
+  background-color: $bg4;
+  color: white;
+  width: 250px;
+  border: 2px $bg4 solid;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 1rem 0 1rem 0;
+  transition: color 0.1s, background-color 0.1s;
+}
+.register-form > button:hover {
+  background-color: white;
+  color: $bg4;
+}
+.bet-info {
+  box-shadow: 0px 0px 3px black;
+}
+.rem75 {
+  font-size: 0.75rem;
+}
+.bet-info-waiting {
+  background-color: $bg1;
+  color: $bg4;
+}
+.bet-info-lost {
+  background-color: #ba9797;
+  color: #c10000;
+}
+.bet-info-won {
+  background-color: #89bb85;
+  color: #003f13;
+}
+
+/////// media
+@media (max-width: 768px) {
+  nav {
+    margin: 0;
+  }
+  nav > ul {
+    align-items: flex-start;
+    flex-direction: column;
+    // justify-content: space-around;
+  }
+  aside {
+    display: none;
+  }
+  .cardb {
+    background-color: $bg4;
+    display: none;
+  }
+  .odds-list {
+    flex-direction: column;
+  }
+  .odds-item {
+    width: 100%;
+    height: 40px;
+  }
+}
