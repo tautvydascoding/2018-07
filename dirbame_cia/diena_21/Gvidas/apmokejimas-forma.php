@@ -357,7 +357,7 @@ if (isset($_GET['vardas'])) {
 
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
         $mail->Username = 'bulvesdykai@gmail.com';                 // SMTP username
-        $mail->Password = 'bulvesfree123';                           // SMTP password
+        $mail->Password = 'slaptazodis';                           // SMTP password
 
         //Recipients
         $mail->setFrom('bulvesdykai@gmail.com', 'Jusu uzsakymas');

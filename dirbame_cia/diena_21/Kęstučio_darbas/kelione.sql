@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.0
+-- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: 2018 m. Rgp 26 d. 17:31
--- Server version: 10.1.16-MariaDB
--- PHP Version: 7.0.9
+-- Host: localhost:3306
+-- Generation Time: Aug 27, 2018 at 12:59 PM
+-- Server version: 5.6.34-log
+-- PHP Version: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -23,16 +25,41 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Sukurta duomenų struktūra lentelei `meniu`
+-- Table structure for table `kontaktai`
+--
+
+CREATE TABLE `kontaktai` (
+  `registracija` int(11) NOT NULL,
+  `E-paštas` varchar(50) CHARACTER SET latin1 NOT NULL,
+  `Vardas` varchar(50) CHARACTER SET latin1 NOT NULL,
+  `Adresas` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `Kalnų-kurorto-adresas` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `Miestas` varchar(50) CHARACTER SET latin1 NOT NULL,
+  `Šalis` varchar(50) CHARACTER SET latin1 NOT NULL,
+  `Pašto-kodas` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `kontaktai`
+--
+
+INSERT INTO `kontaktai` (`registracija`, `E-paštas`, `Vardas`, `Adresas`, `Kalnų-kurorto-adresas`, `Miestas`, `Šalis`, `Pašto-kodas`) VALUES
+(1, 'djkestutis@yahoo.com', 'Kestutis', 'Kaunas', 'Kazkur alpese', 'alpiu Miestas', 'Svecarija', 45821),
+(2, 'djkestutis@yahoo.com', 'Jonas', 'Vilnius', 'Aliaska', 'Keiptaunas', 'Nenustatyta', 458264);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `meniu`
 --
 
 CREATE TABLE `meniu` (
   `meniu_ID` int(11) NOT NULL,
-  `pavadinimas` varchar(50) COLLATE utf8_lithuanian_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_lithuanian_ci;
+  `pavadinimas` varchar(50) CHARACTER SET utf8 COLLATE utf8_lithuanian_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Sukurta duomenų kopija lentelei `meniu`
+-- Dumping data for table `meniu`
 --
 
 INSERT INTO `meniu` (`meniu_ID`, `pavadinimas`) VALUES
@@ -43,23 +70,23 @@ INSERT INTO `meniu` (`meniu_ID`, `pavadinimas`) VALUES
 -- --------------------------------------------------------
 
 --
--- Sukurta duomenų struktūra lentelei `pirkėjų`
+-- Table structure for table `pirkeju`
 --
 
-CREATE TABLE `pirkėjų` (
+CREATE TABLE `pirkeju` (
   `vartotojo id` int(11) NOT NULL,
-  `vartotojo_vardas` varchar(50) COLLATE utf8_lithuanian_ci NOT NULL,
-  `vartotojo_pavardė` varchar(50) COLLATE utf8_lithuanian_ci NOT NULL,
-  `tefefonas` varchar(20) COLLATE utf8_lithuanian_ci NOT NULL,
-  `e_pastas` varchar(50) COLLATE utf8_lithuanian_ci NOT NULL,
-  `komentaras` text COLLATE utf8_lithuanian_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_lithuanian_ci;
+  `vartotojo_vardas` varchar(50) COLLATE utf8mb4_lithuanian_ci NOT NULL,
+  `vartotojo_pavardė` varchar(50) COLLATE utf8mb4_lithuanian_ci NOT NULL,
+  `tefefonas` varchar(20) COLLATE utf8mb4_lithuanian_ci NOT NULL,
+  `e_pastas` varchar(50) COLLATE utf8mb4_lithuanian_ci NOT NULL,
+  `komentaras` mediumtext COLLATE utf8mb4_lithuanian_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_lithuanian_ci;
 
 --
--- Sukurta duomenų kopija lentelei `pirkėjų`
+-- Dumping data for table `pirkeju`
 --
 
-INSERT INTO `pirkėjų` (`vartotojo id`, `vartotojo_vardas`, `vartotojo_pavardė`, `tefefonas`, `e_pastas`, `komentaras`) VALUES
+INSERT INTO `pirkeju` (`vartotojo id`, `vartotojo_vardas`, `vartotojo_pavardė`, `tefefonas`, `e_pastas`, `komentaras`) VALUES
 (52, 'Žaneta', ' Pakalnutė', '0', '', ''),
 (53, 'Donata', ' Testuotojas', '0', '', ''),
 (54, 'Žaneta', 'Pakalnutė', '0', '', ''),
@@ -86,12 +113,31 @@ INSERT INTO `pirkėjų` (`vartotojo id`, `vartotojo_vardas`, `vartotojo_pavardė
 (76, 'Žaneta', 'Pakalnutė', '', 'djkestutis@yahoo.com', 'Noriu pakeliauti'),
 (77, 'Žaneta', 'Pakalnutė', '', 'djkestutis@yahoo.com', 'Noriu pakeliauti'),
 (78, '', '', '', '', ''),
-(79, 'Žaneta', 'Pakalnutė', '', 'djkestutis@yahoo.com', 'Noriu pakeliauti');
+(79, 'Žaneta', 'Pakalnutė', '', 'djkestutis@yahoo.com', 'Noriu pakeliauti'),
+(80, 'Jonas', 'Vasiliauskas', '', 'djkestutis@yahoo.com', 'Noriu pakeliauti'),
+(81, 'Kestutis', 'Morkevicius', '', 'djkestutis@yahoo.com', 'noriu pamatyti kalnus'),
+(82, 'Kestutis', 'Morkevicius', '', 'djkestutis@yahoo.com', 'noriu pamatyti kalnus'),
+(83, 'Kestutis', 'Morkevicius', '', 'djkestutis@yahoo.com', 'noriu pamatyti kalnus'),
+(84, 'Kestutis', 'Morkevicius', '', 'djkestutis@yahoo.com', 'noriu pamatyti kalnus'),
+(85, 'Kestutis', 'Morkevicius', '', 'djkestutis@yahoo.com', 'noriu pamatyti kalnus'),
+(86, 'Kestutis', 'Morkevicius', '', 'djkestutis@yahoo.com', 'noriu pamatyti kalnus'),
+(87, 'Jonas', 'Keliauninkas', '', 'jonas@yahoo.com', 'pabusiu kalnuose'),
+(88, '', '', '', '', ''),
+(89, 'Antanas', 'Keliautojas', '', 'antanas@keliautojas.yahoo.com', 'Turizmas'),
+(90, 'Antanas', 'Keliautojas', '', 'antanas@keliautojas.yahoo.com', 'Turizmas'),
+(91, 'Jurgita', 'Turiste', '', 'kazkoks@yahoo.com', 'Daug keliauju'),
+(92, '', '', '', '', ''),
+(93, '', '', '', '', ''),
+(94, '', '', '', '', ''),
+(95, 'Juozukas', 'Pakalnis', '', 'nesvarbu@yahoo.com', 'Pirma kelione'),
+(96, 'Donatas', 'Pakalnis', '', 'nesvarbu@yahoo.com', 'Nemėgstu būti namuose.'),
+(97, '', '', '', '', ''),
+(98, 'Testuotojas', 'Testas', '', 'nezinomas@yahoo.com', 'keliones');
 
 -- --------------------------------------------------------
 
 --
--- Sukurta duomenų struktūra lentelei `viežbučių`
+-- Table structure for table `viežbučių`
 --
 
 CREATE TABLE `viežbučių` (
@@ -101,18 +147,24 @@ CREATE TABLE `viežbučių` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_lithuanian_ci;
 
 --
--- Sukurta duomenų kopija lentelei `viežbučių`
+-- Dumping data for table `viežbučių`
 --
 
 INSERT INTO `viežbučių` (`Viežbučio_id`, `Viežbučio_pavadinimas`, `aprašymas`) VALUES
-(1, 'Karpatai', 'Some quick example text to build on the card title and make up the bulk of the card''s content.'),
-(2, 'Kalifornijos kalnai', 'Some quick example text to build on the card title and make up the bulk of the card''s content.'),
-(3, 'Islandijos kalnai', 'Some quick example text to build on the card title and make up the bulk of the card''s content.'),
-(4, 'Alpės ', 'Some quick example text to build on the card title and make up the bulk of the card''s content.');
+(1, 'Karpatai', 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'),
+(2, 'Kalifornijos kalnai', 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'),
+(3, 'Islandijos kalnai', 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'),
+(4, 'Alpės ', 'Some quick example text to build on the card title and make up the bulk of the card\'s content.');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `kontaktai`
+--
+ALTER TABLE `kontaktai`
+  ADD PRIMARY KEY (`registracija`);
 
 --
 -- Indexes for table `meniu`
@@ -121,9 +173,9 @@ ALTER TABLE `meniu`
   ADD PRIMARY KEY (`meniu_ID`);
 
 --
--- Indexes for table `pirkėjų`
+-- Indexes for table `pirkeju`
 --
-ALTER TABLE `pirkėjų`
+ALTER TABLE `pirkeju`
   ADD PRIMARY KEY (`vartotojo id`);
 
 --
@@ -137,20 +189,26 @@ ALTER TABLE `viežbučių`
 --
 
 --
+-- AUTO_INCREMENT for table `kontaktai`
+--
+ALTER TABLE `kontaktai`
+  MODIFY `registracija` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT for table `meniu`
 --
 ALTER TABLE `meniu`
   MODIFY `meniu_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `pirkėjų`
+-- AUTO_INCREMENT for table `pirkeju`
 --
-ALTER TABLE `pirkėjų`
-  MODIFY `vartotojo id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+ALTER TABLE `pirkeju`
+  MODIFY `vartotojo id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 --
 -- AUTO_INCREMENT for table `viežbučių`
 --
 ALTER TABLE `viežbučių`
-  MODIFY `Viežbučio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `Viežbučio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
