@@ -11,7 +11,7 @@
             <div class="col">
 
               <?php include('nav.php')?>
-         <!-- IDEA: Pabaigem meniu -->
+             <!-- IDEA: Pabaigem meniu -->
 
             </div>
             <!-- IDEA: Pabaigiu Header col -->
@@ -73,7 +73,7 @@
                   <input type="text" class="form-control" name="komentaras" placeholder="">
                   </div>
                   <div class="form-check col-md-12">
-                    <button type="submit" class="btn btn-primary">Patvirtinti užsakymą</button>
+                    <button type="submit" name="submitted" class="btn btn-primary">Patvirtinti užsakymą</button>
                 </div>
               </form>
             <!-- IDEA: Užbaigiu forma -->

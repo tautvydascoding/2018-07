@@ -1,6 +1,6 @@
 <img class="logo" src="./img/slide-logo-2.png" alt="logo">
-
-<?php  include ('db.php');
+<?php include ('header.php');
+      include ('db.php');
 $nav1 = getNav(1);
 $nav2 = getNav(2);
 $nav3 = getNav(3);

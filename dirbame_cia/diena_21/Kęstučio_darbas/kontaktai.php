@@ -35,45 +35,37 @@
             <div class="col text-center">
 
               <!-- IDEA: Ikeliu forma -->
-              <form>
+              <form action="poKontaktu.php" method="post">
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputEmail4">E-paštas</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="El. paštas">
+                    <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="El. paštas">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="idėti vardą">Vardas</label>
-                    <input type="text" class="form-control" id="inputVardas" placeholder="Vardas">
+                    <input type="text" name="vardas" class="form-control" id="inputVardas" placeholder="Vardas">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputAddress">Adresas</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="Jūsų gyvenamoji vieta">
+                  <input type="text" name="gyvenamoji" class="form-control" id="inputAddress" placeholder="Jūsų gyvenamoji vieta">
                 </div>
                 <div class="form-group">
                   <label for="inputAddress2">Kalnų kurorto adresas</label>
-                  <input type="text" class="form-control" id="inputAddress2" placeholder="Vietovė kur planuojate vykti">
+                  <input type="text" name="kurortas" class="form-control" id="inputAddress2" placeholder="Vietovė kur planuojate vykti">
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputCity">Miestas</label>
-                    <input type="text" class="form-control" id="inputCity">
+                    <input type="text" name="miestas" class="form-control" id="inputCity">
                   </div>
                   <div class="form-group col-md-4">
                     <label for="inputState">Šalis</label>
-                    <select id="inputState" class="form-control">
-                      <option selected>Pasirinkite...</option>
-                      <option>Vokietija</option>
-                      <option>Italija</option>
-                      <option>Prancuzija</option>
-                      <option>Tibetas</option>
-                      <option>Norvegija</option>
-                      <option>Švedija</option>
-                    </select>
+                    <input type="text" id="inputState" name="salis" class="form-control">
                   </div>
                   <div class="form-group col-md-2">
                     <label for="inputZip">Pašto kodas</label>
-                    <input type="text" class="form-control" id="inputZip">
+                    <input type="text" name="pKodas" class="form-control" id="inputZip">
                   </div>
                 </div>
                 <div class="form-group">
@@ -84,7 +76,7 @@
                     </label>
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Siūsti</button>
+                <button type="submit" name="submitas" class="btn btn-primary">Siūsti</button>
               </form>
             <!-- IDEA: Užbaigiu forma -->
 
