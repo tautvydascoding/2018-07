@@ -1,4 +1,4 @@
-﻿(trecioji savaite ketvirtadinieni) Tarpinis testas 5% (html, css) 
+(trecioji savaite ketvirtadinieni) Tarpinis testas 5% (html, css) 
 (trecioji savaite penktadienis) Tarpinis atsiskaitymas 10% (js, jquery)
 (trecioji savaite penktadienis) Tarpinis atsiskaitymas 10% (js scopes: local ir global varible skirtumai)
 (ketritoji savaite penktadienis) Tarpinis atsiskaitymas 15% (programavimo pagrindai: Ciklai, f-jos)
@@ -21,6 +21,7 @@ Baigiamasis:
 //——————Back End  (PHP)——————————————————
 0.5 ajax (gauti duomenis, pvz: “Load more”) !naudojant jQuery ! Nenaudjant "Load" f-jos  !!!
 0.5 ajax (siusti duomenis) !naudojant jQuery ! Nenaudjant Load f-jos !!!
+
 iki 0.5 Email siuntimas, redirect i page, isvesti zinute
 0.3 PHP include (bent 4x)
 3x 0.5  PHP duomenu isvedimas (max 3 skirtingos lenteles,)
