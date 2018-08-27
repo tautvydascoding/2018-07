@@ -7,8 +7,8 @@ if (isset($_POST["limit"], $_POST["start"])) {
   $manoSQL = "SELECT * FROM tbl_gallery ORDER BY id DESC LIMIT " . $_POST['start'] . ", " . $_POST['limit'] . "";
   $result = mysqli_query(getPrisijungimas(), $manoSQL);
   while ($img = mysqli_fetch_array($result)) {
-    echo "<div class='col-md'> 
-    <img src='fetchimg/$img[name]' width='350' height='300'> 
+    echo "<div class='col'> 
+    <img class='gal_mrg' src='fetchimg/$img[name]' width='350' height='300'> 
     </div>";
 
   }

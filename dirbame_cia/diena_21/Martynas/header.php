@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Undo Studija| dizaineriai| idejininkai</title>
     <!-- resposive design reikalingas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dizainieriai, architektai ir idejininkai! Cia rasite musu atliktu darbu galerija, kontaktus ir aprasyma apie mus.">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -17,9 +18,8 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <!-- !!!! mano CSS failas visas patas zemiausias -->
-<link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/master.css">
 
-    <title>Undo studija</title>
 
 </head>
 
