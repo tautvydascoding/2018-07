@@ -1,5 +1,6 @@
 <?php
-include("Aheader.php")
+include("Aheader.php");
+
 ?>
 
 <div class='mainText'>
